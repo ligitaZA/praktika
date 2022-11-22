@@ -13,7 +13,7 @@
   <!-- 
     Git -versijavimo programa ir GitHub- svetainė, talpinti versijuotą kodą
     Puslapio prieinamumas(teoriškai, praktika gale)
-    Prepocesoriai SCSS, SASS 
+    Prepocesoriai SCSS, SASS + variables + dydžiai
     CSS framework
    -->
 
@@ -50,28 +50,81 @@
       <li>Tvirtumas</li>
     </ul>
     <p>
-      Puslapių pritaikymas žmonėms su negalia. Pvz.: klausa, prasto regėjimo, akliesiems, deltonikams, prasto apšvietimo sąlygomis
+      Puslapių pritaikymas žmonėms su negalia. Pvz.: klausa, prasto regėjimo, akliesiems, deltonikams, prasto apšvietimo
+      sąlygomis
     </p>
     <p>
-      Visi standartai yra aprašyti <a href="https://www.w3.org/WAI/" target="_blank"> čia</a>
+      Puslapių pritaikymas žmonėms su negalia. Pvz.: klausa, prasto regėjimo, akliesiems, daltonikams, prasto apšvietimo sąlygomis...
     </p>
     <p>
-      Automatiniai skaitytuvai <a href="webaim.org/projects/screenreadersurvey8" target="_blank"></a><br>
-      Automatinis skaitytuvas <a href="" target="_blank">video</a>
+      Visi standartai yra aprašyti <a href="https://www.w3.org/WAI/" target="_blank">čia</a>.
     </p>
     <p>
-      Alternatyvūs tekstai paveiksliukams ir video <a href="axesslab.com/alt-text/" target="_blank">info</a>
+      Automatinių skaitytuvų <a href="https://webaim.org/projects/screenreadersurvey8" target="_blank">apklausa</a>.<br>
+      Kas yra autimatinis skaitytuvas <a href="https://youtu.be/dEbl5jvLKGQ" target="_blank">video</a>.
     </p>
     <p>
-      ARIA atributai ir jų nauda <a href="" target="_blank"> info</a>
+      Alternatyvūs tekstai paveiksliukams ir video <a href="https://axesslab.com/alt-texts/" target="_blank">info</a>.
     </p>
     <p>
-      Tinklapio prisitaikymas prie vartotojo įrenginio <a href="" target="_blank"></a>
+      ARIA atributai ir jų nauda <a href="https://www.w3.org/TR/wai-aria/#document_structure_roles" target="_blank">info</a>.
     </p>
     <p>
-      Meta tag'ai nusako svetainės informaciją
+      Prisitaikymas prie vartotojo įrenginio <a href="https://www.lambdatest.com/blog/css-media-queries-for-responsive-design/" target="_blank">info</a>.
     </p>
-
+    <p>
+      Meta tag'ai nusako svetainės informaciją <a href="https://ahrefs.com/blog/seo-meta-tags/" target="_blank">info</a>.
+    </p>
+  </section>
+  <section id="preprocessors">
+    <h1>Preprocesoriai</h1>
+    <div>
+      <h3>SASS / SCSS</h3>
+      <p> preprocessors</p>
+      <p>
+        Suteikia galimybę rašyti CSS naujiviškesniu ir patogesniu būdu, kur galima lengvai kurti ir naudoti
+        kintamuosius; nest'inti; rašyti sąlygas, ciklus, funkcijas, mix-in'us ir t.t.... <br>
+        Naudojant kažkurį CSS preprocesor, reikia parašytą kodą konvertuoti į paprastą CSS, kurį supranta svetainė
+      </p>
+    </div>
+  </section>
+  <section id="CSS-frameworks">
+    <h1>CSS Frameworks</h1>
+    <ul>
+      <li>Tailwind</li>
+      <li>Bootstrap</li>
+      <li>Bulma</li>
+      <li>UI Kit</li>
+      <li>Materialize</li>
+      <li>Miligram</li>
+      <li>Foundation</li>
+      <li>...</li>
+    </ul>
+    <div class="twoCols">
+      <div>
+        <h3>Pros</h3>
+        <ul>
+          <li>Nereikia arba reikia labai mažai rašyti CSS</li>
+          <li>Pagreitina laiką</li>
+          <li>Lengva naudoti(daugumą)</li>
+          <li>Suprogramuoti responsiveness</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Cons</h3>
+        <ul>
+          <li>Daug perteklinio, nepanaudoto kodo dėl ko ilginamas užkrovimas ir performance(google paieškos sistema įvertins prasčiau)</li>
+          <li>Nelieka unikalumo</li>
+          <li>Reikalauja laiko išmokti naudotis</li>
+        </ul>
+      </div>
+    </div>
+    <p>
+      <strong>CSS Framework</strong> - kažkieno kito parašytas CSS kodas, kurį tu gali naudoti įsikėlęs į link's virš savo CSS failo. <br>
+      Norint naudoti kažkieno framework reikia jį priijungti prie savo kodo. (CDN) <br>
+      Dauguma Framework'ų veikia naudojant suteikiant jų aprašytas klases kažkokiems HTML elementams. <br>
+      Yra <a href="https://github.com/dbohdan/classless-css" target="_blank">Classless</a> CSS Frameworks . Juos naudojant nereikia suteikti klasių jokiems HTML elementams, viskas aprašyta naudojant tag'ų selektorius.
+    </p>
   </section>
 
 </body>

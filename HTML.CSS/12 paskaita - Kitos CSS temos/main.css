@@ -1,0 +1,30 @@
+:root {
+  --kintamojo-vardas:blue;
+  font-size: 10px;
+  line-height: 1;
+}
+
+
+#preprocessors h1 {
+  font-size: 2rem;
+}
+#preprocessors div{
+  width: 30rem;
+  background-color: aquamarine;
+  display: flex;
+  align-items: baseline;
+  font-size: 10px;
+}
+#preprocessors div h3 {
+  font-size: 2em;
+  color: var(--kintamojo-vardas);
+}
+#preprocessors div p {
+  color: var(--kintamojo-vardas);
+}/*# sourceMappingURL=main.css.map */
+
+@media(min-width:500px){
+  :root{
+    font-size: 20px;
+  }
+}
