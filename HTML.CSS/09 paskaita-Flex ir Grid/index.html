@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>9 paskaita - Flex ir Grid</title>
+  <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+  <section id="grid">
+    <h1>Display - Grid</h1>
+    <ul>
+      <li>grid-template-colums - sukuria grid tinklelio stulpelius</li>
+      <li>grid-template-rows - sukuria grid tinklelio eilutes</li>
+      <li>grid-template-areas - užvardinti tinklelio laukus</li>
+      <li>grid-template - apjungimas grid-template-rows ir grid-template-columns</li>
+      <li>gap,row-gap, column-gap - tarpas tarp elementų</li>
+      <li>justify-items</li>
+      <li>align-items</li>
+      place-items - align-items ir justify-items junginys (per/)
+      <li>justify-content</li>
+      <li>align-content</li>
+      <li>place-content - align-content ir justify-content junginys</li>
+      <li>grid-auto-colums</li>
+      <li>grid-auto-rows</li>
+      <li>grid-auto-flow - nurodo kokia kryptimi elementai grid'e išsidėsto</li>
+      <li>grid grid-template-rows, grid-template-colums, grid-template-areas, grid-auto-rows, grid-auto-columns, grid-auto-flow</li>
+      <li>order - eilės tvarka</li>
+    </ul>
+    <ul>
+      <li>grid-column-start - nurodo kuriame stulpelyje prasideda</li>
+      <li>grid-column-end - nurodo kuriame skulpelyje pasibaigia</li>
+      <li>grid-column - startas ir pabaiga(apjungia)(per /)</li>
+      <li>grid-row-start - nurodo eilutėje stulpelis prasideda</li>
+      <li>grid-column-end - nurodo kuriame stulpelyje pasibaigia</li>
+      <li>grid-row - apjungia start'ą ir end'ą (per /)</li>
+      <li>grid-area - gali suteikti vardą arba apjungia grid-row/colum - start/end</li>
+      <li>align-self </li>
+      <li>justify-self</li>
+      <li>place-self - apjungtas align-self ir justify-self</li>
+    </ul>
+    <ul>
+      <li>fr units - frakcija - panašus į flex-grow - paskirsto elementą, gali kurtis stulpelius ir eilutes</li>
+      <li>repeat(nr, size) - </li>
+      <li>minmax -</li>
+      <li>span - kad elementas išdidetų per eilutes arba rows</li>
+      <li>negative number - -1: 1 nuo galo;-3:3 nuo galo</li>
+    </ul>
+  </section>
+
+  <section id="gridExample">
+    <div class="gridContainer">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+      <div>7</div>
+      <div>8</div>
+      <div>9</div>
+    </div>
+
+<div class="gridContainer2">
+  <div class="header"></div>
+  <div class="main"></div>
+  <div class="aside"></div>
+  <div class="footer"></div>
+</div>
+<div class="gridContainer3">
+  <div>1</div>
+  <div>2</div>
+  <div class="filler1"></div>
+  <div>3</div>
+  <div>4</div>
+  <div>5</div>
+  <div>6</div>
+</div>
+  </section>
+  <section id="tasks">
+    <div id="task3">
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div class="img"></div>
+      <div>5</div>
+    </div>
+  </section>
+</body>
+</html>

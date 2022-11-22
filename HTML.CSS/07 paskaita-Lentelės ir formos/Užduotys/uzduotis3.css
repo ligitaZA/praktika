@@ -1,0 +1,161 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+html{
+  font-family: 'Quicksand';
+}
+body {
+  background-color: rgb(230, 191, 191);
+}
+/*aside*/
+ aside {
+  margin-top: 0;
+  height: 100vh;
+  background-color: rgb(133, 123, 133);
+  position: relative;
+  width: 420px;
+  display: inline-block;
+ }
+ .fa {
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 70px;
+ }
+#aside h1 {
+  margin: 0px 130px;
+  font-size: 40px;
+  letter-spacing: 1px;
+  padding-top: 84px;
+  display: block;
+}
+i {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(237, 185, 185);
+  padding: 4px;
+  border-radius: 50%;
+  position: relative;
+ }
+img {
+  height: 180px;
+  position: absolute;
+  display: inline-block;
+  bottom: 0;
+ }
+ /*form*/
+ .formContainer {
+  margin: 0;
+  width: 100%;
+  padding: 0;
+  font-size: 25px;
+}
+label {
+  display: block;
+}
+.block2 > span {
+  margin: 50px;
+  display: block;
+}
+.block1, .block2, .block3 {
+  padding: 10px;
+}
+.block1 > div:first-child {
+  margin-right: 20px;
+}
+.block1 > div {
+  display: inline-block;
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+.block2 > div:first-child {
+  margin-right: 20px;
+}
+.block2 > div {
+  display: inline-block;
+  width: 48%;
+  margin-bottom: 20px;
+}
+.block3 > div:first-child {
+  margin-right: 20px;
+}
+.block3 > div {
+  display: inline-block;
+  width: 48%;
+  margin-bottom: 20px;
+}
+
+#formSection{
+  margin-top: -780px;
+  padding: 0;
+  margin-left: 500px;
+}
+.radioInputs1, .radioInputs2, .radioInputs3 {
+  background: #fff;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 5px;
+  padding: 8px 8px;
+  margin: 15px;
+  width: 200px;
+}
+.radioInputs3 {
+  margin: 20px;
+}
+.radioInputs1 label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 25px;
+}
+.radioInputs2 label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline-block;
+  height: 26px;
+  line-height: 26px;
+  margin: 0;
+  padding: 0;
+  text-align: center;  
+  width: 25px;
+
+}
+.radioInputs3 label {
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  display: inline;
+  height: 26px;
+  line-height: 26px;
+  padding: 0;
+  text-align: center;
+  width: 25px;
+}
+
+.radioInputs1 input, .radioInputs2 input, .radioInputs3 input{
+  display: none;
+  background-color: beige;
+}
+.radioInputs1 input:checked + label {
+  color: rgb(2, 2, 2);
+  background-color: rgb(228, 143, 190);
+  display: inline;
+}
+.radioInputs2 input:checked + label {
+  color: rgb(2, 2, 2);
+  background-color: rgb(228, 143, 190);
+  display: inline;
+}
+.radioInputs3 input:checked + label {
+  color: rgb(2, 2, 2);
+  background-color: rgb(228, 143, 190);
+  display: inline;
+}
+

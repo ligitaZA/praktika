@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>6 paskaita - Pseudo klasės ir elementai</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+  <!-- 
+    Pseudo klasės ir elementai
+    Multimedijos elementai (video, audio, maps, iframe)
+    Lentelės su pseudo klasės elementais
+    Formos su pseudo klasėm/elementais
+   -->
+  <main>
+    <section id="pseudoSelektoriai">
+      <h1>
+        <a href="https://www.w3schools.com/csSref/css_selectors.php">
+        Pseudo Selektoriai</a></h1>
+        <ul>
+          <li>*</li>
+          <li>element</li>
+          <li>.class</li>
+          <li>#id</li>
+          <li>selector, selector</li>
+          <li>selector selector</li>
+          <li>selector > selector</li>
+          <li>selector.class#id - elementas turitis nurodytą klasę arba klases ir/arba nurodytą #id</li>
+          <li>selector1 + selector2 - iš karto už selector1 einantis selector2</li>
+          <li>selector1 ~ selector2 - už selector1 visi einantys selector2 (tame pačiame lygmenyje)</li>
+          <li>[atribute] - atributas </li>
+          <li>[atribute=_value] - atributas turintis nurodytą reikšmę</li>
+          <li>[atribute~=value] - atributas, kurio reikšmėje yra nurodytas žodis</li>
+          <li>[atribute*=value] - atributas, kurio reikšmėje yra nurodyta žodžio dalis</li>
+          <li>atribute|=value - atributas, kurio reikšmė yra value arba value-kažkas</li>
+          <li>atribute^=value - atributas, kurio reikšmė prasideda value...</li>
+          <li>atribute&=value - atributas, kurio reikšmė pasibaigia ...value</li>
+          <li>:link - paprasta/nelankyta nuoroda</li>
+          <li>:visited - lankyta nuoroda</li>
+          <li>:hover - užėjęs kursorius</li>
+          <li>:active - aktyvi paspaudimo momentu nuoroda</li>
+          <li>element:empty - tuščias elementas (be content)</li>
+          <li>::marker - sąrašo elementų žymės</li>
+          <li>selector1::not(selector2) - parenka viską, apart nurodyto elemento</li>
+          <li>:first-child - parenka pirmą vaikinį elementą</li>
+          <li>:last-child - parenka paskutinį vaikinį elementą</li>
+          <li>:only-child - parenka vienintelį vaikinį elementą</li>
+          <li>:first-of-type - parenka pirmąjį nurodyto tipo elementą</li>
+          <li>:last-of-type - parenka paskutinįjį nurodyto tipo elementą</li>
+          <li>:only-of-type - parenka vientelį nurodyto tipo elementą</li>
+          <li>:nth-child(n) - parenka nurodytus vaikinius elementus</li>
+          <li>:nth-last-child(n) - nuo galo parenka nurodytus elemeentus</li>
+          <li>:nth-of-type(n) - parenka nurodytus elementus pagal tipą</li>
+          <li>:nth-last-of- type(n) - nuo galo parenka nurodytus elementus pagal tipą</li>
+          <li>::before - sukuria kažkokį turinį prieš elementą</li>
+          <li>::after - sukuria kažkokį turinį už elemento</li>
+          <li>input:checked - pažymėtus/parinktus radio/checkbox/option pasirinkimus</li>
+          <li>input:default - iš anksto parinktas  pasirinkimas</li>
+          <li>input:disabled - input'as kuri turi disabled atributą</li>
+          <li>input:enabled - input'as, kuris neturi dissabled atributo</li>
+          <li>input:focus - input'as ant kurio yra paspausta / fokusuotas</li>
+          <li>input:in-range - input'as, kurio vertė yra nurodytose ribose</li>
+          <li>input:out-of-range - input'as, kurio vertė yra už nurodytų ribų</li>
+          <li>input:indeterminate - input'as, kurio reikšmė neapibrėžta</li>
+          <li>input:valid - input'as kurio vertė yra tinkama</li>
+          <li>input:invalid - input'as kurio vertė yra netinkama</li>
+          <li>input:required - input'as su required atributu</li> 
+          <li>input:optional - input'as be required atributo</li>
+          <li>input:read-only - inputas su read-only atributu</li>
+          <li>input:read-write - input'as su nenurodytu read-only atributu</li>
+          <li>input / textarea::placeholder - įvesties laukelio placeholder atributo reikšmės parinkimas stilizavimui</li>
+          <li>::first-letter - parenka elemento pirmąją raidę</li>
+          <li>::first-line - parenka elemento pirmąją eilutę</li>
+          <li>::selection - parenka vartotojo pažymėtą informaciją</li>
+          <li>:is()</li>
+          <li>:has()</li>
+          <li>:where()</li>
+
+        </ul>
+        <div class="selektoriuPvz">
+          <!-- <p class="rytoTekstas" id="hallo">labas rytas</p>
+          <p>tekstas</p>
+          <h1>tekstas tekstas</h1>
+          <p>tekstas more </p>
+          <h1 class="heading">tekstas more more more</h1>
+          <p>tekstas and </p>
+          <h2 class="heading irDar">tekstas 2</h2>
+            <div>
+              <p>div vidus</p>
+            </div>
+          <p>tekstas more and</p>
+          <p>labas rytas</p> -->
+        
+              <p>tekstas</p>
+              <h1>tekstas</h1>
+              <p>tekstas</p>
+              <h1>tekstas</h1>
+              <p>tekstas</p>
+              <p>tekstas</p>
+              <h1>tekstas</h1>
+              <p>tekstas</p>
+              <p>tekstas</p>
+              <h1>tekstas</h1>
+              <p>tekstas</p>
+</div>
+    </section>
+
+
+    <section id="plants">
+      <table class="tableStyle" border>
+        <h1 class="plantNames">TABLE</h1>
+        <thead>
+            <tr>
+                  <th>Plant</th>
+                  <th>Position</th>
+                  <th>Soil</th>
+                  <th>Rate of growth</th>
+                  <th>Hardiness</th>
+            </tr>
+          </thead>
+          <tbody class="inTable">
+            <tr>
+                  <td>Monstera</td>
+                  <td>Bright but indirect light</td>
+                  <td>Good potting compost</td>
+                  <td>Average</td>
+                  <td>Tender</td>
+                  </td>
+            </tr>
+            <tr> 
+                    <td>Alocasia</td>
+                    <td>Tender (indoors only)</td>
+                    <td>Includes an 18cm pot cover</td>
+                    <td>Includes an 18cm pot cover</td>
+                    <td>Tender</td>
+            </tr>
+            <tr>
+                  <td>Syngonium 'Arrow'</td>
+                  <td>Choose a 14cm pot cover to give a good fit over the pot</td>
+                  <td>Choose a 14cm pot cover to give a good fit over the pot</td>
+                  <td>Choose a 14cm pot cover to give a good fit over the pot</td>
+                  <td>Choose a 14cm pot cover to give a good fit over the pot</td>
+              </tr>
+              
+              <tr>
+                    <td>Goeppertia veitchiana Medallion</td>
+                    <td>General-purpose potting compost</td>
+                    <td>Choose a 13cm pot cover to give a good fit over the pot
+                    </td>
+                    <td>Tender</td>
+                    <td>Average</td>
+              <tr>
+                      <td>Chinese evergreen</td>
+                      <td>Slow</td>
+                      <td>Choose a 14cm pot cover to give a good fit over the pot</td>
+                      <td>Tender</td>
+                      <td>Tender</td>
+              </tr>
+                  </tr>
+                </tr>
+          </tbody>
+        </table>
+    </section>
+
+
+
+    <section id="multimedija">
+            <h1>Multimedija</h1>
+      <div id="video">
+          <!-- 
+          <video controls>
+            <source src="" type="">
+            <source src="" type="">
+            <source src="" type="">
+          </video>
+          <video src="" controls></video>
+          -->
+          <p>
+            Iframe - skirtas įkelti kitos svetainės dalį, arba visą svetainę į savo svetainę.
+          </p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/rsKeJgJNlIA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      <div id="audio">
+        <audio controls>
+          <source src="" type="audio/mp3">
+          <source src="" type="">
+           <source src="" type="">
+        </audio>
+      </div>
+      <div id="maps">
+        <div id="">JS prisijungi</div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d18720.67374448803!2d23.829560197817965!3d54.0899821636946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46e0974433ccb4df%3A0x29d6a7c5ab238ad6!2sLeipalingis%2C%20Druskinink%C5%B3%20sav.!5e0!3m2!1slt!2slt!4v1668415556419!5m2!1slt!2slt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        
+
+      </div>
+      <div id="page">
+        <iframe src="https://lrs.lt/" frameborder="0" height="300" width="500"></iframe>
+      </div>
+
+
+    </section>
+  </main>
+</body>
+</html>

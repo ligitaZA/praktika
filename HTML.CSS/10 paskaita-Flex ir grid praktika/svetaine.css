@@ -1,0 +1,558 @@
+@import url('https://necolas.github.io/nozzzrmalize.css/8.0.1/normalize.css');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Norican&family=Parisienne&family=Red+Hat+Text:wght@300;400;500;700&family=Rochester&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+html{
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'Red Hat Text';
+  height:500vh;
+  margin-left: 0;
+  margin-right: 0;
+}
+/* background */
+#headerContent {
+  height: 80vh;
+  background-image: url('https://images.pexels.com/photos/158385/lake-mcdonald-landscape-panorama-sunset-158385.jpeg?cs=srgb&dl=pexels-pixabay-158385.jpg&fm=jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1;
+  position: relative;
+}
+
+#headerContent .background {
+  background-color: rgba(155, 140, 140, 0.644);
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* header content */
+#headerContent .logo {
+  font-family: 'Allison';
+  font-weight: bold;
+  display: flex;
+  font-weight: bold;
+  font-size: 50px;
+  flex: 1;
+  cursor: pointer;
+}
+
+#headerContent .header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: small;
+  list-style-type: none;
+  color: white;
+  gap: 35px;
+  flex: 2;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 0px;
+}
+
+#headerContent .link {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+#headerContent .link:hover {
+  text-decoration: none;
+  color: rgb(179, 216, 179);
+  cursor: pointer;
+}
+
+/* header content */
+#header {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#header .firstP {
+  margin-bottom: 0;
+}
+
+#header .secondP {
+  margin-top: 0;
+  text-align: center;
+  margin-left: 300px;
+  margin-right: 300px;
+}
+
+#header h1 {
+  letter-spacing: 2px;
+  margin-top: 0;
+}
+
+#header .input {
+  border: none;
+  background-color: rgb(179, 216, 179);
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 9px;
+  cursor: pointer;
+}
+#header .input:hover {
+  border: none;
+  background-color: white;
+  color: rgb(179, 216, 179);
+}
+
+/* about us */
+#about {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#about h2 {
+  margin-bottom: 10px;
+}
+
+#about .line {
+  background-color: black;
+  width: 60px;
+  height: 3px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+
+#about .cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 100px;
+  
+}
+
+#about .card1,
+.card2,
+.card3,
+.card4 {
+  width: 250px;
+  height: 250px;
+  border: 1px grey;
+  box-shadow: 5px 5px 40px rgb(175, 175, 175);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  cursor: pointer;
+}
+
+#about i {
+  color: grey;
+}
+
+/* CONTENT */
+#offers {
+  height: 90vh;
+  background-image: url('https://insideclimatenews.org/wp-content/uploads/2021/03/wind_robert-alexander-getty-1-scaled.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  z-index: 0;
+  position: relative;
+  color: white;
+}
+#offers .background {
+  background-color: rgba(155, 140, 140, 0.644);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: repeat(5, 1fr 1fr) / repeat(10, 1fr 1fr);
+}
+#offers .content{
+  color: rgb(255, 255, 255);
+  grid-area: 2/3/9/8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#offers .input {
+  grid-area: 9/3/10/4;
+}
+#offers .input:hover{
+  background-color: white;
+  color: rgb(179, 216, 179);
+}
+#offers .input1 {
+  grid-area: 9/4/10/5;
+}
+#offers .input1:hover{
+  background-color: white;
+  color: rgb(179, 216, 179);
+  grid-area: 9/4/10/5;
+}
+#offers .input, .input1{
+  border: none;
+  background-color: rgb(179, 216, 179);
+  color: white;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 5px;
+  margin-left: 0;
+  font-size: 9px;
+  cursor: pointer;
+}
+#offers .img1{
+  background-image: url('https://kickassbaker.com/wp-content/uploads/2022/04/self-rising-flour-pancake-recipe.jpg');
+  background-size: cover;
+  background-position: center;
+  grid-area: 4/10/8/14;
+  z-index: 3;
+
+}
+#offers .img2{
+  background-image: url('https://www.modernhoney.com/wp-content/uploads/2016/10/IMG_1210edit-copycrop.jpg');
+  background-size: cover;
+  background-position: center;
+  grid-area: 2/12/6/16;
+  z-index: 1;
+
+}
+#offers .img3{
+  background-image: url('https://offloadmedia.feverup.com/secretchristchurch.com/wp-content/uploads/2021/07/20015609/herson-rodriguez-aZOqcEK2KuQ-unsplash.png');
+  background-size: cover;
+  background-position: center;
+  grid-area: 6/12/10/17;
+  z-index: 2;
+}
+/* portfolio */
+#portfolio {
+  height: 90vh;
+  margin-top: 30px;
+  text-align: center;
+}
+
+#portfolio h2 {
+  margin-bottom: 10px;
+}
+
+#portfolio .line {
+  background-color: black;
+  width: 60px;
+  height: 3px;
+  margin: auto;
+  margin-bottom: 60px;
+}
+#portfolio .navigation {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  gap: 20px;
+ 
+} 
+#portfolio a{
+text-decoration: none;
+color: black;
+}
+#portfolio a:hover{
+  color: rgb(145, 206, 145);
+}
+#portfolio .images{ 
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 50vh;
+  flex-wrap: wrap;
+  margin: 50px 150px;
+}
+#portfolio .img1{
+  background-image: url('https://storage.googleapis.com/nextivawebsites-wordpressfiles-voip/var/www/virtual/nextiva.com/voip/How-to-Get-More-Productivity-From-a-Larger-Team-scaled.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+#portfolio .img2{
+  background-image: url('https://www.wework.com/ideas/wp-content/uploads/sites/4/2021/02/Web_150DPI-20210124_WeWork_Brand-Shoot_San-Francisco_002_v1-1120x630.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+#portfolio .img3{
+  background-image: url('https://www.dgicommunications.com/wp-content/uploads/2022/08/Design_a_Flexible_Workspace.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+#portfolio .img4{
+  background-image: url('https://t4.ftcdn.net/jpg/02/62/10/95/360_F_262109594_zM5DyK8cHsQuxZ9jiu5XXSLJBjTpU0eK.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+#portfolio .img5{
+  background-image: url('https://images.unsplash.com/photo-1491555103944-7c647fd857e6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8bWFuJTIwaW4lMjBzbm93fGVufDB8fDB8fA%3D%3D&w=1000&q=80');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+#portfolio .img6{
+  background-image: url('https://wpblog.zyro.com/wp-content/uploads/2020/12/robot-reaching-for-desk-lamp.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+#portfolio .img7{
+  background-image: url('https://www.decorilla.com/online-decorating/wp-content/uploads/2015/12/Scandinavian-dining-room-design-ideas-wooden-table-wood-flooring.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+#portfolio .img8{
+  background-image: url('https://www.westend61.de/images/0001107006pw/smiling-woman-with-laptop-and-cell-phone-working-at-home-HAPF02854.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
+}
+
+/* blog */
+#blog{
+  margin-top: 100px;
+  text-align: center;
+  color: white;
+}
+#blog h2 {
+  margin-bottom: 10px;
+  padding-top: 30px;
+}
+
+#blog .line {
+  background-color: rgb(255, 255, 255);
+  width: 60px;
+  height: 3px;
+  margin: auto;
+}
+#blog .background {
+  background-color: rgb(165, 194, 165);
+  height: 100vh;
+  width: 100%;
+  z-index: -1;
+}
+#blog .content{
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10, 1fr 1fr);
+  width: 100%;
+  height: 100%;
+  gap: 20px;
+}
+#blog .content :hover{
+  background-color: rgba(0, 0, 0, 0.87);
+  cursor: pointer;
+}
+#blog .content1{
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  grid-area: 7/4/8/11;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+#blog .content2{
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  grid-area: 4/11/5/18;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+#blog .content3{
+  background-color: rgba(0, 0, 0, 0.534);
+  color: white;
+  grid-area: 7/11/8/18;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+#blog .img1{
+  background-image: url('https://www.crowdedkitchen.com/wp-content/uploads/2021/08/Stone-Fruit-Salad-12.jpg');
+  background-size: cover;
+  background-position: center;
+  grid-area: 2/4/8/11;
+  z-index: 1;
+}
+#blog .img2{
+  background-image: url('https://www.goodfreephotos.com/albums/business-and-technology/glasses-sitting-on-laptop.jpg');
+  background-size: cover;
+  background-position: bottom;
+  grid-area: 2/11/5/18;
+  z-index: 1;
+}
+#blog .img3{
+  background-image: url('https://fournews-assets-prod-s3-ew1-nmprod.s3.amazonaws.com/media/2012/04/30_planecrash_w.jpg');
+  background-size: cover;
+  background-position: center;
+  grid-area: 5/11/8/18;
+  z-index: 1;
+}
+
+/* finish */
+
+#finish .cards{
+  margin: 50px auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+#finish .card {
+  width: 200px;
+  height: 150px;
+  background-color: rgb(238, 232, 232);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+#finish .card h2 {
+  color: rgb(165, 194, 165);;
+}
+#finish .card p {
+  color: grey;
+}
+
+/* contact us */
+#contact{
+  margin-top: 50px;
+  text-align: center;
+  color: white; 
+  height: 70vh;
+  background-image: url('https://wallpaperaccess.com/full/1413601.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+  position: relative;
+}
+#contact .background{
+  background-color: rgba(44, 41, 41, 0.644);
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+#contact h2 {
+  margin-bottom: 10px;
+}
+
+#contact .line {
+  background-color: rgb(255, 255, 255);
+  width: 60px;
+  height: 3px;
+  margin: auto;
+}
+#contact .grid {
+  display: grid;
+  grid-template: repeat(10, 1fr) / repeat(10,1fr);
+  height: 100%;
+  gap: 20px;
+}
+#contact iframe {
+  grid-area: 2/3/8/6;
+}
+::placeholder{
+  background-color: rgba(148, 148, 148, 0);
+  height: 100%;
+  width: 100%;
+  border: none;
+  color: white;
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+#contact .name {
+  grid-area: 2/6/3/7;
+  background-color: rgba(148, 148, 148, 0.336);
+  border: none;
+}
+#contact .email {
+  grid-area: 2/7/3/9;
+  background-color: rgba(148, 148, 148, 0.336);
+  border: none;
+}
+#contact textarea{
+  grid-area: 3/6/7/9;
+  background-color: rgba(148, 148, 148, 0.336);
+  border: none;
+  font-family: 'Red Hat Text';
+}
+#contact .input {
+  border: none;
+  background-color: rgb(179, 216, 179);
+  color: white;
+  border-radius: 20px;
+  padding: 7px;
+  font-size: 9px;
+  grid-area: 7/6/8/7;
+  cursor: pointer;
+}
+#contact .input:hover {
+  background-color: white;
+  color: rgb(179, 216, 179);
+}
+/* footer */
+ #footer{
+  background-color: rgba(12, 13, 17, 0.849);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 50px;
+  align-items: center;
+ }
+ #footer .text{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  align-items: center;
+  gap: 7px;
+ }
+ #footer .text i {
+  font-size: 15px;
+ }
+ #footer a {
+  color: red;
+ }
+
+ #footer .icons {
+  margin-left: 100px;
+  margin-right: 100px;
+  display: flex;
+  gap: 10px;
+ }
+ #footer .fa {
+  background-color: rgb(179, 216, 179);
+  padding: 7px;
+  font-size: 12px;
+  border-radius: 50%;
+ }

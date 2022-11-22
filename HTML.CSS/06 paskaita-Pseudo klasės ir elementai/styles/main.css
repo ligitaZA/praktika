@@ -1,0 +1,70 @@
+/*div > *  -visi div vaikiniai elementai {
+}*/
+/*element.class#id*/ /*elementas, kuris turi klasę ir id*/
+
+
+p.rytoTekstas#hallo {
+  font-weight: bold;
+}
+
+div + p { /*paragrafas uz div'o*/
+  color: red;
+}
+p + p {
+  font-size: large;
+}
+.rytoTekstas + p {
+  color: blue;
+}
+
+/*h1.heading ~ * {
+  background-color: aquamarine;
+}*/
+
+[class~=heading] {
+  color: blueviolet;
+}
+/*[href]{
+  color: rgb(30, 255, 0);
+}*/
+[class^=head] {
+  color: brown;
+}
+
+a:link {
+  background-color: aquamarine;
+}
+a:visited {
+  background-color: rgb(115, 160, 199);
+}
+a:hover {
+  background-color: rgb(251, 251, 251);
+}
+a:active {
+  background-color: rgb(120, 162, 162);
+}
+li::marker {
+  color: rgb(211, 208, 202);
+}
+div > :not(div) {
+  background-color: rgb(227, 227, 226);
+}
+.selektoriuPvz :nth-child(3n+1) /*kas trecias nuo pirmo elemento*/ {
+  color: green;
+}
+.selektoriuPvz :nth-child(even) {
+  color: rgb(71, 18, 67);
+}
+li::before {
+  content: ":)";
+  font-size: 30px;
+}
+li::after {
+  content: "(:";
+  background-color: aqua;
+  font-size: 20px;
+}
+
+td:first-child {
+  color:rgb(221, 187, 120)
+}

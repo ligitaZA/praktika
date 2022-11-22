@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>8 paskaita - Animation ir Flex</title>
+  <link rel="stylesheet" href="./main1.css">
+</head>
+<body>
+  <!-- 
+    transform
+    transition
+    animation
+   -->
+    <main>
+      <section id="transform">
+        <h1>Transform</h1>
+          <ul>
+            <li>scale - keičia elmento dydį(default 1) - </li>
+            <li> scaleX(x) scaleY(y) scaleZ(z) scale(x,y) scale3d(x,y,z)</li>
+            <li>rotate - pasuka elementą (deg)</li>
+            <li>rotateX rotateY rotateZ rotate(z) rotate3d(x,y,z,angle)</li>
+            <li>translate - elemento pastūmimas</li>
+            <li>translateZ translateY traslateZ translate translate3d(x,y,z,3d</li>
+            <li>skew - tampo elementus į kampus (deg)</li>
+            <li>skewX skewY skew(x,y)</li>
+            <li>matrica - </li>
+            <li>matrix matrix3d</li>
+            <li>perspective</li>
+          </ul>
+
+          <div class="kvadratasDidelis transformation" >labas</div>
+
+      </section>
+      <section id="transition">
+        <h1>Tranzicija</h1>
+        <ul>
+          <li>transition-property - kokie stiliai keičiasi</li>
+          <li>transition-duration - per kiek laiko įvyksta pakitimas</li>
+            <li>transition-timing-function - kaip tranzicijai paskirstys turimą laiką
+            <ul>
+              <li>ease()</li> 
+              <li>linear(skirsto vienodai)</li>
+              <li>ease-in(pradžioj lėtai, poto greičiau)</li> 
+              <li>ease-out (pradzioj greita,</li>    
+              <li>poto lėtai, ease-in-out)(letai-greit-letai)</li> 
+            </ul> 
+          </li>
+          
+          <li>transition-delay - po kiek laiko pradeda vykti pakitimai</li>
+          <li>transition - visų 4 junginys</li>
+        </ul>
+        <div class="kvadratasDidelis tranzicija"></div>
+      </section>
+      <section id="animation">
+        <h1>Animation</h1>
+          <ul>
+            <li>animation-duration - animacijai skirtas laiko tarpas</li>
+            <li>animation-timing-function - kaip animacijai paskirstys turimą laiką</li>
+            <li>animation-delay - po kiek laiko prasidės animacija</li>
+            <li>animation-iteration-count - kiek sykių vyks animacija</li>
+            <li>animation-direction - į kurią pusę vyks animacija (kryptis)</li>
+            <li>animation-fill-mode - animacijos pradžios/pabaigos nustatymai</li>
+            <li>animation-play-state - ar animacija vyksta ar nevyksta (būsena)</li> 
+            <li>animation-name - animacijos pavadinimas</li>
+            <li>animation - junginys visų 8 nustatymų</li>
+          </ul>
+          <p></p>
+          <div class="kvadratasDidelis animacija"></div>
+      </section>
+      <section id="animationTask">
+        <div class="transitionButton">
+          <input type="button" value="Button">
+        </div>
+        <div class="taskContainer animation1">
+        </div>
+        <div class="taskContainer animation2"></div>
+      </section>
+      <section id="flex">
+        <h1>Display - flex</h1>
+        <ul>
+          <li>flex-direction - row | row-reverse|.... nusako kaip elementai išsidėstys</li>
+          <li>flex-wrap - no-wrap | wrap | wrap-reverse(apverstas wrap)</li>
+          <li>flex-flow - flec-direction ir  flex-wrap junginys</li>
+          <li>justify-content -  nusako kaip elementai išsidėstys elemeto viduje main ašyje</li>
+          <li>align-items  - cross axis - sulygiuoja eilutes jų konteineryje</li>
+          <li>align-content  - cross axis - lygiuoja content'ą (su justify-content)</li>
+          <li>gap, row-gap, column-gap - tarpai tarp vaikinių elementų</li>
+          <li>order - eilės tvarka (default - 0)</li> 
+          <li>flex-grow</li>
+         <li>align-self - vieną elementą nustumti</li>
+          
+        </ul>
+        <hr>
+        <div class="flexContainer">
+          <div class="kvadratas">1</div>
+          <div class="kvadratas">2</div>
+          <div class="kvadratas order1">3</div>
+          <div class="kvadratas">4</div>
+          <div class="kvadratas order1">5</div>
+          <div class="kvadratas">6</div>
+          <div class="kvadratas order2">7</div>
+          <div class="kvadratas alignSelfItems">8</div>
+          <div class="kvadratas order1">9</div>
+          <div class="kvadratas">10</div>
+          <div class="kvadratas">11</div>
+          <div class="kvadratas">12</div>
+
+
+
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

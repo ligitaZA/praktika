@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 paskaita - Box model</title>
+  <link rel="stylesheet" href="./styles/main.css">
+</head>
+
+<body>
+  <header><!-- kuriames menu -->
+    <nav>
+      <div class="logo">
+          <a href="#">
+          <img src="https://seeklogo.com/images/H/hummingbird-logo-D436A31661-seeklogo.com.png" alt="pageLogo">
+        </a>
+    </div>
+      <div class="mainMenu">
+        <ul><!-- ul>li*5>a.link -->
+          <li><a href="#boxModel" class="link">Box Model</a></li>
+          <li><a href="#selectors" class="link">Selectors</a></li>
+          <li><a href="#backgrounds" class="link">Backgrounds</a></li>
+          <li><a href="#cards" class="link">Cards</a></li>
+          <li><a href="#semantic" class="link">Semantic</a></li>
+        </ul>
+
+
+      </div>
+    </nav>
+  </header>
+<main>  <!-- 
+  box model
+  selectors
+  background
+  semantic tags
+  menu
+  page
+ -->
+<section id="boxModel"> <!-- Box model -->
+  <h1>Box model</h1>
+    <ol>
+      <li>Content - Turinys</li>
+      <li>Padding - Pamušalas</li>
+      <li>Border - Rėmelis</li>
+      <li>Margin - Paraštės, atstumas iki kitų elementų</li>
+      <li>Position - Pozicija</li>
+    </ol>
+<div class="boxModelPvz">Box modelis pavyzdys</div>
+<div><!-- Content -->
+  <h2>1. Content</h2>
+  <p>
+    Tai box modelio vidurinė dalis, kurioje atvaizduojama informacija vartotojui.
+  </p>
+</div>
+<div><!--Padding-->
+  <h2>2. Padding</h2> 
+  <p>
+    Pamušalas - pirmasis turinio sluoksnis, kuris nurodo per kokį atstumą turinys bus atitrauktas nuo rėmelio(border) ir suteikia didesnę click'inimo zoną.(kad content nebūtų suspaustas rėmelyje) <br>
+    Pamušalas yra vizualiai matomas vartotojui ir reaguoja į vartotojo interakciją.
+  </p>
+  <ul>
+    <li>padding: top/right/bottom/left;</li>
+    <li>padding: 20px(top bottom) 50px(right left)</li>
+    <li>padding: 20px(virsus) 50px(desine ir kaire) 5px(apacia);</li>
+    <li>padding:top/right bottom/left</li>
+  </ul>
+</div>
+<div><!--Border-->
+  <h2>3. Border</h2> 
+  <p>
+    Rėmelis yra antrasis turinio sluoksnis, kuris turi storį, tipą, spalvą. Ir jo pločio nustatymas nurodo kokiu atstumu bus atskirtas margin ir padding. <br>
+    Rėmelis yra vizualiai matomas vartotojui ir reaguoja į vartotojo interakcijas.
+  </p>
+  <ul>
+    <li>border: width style color;</li>
+    <li>border-width: width;</li>
+      <li>border-style: style;</li>
+      <li>border-color:color;</li>
+      <li>border-width/style/color: top/right/bottom/left;</li>
+      <li>border-top/right/bottom/left-width/style/color:...</li>
+      <li>border-radius: radius</li>
+      <li>border-(corner)-radius: radius</li>
+  </ul>
+</div>
+<div><!--Margin-->
+  <h2>4.Margin</h2> 
+  <p>
+    Paraštė yra trečiasis turinio sluoksnis, kuris nurodo per kokį atstumą nuo rėmelio bus atitraukti kiti aplinkiniai elementai.
+    <br>
+    Margin nėra vizualiai atvaizduojamas ir nereaguoja į vartotojo interakcijas.(hover uždejus pradės veikt užejus ant padding, ne margin)
+  </p>
+  <ul><!-- li{margin}*8 -->
+    <li>margin:top/right/left/bottom</li>
+    <li>margin:top/bottom right/left/<li>
+    <li>margin:top right/left bottom<li>
+    <li>margin:top/right/left/bottom<li>
+    <li>margin:top<li>
+    <li>margin:right<li>
+    <li>margin:left<li>
+    <li>margin:bottom<li>
+    </ul>
+</div>
+<div>
+</div> 
+<div><!-- Position -->
+  <h2>5. Pozicija</h2>
+  <p>
+  Nurodo kaip elementas bus pozicionuojamas puslapyje. For more info : <a href="../03 paskaita - CSS įvadas/index.html#positions" target="_blank">click me</a><!-- .. žingsniai atgal per aplankus # id selektorius nurodo kur tiksliai mum reikia nukelt-->
+  </p>
+</div>
+</div></section>
+
+<section id="selectors"> <!-- Selectors -->
+<h1>Selectors</h1>
+  <ul class="ulItemSquare">
+    <li>selector, selector - keletas selektorių</li>
+    <li> * - viską parinks.</li>
+    <li>element1/class1/id element2/class2/id2 -  parenkamas bet kur viduje esantis element2/class2/id2  parenkamas</li>
+    <li>element1/class1/id > element2/class2/id2 -  parenkamas iš karto viduje esantis element2/class2/id2  </li>
+    <li> selector:hover - Ant elemento(i kuri nurodo selektorius) užėjęs kursorius </li>
+  </ul>
+</div></section>
+
+<section id="backgrounds"><!--Backgrounds-->
+  <h1>Fonai</h1>
+<div class="fonas1"> Fonas  1</div>
+<div class="fonas2"><div class="bg_op"></div> Fonas  2</div>
+<div class="fonas3"> 
+  <img src="https://c4.wallpaperflare.com/wallpaper/776/260/904/earth-beach-sky-night-wallpaper-preview.jpg" alt="backgroundImage"> 
+  Fonas  3
+</div>
+<div class="fonas4"> Fonas  4</div>
+<div class="fonas5"> Fonas  5</div>
+<div class="fonas6"> Fonas  6</div>
+<div class="fonas7"> Fonas  7</div>
+</div></section>
+<section id="cards">
+<h1>Kortelės užduotis</h1>
+<div class="card1">
+   <img src="https://th.bing.com/th/id/R.5da6d54bc2a01ed5aea38bc180d84531?rik=6sVC2pDTaCQDVA&pid=ImgRaw&r=0" alt="Didysis Kanjonas">
+<div class="container1">
+  <h4 class="name">Didysis Kanjonas</h4>
+  <p class="about">Stačių šlaitų tarpeklis Arizonos valstijoje, JAV. Tarpeklį išgraužė Kolorado upė bei jos intakai per daugiau kaip 6 milijonus metų.</p>
+</div></div>
+</div></section>
+<br>
+<section id="semantic"> <!--Semantiniai tag'ai-->
+<h1>Semantiniai tagai</h1>
+<p>
+  Naudojami tam, kad vien perskaičius tag'o pavadinimą, būtų aiškiau kam jo viduje esanti ino naudojama.
+</p>
+<ul>
+  <li>header</li>
+  <li>nav</li>
+  <li>main</li>
+  <li>aside</li>
+  <li>section</li>
+  <li>article</li>
+  <li>footer</li>
+</ul>
+<p>
+  Header - viršutinė puslapio dalis, kurioje būna: logotipas, menu, paieškos sistema, prisijungimas/registracija, profilio info.
+</p>
+<p>Nav- Menu. Pagr. puslapio menu būna header'io viduje. Bet puslapis gali turėti pagalbinius menu(papildomus nav tag'us)</p>
+<p>
+  Main - puslapio content'o vieta. Jo viduje būna section's, article's, net ir kitų aside'ų.
+</p>
+<p>
+  Aside - šoninė sekcija esanti šalia pagrindinio turinio arba esanti pagrindinio turinio viduje.
+</p>
+<p>
+  Section/article - pagr. turinio dalyje skirsto informaciją į sekcijas/straipsnius.
+</p>
+<p>
+  Footer - apatinė puslapio dalis, kurioje būna: logotipas, copywights, data, kūrėjas/savininkas, terms and conditions, services, privacy policy, cookies, partneriai, remėjai, kontaktai....
+</p>
+<p>
+
+</p>
+</div></section>
+
+</main>
+<footer><section></section></footer>
+</body>
+</html>

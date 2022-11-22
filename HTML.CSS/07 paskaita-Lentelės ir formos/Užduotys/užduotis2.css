@@ -1,0 +1,53 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+
+body{
+  margin: 0;
+  text-align: center;
+  background-color: rgb(61, 83, 78);
+  color: beige;
+}
+span{
+  background-color: rgb(242, 0, 255);
+}
+label {
+  display: block; 
+  margin-bottom: 5px;
+}
+.inputs {
+  width: 100%;
+}
+#task2 div {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+input:read-only {
+  background-color: rgb(183, 177, 177);
+  color: black;
+}
+ input:valid,
+ textarea:valid,
+ input:in-range {
+  border: 2px solid rgb(5, 224, 5);
+}
+ input:invalid,
+ textarea:invalid,
+ input:out-of-range {
+  border: 2px solid rgb(229, 9, 9);
+}
+ input:required,
+ textarea:required {
+  border-left: 6px solid rgb(255, 0, 255);
+}
+ .submit-button {
+  background-color: rgb(60, 118, 60);
+  border: none;
+  border-radius: 1px;
+  padding: 5px;
+}
+ .submit-button:hover {
+  background-color: rgb(219, 232, 219);
+  color: black;
+}
+ input[type="checkbox"]:checked + label {
+  color: rgb(106, 106, 196);
+}

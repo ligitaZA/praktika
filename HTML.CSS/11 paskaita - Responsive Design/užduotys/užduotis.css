@@ -1,0 +1,150 @@
+@import url('https://necolas.github.io/nozzzrmalize.css/8.0.1/normalize.css');
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(218, 211, 211);
+  padding: 30px 15px;
+}
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .mainMenu>ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  box-shadow: 1px 1px 3px rgb(129, 126, 126);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.mainMenu>ul>li {
+  width: 100%;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.mainMenu .link {
+  color: rgb(96, 202, 221);
+  font-weight: 600;
+}
+
+#login {
+  box-shadow: 1px 1px 3px rgb(129, 126, 126);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#help {
+  box-shadow: 1px 1px 3px rgb(129, 126, 126);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+#content {
+  box-shadow: 1px 1px 3px rgb(129, 126, 126);
+  border-radius: 20px;
+  overflow: hidden;
+  width: 100%;
+  margin-top: 10px;
+  background-color: white;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+footer {
+  color: rgb(109, 107, 107);
+  text-align: center;
+}
+
+@media (min-width:400px) {
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  .mainMenu>ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #login,
+  #content {
+    display: block;
+    height: 100%;
+  }
+
+  #help {
+    display: none;
+  }
+
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width:1020px) {
+  .logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+  }
+
+  header .mainMenu>ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    list-style-type: none;
+    gap: 0;
+    background-color: white;
+  }
+  .mainMenu>ul>li {
+    padding: 10px;
+    width: 60px;
+  }
+  .mainMenu .link {
+    text-decoration: none;
+    color: grey;
+  }
+  main {
+    display: grid;
+    grid-template: repeat(3, 1fr) / repeat(4, 1fr);
+    gap: 10px;
+    height: 100%;
+  }
+  #login {
+    grid-area: 1/1/2/2;
+  }
+  #content {
+    grid-area: 1/2/4/5;
+  }
+  #help {
+    display: inline-block;
+    grid-area: 2/1/4/2;
+  }
+  footer {
+    margin-top: 10px;
+  }
+}

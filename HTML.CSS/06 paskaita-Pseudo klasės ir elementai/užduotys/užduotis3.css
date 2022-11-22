@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  background-color: rgb(80 85 85);
+}
+h1{
+  display: inline-block;
+  padding: 10px;
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+h1:first-child {
+  color: rgb(125, 125, 215);
+}
+h1:last-of-type {
+  color:  rgb(235, 235, 93);
+}
+section {
+  margin: 0 auto;
+  text-align: center;
+}
+img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  width: auto;
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 20px;
+}
+p {
+  color: rgb(254, 67, 67);
+}
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 40px;
+  font-size: 25px;
+  height: 400px;
+  width: 40em;
+  color: beige;
+  margin-bottom: 50px;
+  text-align: left;
+}
+thead {
+  opacity: 1;
+  border-width: 0;
+  color: beige;
+  padding: 4px;
+}
+td, tr {
+  padding: 9px;
+}
+th {
+  padding: 10px;
+}
+table {
+  overflow: hidden;
+  display:inline-block;
+}
+table *{
+  box-sizing: border-box;
+}
+
+th, td, table {
+  position: relative;
+}
+tbody >tr:nth-child(even) {
+  background-color: rgb(36 32 32 / 44%);
+}
+
+tbody >tr:nth-child(odd) {
+  background-color:rgb(184 180 180 / 33%);
+}
+span {
+  box-sizing: border-box;
+  border-radius: 10px;
+  display: inline-block;
+  background-color: rgb(87, 173, 65);
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  padding: 10px;
+}
+td:first-of-type {
+  color: red;
+}
+.span1 :nth-child(2) {
+  background-color: rgb(246, 246, 56);
+}
+.span2 :nth-child(4) {
+  background-color: rgb(246, 246, 56);
+}
+.span3 :nth-child(even) {
+  background-color: rgb(246, 246, 56);
+}
+.span3 :nth-last-of-type(1) {
+  background-color: rgb(253, 58, 58);
+}
+.span4 :nth-last-child(2) {
+  background-color: rgb(246, 246, 56);
+}
+.span5 :nth-child(2) {
+  background-color: rgb(253, 58, 58);
+}
+.span5 :nth-child(3) {
+  background-color: rgb(255, 68, 68);
+}
+td:not(td:first-of-type):hover{
+  background-color: rgba(173, 173, 231, 0.744);
+  color: rgb(74, 57, 35);
+}
+tr:hover {
+  background-color: rgb(202, 165, 148);
+  color: rgb(255, 217, 0);
+}
+tr:nth-of-type(odd):hover {
+  background-color: rgb(132, 206, 159);
+  color: rgb(36, 54, 66);
+}
+tr:nth-of-type(even):hover {
+  background-color:rgba(28, 84, 86, 0.77); 
+  color: rgb(135, 255, 191);
+}
+td:first-of-type:hover {
+  color: rgb(0, 0, 0);
+  background-color: rgb(52, 59, 72);
+}
+td:hover::after { 
+  background-color: rgba(0, 0, 0, 0.729);
+  content: '';  
+  height: 10000px;    
+  left: 0;
+  position: absolute;  
+  top: -5000px;
+  width: 100%;
+  z-index: -1;        
+}
+

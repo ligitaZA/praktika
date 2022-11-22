@@ -1,0 +1,145 @@
+
+body {
+  height: 800vh;
+}
+  h2 {
+  color: red;
+  letter-spacing: 3px;
+}
+
+.svarbusTekstas {
+  font-size: larger;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#remeliai {
+  border: 3px dashed rgb(34, 255, 0);
+}
+
+.raudonasTekstas {
+  color: red;
+}
+.kvadratas {
+  width: 150px;
+  height: 150px;
+  background-color: beige;
+  border: 2px solid black;
+  font-size: 30px;
+  text-align: center;
+  line-height: 150px;
+}
+.linijinis {
+  display: inline;
+}
+
+.blokinis {
+  display: block;
+}
+.linijinisBlokinis {
+  display: inline-block;
+}
+ 
+/*display uzduotis*/
+.LT_flag_linear_gradient {
+  background-image: linear-gradient(
+    to bottom,
+    yellow 33%,
+    green 33% 66%,
+    red 66%
+  );
+}
+.w400 {
+  width: 400px;
+}
+.h300 {
+  height: 300px;
+}
+.wrap {
+  border: 10px solid rgb(203, 203, 223);
+  background-color: rgb(54, 157, 198);
+}
+.blokin {
+  display: block;
+  width: 310px;
+  height: 60px;
+}
+.geltona {
+  background-color: yellow
+}
+.zalia1 {
+  background-color: green;
+}
+.raudona {
+  background-color: red;
+}
+.linijinisBlok {
+  display: inline-block;
+  height: 150px;
+  width: 100px;
+}
+.zalia2 {
+  background-color: rgb(35, 107, 63);
+}
+.balta {
+  background-color: white;
+}
+.linijin {
+  display: inline-block;
+  height: 150px;
+  width: 100px;
+}
+.melyna {
+  background-color: blue;
+  color: blue;
+}
+.balta2 {
+  background-color: white;
+  color: white;
+}
+.raudona1 {
+  background-color: red;
+  color: red;
+}
+
+.noTextSize {
+  font-size: 0;
+}
+.t10 {
+  top: 10px;
+}
+.r30 {
+  right: 30px;
+}
+.b50 {
+  bottom: 50px;
+}
+.l80{
+  left: 80px;
+}
+.z5 {
+  z-index: 5;
+}
+.z10{
+  z-index: 10;
+}
+
+.static {
+  position: static;
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.sticky {
+  position: sticky;
+}
+.h500 {
+  height: 800px;}
+
+

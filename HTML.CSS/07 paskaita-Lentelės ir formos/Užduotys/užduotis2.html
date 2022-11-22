@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>užduotis2</title>
+  <link rel="stylesheet" href="./užduotis2.css">
+</head>
+<body>
+  <main>
+    <div class="formContainer"></div>
+    <h1>Register to Fancy Form</h1>
+    <p>All fields are <span>required</span> unless marked as "optional"</p>
+    <section id="task2">
+      
+        <form>
+          <div class="inputs">
+              <div>
+                <label for="code">Your unique ID that you can't change</label>
+                <input type="text" name="" id="code" placeholder="YBX0123" class="input1" readonly>
+              </div>
+              <div>
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email" required/>
+              </div>
+              <div>
+                <label for="password">Password:</label>
+                <input type="password" name="passwors" id="password" required>
+              </div>
+              <div>
+                <label for="number">Age:</label>
+                <input type="number" name="number" id="number" min="18" max="65" required>
+              </div>
+              <div>
+                <label for="">Tell us a little about yourself(optional):</label>
+                <textarea name="" id=""></textarea>
+              </div>
+              <div>
+                <input id="terms" type="checkbox" name="terms" value="1" required>
+              <label for="terms">I agree with the Terms & Conditions</label>
+          </div>
+          <button class="submit-button">Register</button>
+      </div>
+        </form>
+      </div>
+    </section>
+</main>
+</body>
+</html>

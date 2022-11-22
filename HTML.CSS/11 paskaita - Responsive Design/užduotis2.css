@@ -1,0 +1,430 @@
+@import url('https://necolas.github.io/nozzzrmalize.css/8.0.1/normalize.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  height:500vh;
+}
+
+/* header */
+header{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  gap: 50px;
+  justify-content: space-between;
+}
+header .logo > img {
+  width: 70px;
+  height: 100px;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  gap: 10px;
+}
+nav div {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  font-size: 13px;
+}
+nav i {
+  background-color: rgb(171, 211, 211);
+  border-radius: 50%;
+  padding: 5px;
+  margin: 5px;
+}
+.line1 {
+  display: flex;
+  justify-items: center;
+  height: 2px;
+  margin: 10px 20px;
+  background-color: rgb(206, 205, 205);
+}
+
+/* home */
+#home {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+#home .latest {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-left: 50px;
+  margin-top: 0;
+}
+#home .latest .glyphicon {
+  background-color: rgb(171, 211, 211);
+  border-radius: 50%;
+  padding: 10px;
+}
+#home .img {
+  height: 350px;
+  width: 350px; 
+  margin: 0 auto;
+  margin-top: 10px;
+}
+#home img {
+  height: 350px;
+}
+#home .home {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0;
+}
+#home :nth-child(2) {
+  padding: 30px;
+}
+#home .red {
+  color: red;
+}
+#home .blue {
+  color: #337ab7;
+}
+
+/* books */
+ #books {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+ }
+#books .card1, .card2, .card3 {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+ #books .flex {
+  display: flex;
+  flex-direction: column;
+ }
+ #books h1 {
+  font-size: 30px;
+ }
+#books input {
+  background-color: orangered;
+  color: azure;
+  border-radius: 5px;
+  border: none;
+  width: 50px;
+  padding: 2px;
+}
+#books span {
+  color: red
+}
+ /* blog */
+ #blog {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  padding: 30px;
+  font-size: 20px;
+ }
+.blog a {
+  color: #337ab7;
+  font-size: 15px;
+}
+/* about */
+#about {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin: 30px;
+  font-size: 15px;
+
+ }
+#about form {
+  display: flex;
+  flex-direction: column;
+}
+#about input {
+border: 1px solid rgb(196, 192, 192);  
+}
+
+/* support */
+
+#support {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 15px;
+ }
+#support .card1, .card2, .card3 {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+ #support .ux, .web, .ampersand {
+  display: flex;
+  flex-direction: column;
+ }
+ #support h1 {
+  font-size: 20px;
+ }
+ #support p:nth-child(1){
+  text-align: center;
+ }
+ #support a{
+  display: flex;
+  justify-content: center;
+ }
+@media (min-width:500px){
+  header{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    gap: 50px;
+    justify-content: space-between;
+  }
+  nav div {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .line1 {
+    display: flex;
+    justify-items: center;
+  }
+  
+  #home {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+  }
+  #home .latest {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    height: 20px;
+  }
+  #home .home {
+    display: flex;
+    flex-direction: column;
+  }
+  #home :nth-child(2) {
+    padding: 30px;
+  }
+
+   #books {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+   }
+  #books .card1, .card2, .card3 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+   #books .flex {
+    display: flex;
+    flex-direction: column;
+   }
+   #blog {
+    display: flex;
+    flex-direction: column;
+   }
+  .blog a {
+    color: #337ab7;
+    font-size: 15px;
+  }
+  #about {
+    display: flex;
+    flex-direction: column;
+   }
+  #about form {
+    display: flex;
+    flex-direction: column;
+  }
+  #about input {
+  border: 1px solid rgb(196, 192, 192);  
+  }
+  #support {
+    display: flex;
+    flex-direction: column;
+   }
+  #support .card1, .card2, .card3 {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center;
+  }
+   #support .ux, .web, .ampersand {
+    display: flex;
+    flex-direction: column;
+   }
+   #support a{
+    display: flex;
+    justify-content: center;
+   }
+}
+@media(min-width:678px) {
+  #header {
+    align-items: center;
+  }
+  #home .home {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-start;
+    align-content: flex-end;
+    padding: 30px;
+  }
+ .cards {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  padding: 20px;
+  justify-content: space-evenly;
+ } 
+ #books h1 {
+  font-size: 20px;
+ }
+ .cards img{
+  height: 150px;
+  width: 100px;
+  margin: 5px;
+ }
+ #books input {
+  font-size: 15px;
+}
+.mediaQuery {
+  display: flex;
+  flex-direction: row;
+}
+.mediaQuery p {
+  font-size: 15px;
+}
+.mediaQuery h2, h3 {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+.blog a {
+  color: #337ab7;
+  font-size: 10px;
+}
+#blog, #about, #support{
+  margin:30px;
+  padding: 0;
+  width: 100%;
+}
+.mediaQuery img {
+  width: 50px;
+  height: 50px;
+}
+.ux .web .ampersand {
+  align-items: flex-start;
+}
+/* about */
+
+#support {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 20px;
+ }
+#support .card1, .card2, .card3 {
+  gap: 0;
+}
+ #support p:nth-child(1){
+  text-align: center;
+ }
+.mediaQuery a{
+  font-size: 15px;
+  text-align: center;
+ }
+ .material-icons {
+  font-size: 15px;
+ }
+}
+/* @media (min-width:1020px){
+
+ .cards {
+  display: flex;
+  flex-direction: row;
+  font-size: 15px;
+  padding: 20px;
+  justify-content: space-evenly;
+ } 
+ #books h1 {
+  font-size: 20px;
+ }
+ .cards img{
+  height: 150px;
+  width: 100px;
+  margin: 5px;
+ }
+ #books input {
+  font-size: 15px;
+}
+.mediaQuery {
+  display: flex;
+  flex-direction: row;
+}
+.mediaQuery p {
+  font-size: 15px;
+}
+.mediaQuery h2, h3 {
+  font-size: 15px;
+  padding: 0;
+  margin: 0;
+}
+.blog a {
+  color: #337ab7;
+  font-size: 10px;
+}
+#blog, #about, #support{
+  margin:30px;
+  padding: 0;
+  width: 100%;
+}
+.mediaQuery img {
+  width: 50px;
+  height: 50px;
+}
+.ux .web .ampersand {
+  align-items: flex-start;
+}
+/* about */
+
+/* #support {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  font-size: 20px;
+ }
+#support .card1, .card2, .card3 {
+  gap: 0;
+}
+ #support p:nth-child(1){
+  text-align: center;
+ }
+.mediaQuery a{
+  font-size: 15px;
+  text-align: center;
+ }
+ .material-icons {
+  font-size: 15px;
+ }
+}
+} */ 

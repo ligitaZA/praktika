@@ -1,0 +1,47 @@
+@import url('https://necolas.github.io/normalize.css/8.0.1/normalize.css');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7//css/bootstrap.min.css');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap');
+body {
+  font-family: 'Montserrat';
+  font-weight: 400;
+  font-style: italic;
+}
+#paveldejimas > ul {
+  color: red;
+  font-size: 20px;
+
+  margin: left;
+  border: 3px solid black;
+  list-style-type:  square; /* ant li neuzsidejo stilius, dėl prioritetų*/ 
+}
+
+#priorities p { /*balas 101*/
+  color: red;
+}
+main section p { /*balas 3*/
+  color: blue;
+}
+.blueText {
+  color: blue;
+}
+#priorities {
+  text-decoration: none;
+  color: orange;
+}
+#priorities a {
+  text-decoration: none;
+}
+.veryImportant {
+  color: red;
+  font-size: larger;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+/*p {
+  color: blueviolet !important; 
+}
+p {
+  color: blue !important;
+}*/

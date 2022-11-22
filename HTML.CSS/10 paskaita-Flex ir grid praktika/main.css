@@ -1,0 +1,767 @@
+/* flex */
+.flex {
+  display: flex;
+}
+.box {
+  flex-direction: column;
+}
+#task1 > div.flex {
+  width: 600px;
+  height: 200px;
+  gap: 2px;
+}
+#task1 .box {
+  background-color: rgb(102, 102, 189);
+}
+#task1 > .flex div {
+  flex: 1;
+}
+/* grid */
+#task1 .grid {
+  display: grid;
+  grid-template: 1fr 1fr / 2fr 1fr 1fr;
+  gap: 2px;
+  width: 600px;
+  height: 200px;
+}
+#task1 :nth-child(1){
+  grid-area: 1 / 1 / 3 / 2;
+}
+#task1 .grid :nth-child(2){
+  grid-area: 1 / 2 / 2 / 4; 
+}
+#task1 .grid :nth-child(3){
+  grid-area: 2 / 2;
+}
+#task1 .grid :nth-child(4) {
+  grid-area: 2/3;
+}
+
+#task1 .grid :not([class]){
+  background-color: aqua;
+}
+/* task 2 */
+#task2{
+  width: 900px;
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+#task2 > div {
+  height: 200px;
+  width: 200px;
+  background-color: aqua;
+}
+#task2 .box1 {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  gap: 2px;
+}
+#task2 .box1 > div {
+  background-color: bisque;
+}
+#task2 .box1 :nth-child(2){
+  grid-area: 1 / 2 / 2 / 5;
+}
+#task2 .box1 :nth-child(3){
+  grid-area: 2 / 1 / 3 / 4;
+}
+#task2 .box1 :nth-child(6){
+  grid-area: 3 / 2 / 4 / 5;
+}
+
+
+#task2 .box2 {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr;
+  gap: 2px;
+}
+#task2 .box2 > div {
+  background-color: bisque;
+}
+#task2 .box2 :nth-child(2){
+  grid-area: 1 / 2 / 4 / 3;
+}
+#task2 .box2 :nth-child(3){
+  grid-area: 4 / 2 / 4 / 3;
+}
+#task2 .box2 :nth-child(5){
+  grid-area: 2 / 1 / 5 / 2;
+}
+#task2 .box2 :nth-child(6){
+  grid-area: 2 / 3 / 5 / 4;
+}
+
+
+#task2 .box3 {
+  display: grid;
+  grid-template: 1fr 1fr 1fr 1fr/ 1fr 1fr 1fr 1fr;
+  gap: 2px;
+}
+#task2 .box3 > div {
+  background-color: bisque;
+}
+#task2 .box3 :nth-child(1){
+  grid-area: 1 / 1 / 4 / 4;
+}
+
+
+#task2 .box4 {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+  gap: 2px;
+}
+#task2 .box4 > div {
+  background-color: bisque;
+}
+#task2 .box4 :nth-child(1){
+  grid-area: 1 / 1 / 2 / 3;
+}
+#task2 .box4 :nth-child(3) {
+  grid-area: 1/4/2/6;
+}
+#task2 .box4 :nth-child(6){
+  grid-area: 2/2/4/5;
+}
+#task2 .box4 :nth-child(9){
+  grid-area: 4/1/5/3;
+}
+
+#task2 .box4 :nth-child(10){
+  grid-area: 4/3/5/4;
+}
+#task2 .box4 :nth-child(11){
+  grid-area: 4/4/5/6;
+}
+
+
+#task2 .box5 {
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+  gap: 2px;
+}
+#task2 .box5 > div {
+  background-color: bisque;
+}
+#task2 .box5 :nth-child(1){
+  grid-area: 1 / 1 / 3 / 3;
+}
+#task2 .box5 :nth-child(2){
+  grid-area: 1 / 3 / 3 / 7;
+}
+#task2 .box5 :nth-child(3){
+  grid-area: 3 / 1 / 5 / 3;
+}
+#task2 .box5 :nth-child(6){
+  grid-area: 3 / 5 / 5 / 7;
+}
+#task2 .box5 :nth-child(9){
+  grid-area: 5 / 1 / 7 / 5;
+}
+#task2 .box5 :nth-child(10){
+  grid-area: 5 / 5 / 7 / 7;
+}
+
+
+#task2 .box6 {
+  display: grid;
+  grid-template: repeat(8, 1fr) / repeat(8, 1fr);
+  gap: 2px;
+}
+#task2 .box6 > div {
+  background-color: bisque;
+}
+#task2 .box6 :nth-child(1){
+  grid-area: 1/1/5/9;
+}
+#task2 .box6 :nth-child(2){
+  grid-area: 5/1/7/2;
+}
+#task2 .box6 :nth-child(3){
+  grid-area: 5/2/7/3;
+}
+#task2 .box6 :nth-child(4){
+  grid-area: 7/1/9/3;
+}
+#task2 .box6 :nth-child(5){
+  grid-area: 5/3/9/6;
+}
+#task2 .box6 :nth-child(6){
+  grid-area: 5/6/9/9;
+}
+
+
+#task2 .box7 {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+  gap: 2px;
+}
+#task2 .box7 > div {
+  background-color: bisque;
+}
+#task2 .box7 :nth-child(1){
+  grid-area: 1/1/3/4;
+}
+#task2 .box7 :nth-child(6){
+  grid-area: 3/2/5/5;
+}
+
+#task2 .box8 {
+  display: grid;
+  grid-template: repeat(7, 1fr) / repeat(6, 1fr);
+  gap: 2px;
+}
+#task2 .box8 > div {
+  background-color: bisque;
+}
+#task2 .box8 :nth-child(1){
+  grid-area: 1/1/4/7;
+}
+#task2 .box8 :nth-child(2){
+  grid-area: 4/1/6/3;
+}
+#task2 .box8 :nth-child(3){
+  grid-area: 6/1/8/3;
+}
+#task2 .box8 :nth-child(4){
+  grid-area: 4/3/8/5;
+}
+#task2 .box8 :nth-child(5){
+  grid-area: 4/5/6/7;
+}
+#task2 .box8 :nth-child(6){
+  grid-area: 6/5/8/7;
+}
+
+
+#task2 .box9 {
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(5, 1fr);
+  gap: 2px;
+}
+#task2 .box9 > div {
+  background-color: bisque;
+}
+#task2 .box9 :nth-child(1){
+  grid-area: 1/1/4/3; 
+}
+#task2 .box9 :nth-child(5){
+  grid-area: 2/3/5/6; 
+}
+#task2 .box9 :nth-child(6){
+  grid-area: 5/1/7/3; 
+}
+#task2 .box9 :nth-child(7){
+  grid-area: 5/3/7/5; 
+}
+
+#task2 .box10 {
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(6, 1fr);
+  gap: 2px;
+}
+#task2 .box10 > div {
+  background-color: bisque;
+}
+#task2 .box10 :nth-child(1){
+  grid-area: 1/1/3/4;
+}
+#task2 .box10 :nth-child(4){
+  grid-area: 1/5/3/7;
+}
+#task2 .box10 :nth-child(5){
+  grid-area: 3/1/5/3;
+}
+#task2 .box10 :nth-child(8){
+  grid-area: 3/4/5/7;
+}
+#task2 .box10 :nth-child(9){
+  grid-area: 5/1/7/4;
+}
+#task2 .box10 :nth-child(12){
+  grid-area: 5/5/7/7;
+}
+
+#task2 .box11 {
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(5, 1fr);
+  gap: 2px;
+}
+#task2 .box11 > div {
+  background-color: bisque;
+}
+#task2 .box11 :nth-child(1){
+  grid-area: 1/1/6/6;
+}
+#task2 .box12 {
+  display: flex;
+  gap: 5px;
+  flex-direction: row;
+}
+#task2 .inBox{
+  background-color: bisque;
+  height: 100%;
+  width: 100%;
+}
+#task2 .box13 {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+#task2 .box14 {
+  display: grid;
+  grid-template: repeat(6, 1fr) / repeat(4, 1fr);
+  gap: 2px;
+}
+#task2 .box14 > div {
+  background-color: bisque;
+}
+#task2 .box14 :nth-child(3){
+  grid-area: 1/3/4/4;
+}
+#task2 .box14 :nth-child(5){
+  grid-area: 2/1/4/3;
+}
+#task2 .box14 :nth-child(6){
+  grid-area: 4/1/7/2;
+}
+#task2 .box14 :nth-child(10){
+  grid-area: 4/3/7/5;
+}
+
+/* task3 */
+#task3{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  height: 500px;
+  justify-content: space-evenly;
+}
+#task3 > div {
+  width: 500px;
+  background-color: rgb(255, 255, 255);
+  color: beige;
+}
+#task3 .header {
+  background-color: navy;
+}
+#task3 .box1 {
+  margin-top: 50px;
+  display: grid;
+  grid-template: repeat(7, 1fr) / repeat(8, 1fr);
+}
+#task3 .box1 .header{
+  text-align: center;
+  grid-area: 1/1/2/4;
+}
+#task3 .box1 .menu{
+  text-align: center;
+  grid-area: 1/4/2/9;
+}
+#task3 .menu {
+  background-color: rgb(202, 71, 71);
+}
+#task3 .box1 .hero{
+  text-align: center;
+  grid-area: 2/1/5/9;
+}
+#task3 .hero {
+  background-color: rgb(70, 137, 214);
+  width: 100%;
+  height: 100%;
+}
+#task3 .box1 .main{
+  text-align: center;
+  grid-area: 5/1/7/5;
+}
+#task3 .main {
+  background-color: rgb(41, 63, 88);
+}
+#task3 .box1 .image{
+  text-align: center;
+  grid-area: 5/7/6/9;
+}
+#task3 .image {
+  background-color: rgb(123, 165, 214);
+  color: black;
+}
+#task3 .box1 .extra{
+  text-align: center;
+  grid-area: 6/7/7/9;
+}
+#task3 .extra {
+  background-color: rgb(107, 145, 102);
+  color: black;
+}
+#task3 .box1 .banner{
+  text-align: center;
+  grid-area: 7/1/9/9;
+}
+#task3 .banner {
+  background-color: rgb(247, 209, 152);
+  color: black;
+}
+
+/* task4 */
+#task4{
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  height: 500px;
+  justify-content: space-evenly;
+}
+#task4 > div {
+  width: 500px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 238, 255);
+  border: 1px solid rgb(196, 1, 255);
+  border-radius: 5px;
+  gap: 5px;
+}
+#task4 .box2 {
+  margin-top: 50px;
+  display: grid;
+  grid-template: repeat(14, 1fr) / repeat(15, 1fr);
+  text-align: center;
+}
+#task4 .box2 > div {
+  border: 1px solid rgb(196, 1, 255);
+  border-radius: 5px;
+}
+#task4 .box2 :nth-child(1){
+  grid-area: 1/1/2/4;
+}
+#task4 .box2 :nth-child(2){
+  grid-area: 1/4/2/8;
+}
+#task4 .box2 :nth-child(3){
+  grid-area: 1/8/2/12;
+}
+#task4 .box2 :nth-child(4){
+  grid-area: 1/12/2/16;
+}
+#task4 .box2 :nth-child(5){
+  grid-area: 2/1/5/12;
+}
+#task4 .box2 :nth-child(6){
+  grid-area: 5/1/8/8;
+}
+#task4 .box2 :nth-child(7){
+  grid-area: 5/8/12/12;
+}
+#task4 .box2 :nth-child(8){
+  grid-area: 2/12/12/16;
+}
+#task4 .box2 :nth-child(9){
+  grid-area: 8/1/15/5;
+}
+#task4 .box2 :nth-child(10){
+  grid-area: 12/5/15/16;
+}
+
+/* task5 */
+
+#task5{
+  display: flex;
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: space-evenly;
+}
+#task5 .box3 {
+  display: grid;
+  grid-template: repeat(70, 1fr) / repeat(60, 1fr);
+}
+
+#task5 .box3 .green{
+  background-color: rgb(103, 131, 103);
+  border: 2px solid black; 
+  grid-area: 1/1/65/40;
+}
+#task5 .box3 .blue {
+  background-color: rgb(122, 122, 255);
+  grid-area: 1/3/5/37;
+}
+#task5 .box3 .blueContainer1 {
+  border: 2px solid black;
+  grid-area: 1/3/5/12;
+}
+#task5 .box3 .blueContainer2 {
+  border: 2px solid black;
+  grid-area: 1/37/5/20;
+}
+#task5 .box3 .yellow {
+  background-color: rgb(202, 180, 54);
+  grid-area: 5/3/20/37;
+}
+#task5 .pavadinimas {
+  border: 2px solid black;
+  grid-area: 7/5/10/14;
+}
+#task5 .about {
+  border: 2px solid black;
+  grid-area: 12/10/18/19;
+  text-align: center;
+  font-size: 15px;
+}
+#task5 .foto {
+  border: 2px solid black;
+  grid-area: 7/20/19/34;
+}
+#task5 .lightBlue {
+  background-color: rgb(177, 200, 231);
+  grid-area: 20/3/40/37;
+}
+  #task5 .pavadinimas2{
+    border: 2px solid black;
+    grid-area: 22/10/25/30;
+  }
+  #task5 .straipsnis1{
+    border: 2px solid black;;
+    grid-area: 26/7/31/21;
+  }
+  #task5 .straipsnis2{
+    border: 2px solid black;;
+    grid-area: 38/7/32/21;
+  }
+  #task5 .straipsnis3{
+    border: 2px solid black;;
+    grid-area: 26/22/38/35;
+  }
+#task5 .navy {
+  background-color: rgb(57, 57, 146);
+  grid-area: 40/3/60/37;
+}
+#task5 .kontaktai {
+  border: 2px solid black;
+  grid-area: 41/10/44/29;
+}
+#task5 .kontaktas1 {
+  border: 2px solid black;
+  grid-area: 46/27/57/35;
+}
+#task5 .kontaktas2 {
+  border: 2px solid black;
+  grid-area: 46/16/57/24;
+}
+#task5 .kontaktas3 {
+  border: 2px solid black;
+  grid-area: 46/13/57/5;
+}
+#task5 .lightest {
+  background-color: rgb(211, 233, 233);
+  grid-area: 60/3/65/37;
+}
+#task5 .last {
+  border: 2px solid black;
+  grid-area: 61/8/64/32;
+}
+#task5 .sideBlue {
+  background-color: rgb(122, 122, 255);
+  grid-area: 2/41/3/46;
+}
+#task5 .sideMenu {
+  grid-area: 2/46/3/50;
+}
+#task5 .sideYellow {
+  background-color: rgb(202, 180, 54);
+  grid-area: 4/41/4/46;
+}
+#task5 .sideHero {
+  grid-area: 5/46/4/50
+}
+
+#task5 .sideLightBlue{
+ background-color: rgb(177, 200, 231);
+ grid-area: 6/41/6/46;
+}
+ #task5 .sideAbout {
+  grid-area: 6/46/6/50;
+}
+
+#task5 .sideNavy{
+ background-color: rgb(61, 52, 148);
+ grid-area: 8/41/8/46;
+}
+#task5 .sideContact {
+  grid-area: 8/46/8/50;
+}
+#task5 .sideLightest{
+ background-color: rgb(211, 233, 233);
+ grid-area: 10/41/10/46;
+}
+#task5 .sideFooter {
+  grid-area: 10/46/10/50;
+}
+#task5 .sideGreen{
+  background-color: rgb(103, 131, 103);
+  grid-area: 12/41/12/46;
+ }
+ #task5 .sideAtitraukimas {
+   grid-area: 12/46/12/50;
+ }
+
+ /* task6 */
+
+ #task6 .main{
+  background-color: rgb(49, 46, 95);
+  width: 800px;
+  height: 550px;
+  display: grid;
+  grid-template: repeat(20, 1fr) / repeat(10, 1fr);
+  margin-bottom: 50px;
+ }
+ #task6 .whiteBox{
+  background-color: white;
+  grid-area: 4/2/16/10;
+ }
+ #task6 .number1 {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+ }
+
+ #task6 > div .flex{
+  width: 50px;
+  height: 30px;
+  z-index: 10;
+  background-color: rgb(238, 157, 157);
+ }
+ #task6 .flex{
+  justify-content: space-evenly;
+  align-items: center;
+  color: beige;
+  font-weight: bold;
+ }
+
+ #task6 .number2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+ }
+ #task6 > div .flex2{
+  width: 110px;
+  height: 30px;
+  z-index: 10;
+  background-color: rgb(238, 157, 157);
+ }
+ #task6 .flex2{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: beige;
+  font-weight: bold;
+ }
+
+ #task6 .number3 {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+ }
+ #task6 > div .flex3{
+  width: 170px;
+  height: 30px;
+  z-index: 10;
+  background-color: rgb(238, 157, 157);
+ }
+ #task6 .flex3{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: beige;
+  font-weight: bold;
+ }
+ #task6 .number4 {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+ }
+ #task6 > div .flex4{
+  width: 230px;
+  height: 30px;
+  z-index: 10;
+  background-color: rgb(238, 157, 157);
+ }
+ #task6 .flex4{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: beige;
+  font-weight: bold;
+ }
+ #task6 .number5 {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+ }
+ #task6 > div .flex5{
+  width: 350px;
+  height: 30px;
+  z-index: 10;
+  background-color: rgb(238, 157, 157);
+ }
+ #task6 .flex5{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: beige;
+  font-weight: bold;
+ }
+ #task6 .number6 {
+  margin-left: 10px;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 20px;
+  justify-content: center;
+ }
+ #task6 > div .flex6{
+  width: 500px;
+  height: 30px;
+  z-index: 10;
+  background-color: rgb(238, 157, 157);
+ }
+ #task6 > div .flex7{
+  width: 200px;
+  height: 30px;
+  z-index: 10;
+  background-color: rgb(238, 157, 157);
+  color: beige;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+ }
+ #task6 .flex6{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: beige;
+  font-weight: bold;
+ }
+

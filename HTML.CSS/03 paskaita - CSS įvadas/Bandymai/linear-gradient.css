@@ -1,0 +1,18 @@
+.wrap {
+  background-color: rgb(97, 189, 189);
+  border: 2px dotted navy;
+}
+.w400 {
+  width: 400px;
+}
+.h300 {
+  height: 300px;
+}
+.LT_flag_linear_gradient{
+  background-image: linear-gradient(
+    to bottom,
+    yellow 33%,
+    green 33% 66%,
+    red 66%
+  );
+}

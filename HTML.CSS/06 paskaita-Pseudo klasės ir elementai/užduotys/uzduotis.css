@@ -1,0 +1,63 @@
+
+html {
+  scroll-behavior: smooth;
+}
+[id]{
+  scroll-margin-top: 80px;
+}
+header {
+  height: 50px;
+  margin-top: 50px;
+  z-index: 10;
+  position: sticky;
+  text-align: center;
+}
+
+.logo img {
+  height: 63px;
+  width: auto;
+  margin-bottom: 20px;
+}
+.mainMenu {
+  background-color: green;
+  width: 100%;
+  text-align: center;
+  height: 77px;
+}
+.mainMenu a {
+padding: 0;
+list-style-type: none;
+display: inline-block;
+color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: rgb(39, 33, 33);
+  font-size: 25px;
+  line-height: 80px;
+  margin-right: 50px;
+  z-index: 1;
+}
+div > img {
+  width: 70%;
+  margin-top: 150px;
+  margin-left: 274px;
+}
+.padding {
+  padding: 20px;
+}
+div > h1 {
+  background-color: green;
+  width: 70%;
+  height: 45px;
+  margin-left: 275px;
+  color: white;
+  padding-top: 15px;
+  font-weight: bold;
+}
+div > p {
+  padding-left: 276px;
+  padding-right: 400px;
+  font-size: larger;
+}

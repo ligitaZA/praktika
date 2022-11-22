@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3 paskaita - CSS Įvadas</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/919/919826.png">
+  <link rel="stylesheet" href="main.css">
+
+  <!-- Vidinis CSS rašymo būdas -->
+  <style>
+    p {
+      color: rgb(97, 77, 41);
+      background-color: rgb(185, 176, 176);
+    }
+
+  </style>
+</head>
+<body>
+    <div><!-- CSS rašymo būdai-->
+      <h1>CSS rašymo būdai</h1> 
+      <h4>Inline - Linijinis</h2> <!--Inline būdas, kuris yra prioritetinis, tai pritaikant jį, kiti būdai nesuteiks stiliaus-->
+      <p style="color:rgb(58, 91, 92)">
+       <span style="background-color:rgb(201, 204, 250)"> 
+        Linijinis stilius yra kai elementui, kurį stilizuojame suteikiame style atributą ir jo viduje aprašome stilius, neturi perpanaudojimo galimybės ir yra skirtas tik testavimui.
+      </span> 
+      </p>
+      <p style="background-color:bisque">
+        Linijinis stilius yra kai elementui, kurį stilizuojame suteikiame style atributą ir jo viduje aprašome stilius.
+      </p>
+      <h2>Internal - Vidinis</h2>
+      <p>
+        Vidinis stilius yra, kai HTLM failo viduje, head ar body tag'o dalyje pasirašome style tag'ą ir tame style tag'e rašome CSS kodą, siūloma naudoti tik testavimui (dažniausiai tam ir naudojamas). Turi šiek tiek perpanaudojimo galimybių, nes turi selektorius.
+      </p>
+      <h2>External - Išorinis</h2> <!--External-->
+      <p>
+        Išorinis stilius - rašomas atskirame CSS faile ir yra prijungiamas prie HTML failo naudojant link tag'ą. Turi visas reikalingas/norimas perpanaudojimo galimybes, yra plačiausiai naudojamas ir galutiniam projekto variante, turėtų likti tik šis rašymo būdas.
+      </p>
+
+    </div>
+    <div><!--Basic Selectors-->
+    <h1>Basic Selectors</h1>
+    <h2>Elemento / Tag'o selektorius</h2>
+        <p>
+          Selektinami/pasirenkami visi tag'ai pagal nurodytą elementą.<br>
+          <span class="svarbusTekstas">  
+            h2 -> parinks visus h2 elementus esančius HTML'e.
+          </span>
+      </p>
+      <h2>Class</h2>
+        <p>
+          <span class='svarbusTekstas raudonasTekstas'>
+            Klasė sukuriama kokiu tik nori logišku ir trumpu pavadinimu. HTML'e norint priskirti klasę elementui, suteikiame jam atributą class. CSS'e tam, kad nurodytume jog kuriame klasę pavadinimo pradžioje parašome tašką. <br>
+            Pvz.: CSS'e .klasesVardas; o HTML'e: &lt;p class="klasesVardas"&gt; 
+            Klasės turi daug su daug santykį. Vienas elementas gali turėti daugelį klasių ir viena klasė gali būti priskirta daugeliui elementų.
+            <br>
+          </span>
+        </p>
+      <h2>ID</h2>
+        <p id="remeliai">
+            Sukuriame kokiu tik norime logišku ir trumpu pavadinimu. CSS'e tam, kad nurodytume, jog kuriame ID - sugalvoto pavadinimo pradžioje parašome groteles. HTML'e norint priskirti ID elementui suteikiame atributą "id" ir jam priskiriame sugalvotą ID pavadinimą be grotelių.
+            Pvz.: CSS'e #idPavadinimas; HTML'e: &lt;p id="idPavadinimas"&gt;<br>
+            ID turi vienas su vienu santykį. Vienas elementas gali turėti tik vieną ID ir vienas ID turėtų būti priskirtas tik vienam elementui. 
+            ID naudojamas formoms, stilizacijai ir navigacijai.
+      </p>
+
+
+  
+  
+  
+  
+    </div>
+    <div id="displays"><!-- Displays -->
+      <h1>Displays</h1>
+        <h2>Inline - Linijinis</h2>
+          <p>
+            Inline display užima tik tiek vietos kiek reikalauja jų viduje esantis turinys(content). Jie sudedami/sustoja vienas šalia kito, bet jie nepriima pločio ir aukščio nustatymų.
+
+          </p>
+          <div> <!-- div.kvadratas.linijinis*3-->
+            <div class="kvadratas linijinis">1</div>
+            <div class="kvadratas linijinis">2</div>
+            <div class="kvadratas linijinis">3</div>
+          </div>
+          <h2>Block - Blokinis</h2>
+          <p>
+            Blokiniai elementai užima visą eilutę arba nurodytą dydį. Bet jie neįsileidžia kitų elementų i tą pačią eilutę net jei jų dydžio nustatymai visos eilutės neužima(yra išimčių)
+          </p>
+          <div>
+            <div class="kvadratas blokinis">1</div>
+            <div class="kvadratas blokinis">2</div>
+            <div class="kvadratas blokinis">3</div>
+          </div>
+          <div>
+            <h2>Inline-Block - Linijinis-Blokinis</h2>
+            <p>
+              Linijiniai-Blokiniai elementai užima tiek vietos kiek reikalauja kontentas jeigu neturi dydžio nustatymų. Turint dydžio nustatymus būna tokio dydžio kokio nustatyta. Gali išsidėstyti vienoje eilutėje.
+
+            </p>
+            <div>
+              <div class="kvadratas linijinisBlokinis">1</div>
+              <div class="kvadratas linijinisBlokinis">2</div>
+              <div class="kvadratas linijinisBlokinis">3</div>
+            </div>
+          </div>
+
+
+    </div>
+<!-- display užduotis -->
+<div id="displayTask" class="bg">
+          <div class="wrap">
+          <h4>Lietuva</h4>
+            <div class="lietuvosVeliava noTextSize">
+              <div class="blokin geltona "></div>
+              <div class="blokin zalia1" ></div>
+              <div class="blokin raudona"></div>
+            </div>
+          </div>
+        
+          <div class="wrap">
+            <h4>Lietuva</h4>
+              <div class="wrap w400 h300 LT_flag_linear_gradient"></div>
+          </div>
+
+          <div class="wrap">
+            <h4>Italija</h4>
+              <div class="italijosVeliava noTextSize">
+                <div class="linijinisBlok zalia2"></div>
+                <div class="linijinisBlok balta"></div>
+                <div class="linijinisBlok raudona"></div>
+            </div>
+          </div>
+
+          <div class="wrap">
+            <h4>Prancūzija</h4>
+              <div class="prancuzijosVeliava noTextSize">
+                <div><div class="linijin melyna">melyna</div>
+                <div class="linijin balta2">balta</div>
+                <div class="linijin raudona1">raudona</div>
+              </div>
+          </div>
+</div>
+
+<div id="colors"> <!--Color's-->
+      <h1>Colors</h1>
+      <h2>Names</h2>
+        <p>
+          Spalvos gali turėti vardus. Vardinių spalvų yra ~140. Norint elementui priskirti spalvos nustatymą, priskiri tos spalvos vardą.<br>
+          Pvz.: blue; green; lightsalmon; darkred; ...
+        </p>
+      <h2>RGB</h2>
+      <p>
+        RED BLUE GREEN. Kiekvienos iš šių 3 spalvų kiekio galima įdėti nuo 0 iki 255 ir taip išgauti bet  kurią spalva.
+        Pvz.: rgb(0, 0, 0) - juoda. rgb(255, 0, 0) - raudona. <br>
+        RGBA - red green blue alpha. Alpha nurodo spalvos matomumą ir jis gali būti nuo 0 iki 1 tūkstantąja paklaida. <br>
+        Pvz.: rgba(0, 255, 0, 0) - nematoma(žalia); rgba(0, 255, 0, 1) - pilnai matoma (žalia);
+      </p>
+      <h2>Hex</h2>
+      <p>
+        Hex - hexadecimal - šešioliktainis.
+        Kiekvienos iš spalvos (RGB) galima nurodyti nuo 00 iki ff
+        ir šitaip išgauti bet kurią spalvą. Skaičiavimas šešioliktainėje sistmoje: 00 01 02 03 04 05 06 07 08 09 0a 0b 0c 0d 0e 0f 10 11 12 13 14 15 16 17 18 19 1a 1b 1c 1d .... a1 ... 
+        0-9 a-f <br>
+        Pvz.: #000000 - juoda; #ff0000 - raudona; #00ff00 - žalia; <br>
+        Trumpiniai: #000 - juoda; #f00 - raudona; #00f - mėlyna <br>
+        Spalvos matomumas su HEX: gale prisideda dar 2 šešioliktainiai simboliai, kur 00 permatomas, ff pilnai matomas. <br>
+        Pvz.: #0f00 (#00ff0000)- pilnai permatoma žalia; #0f0f (#00ff0000) - pilnai matoma žalia. ...
+      </p>
+</div>
+<div id="positions"><!--Position's-->
+  <h1>Positions</h1>
+  <h2>Static</h2>
+    <p>
+      Statinė pozicija nieko nedaro. Nei pakeičia elemeneto poziciją, nei suteikia jam galimybę naudotis top, left, rigth, bottom, z-index stiliais. <br>
+      Statinė pozicija gali būti suteikiama kaip placeholder ar panaudota tam, kad nuimti kokia kita pozicija.
+    </p>
+  <div>
+    <div class="kvadratas static linijinisBlokinis">statinis 1</div>
+    <div class="kvadratas static linijinisBlokinis">statinis 2</div>
+    <div class="kvadratas static linijinisBlokinis t10">statinis 3 </div>
+    <div class="kvadratas static linijinisBlokinis">statinis 4</div>
+  </div>  
+  <h2>Relative</h2>
+  <p>
+    Relative pozicija pati jokių stilių nesuteikia, elemento nepakeičia. Suteikia galimybę naudotis top, left, right, bottom, z-index stiliais. Nurodo ribas kažkur esančiam absolute elementui.<br>
+    Top, left, right,bottom nustatymas pastumia elementą nuo jo pradinės pozicijos, per nurodytą atstumą, nuo nurodytos kraštinės. <br>
+    
+  </p>
+  <div>
+    <div class="kvadratas linijinisBlokinis relative b50">relative 5</div>
+    <div class="kvadratas linijinisBlokinis relative t10 z5">relative</div>
+    <div class="kvadratas linijinisBlokinis relative r30 z10">relative 3</div>
+    <div class="kvadratas linijinisBlokinis static">static 4</div>
+  </div>
+
+  <h2>Absolute</h2>
+  <p>
+   Elementas su Absolute pozicija yra išėjęs iš puslapio tėkmės.  Suteikia galimybę naudotis top, left, right, bottom, z-index stiliais.<br> 
+   Top, left, right, bottom nustatymas pastumia elementą per nurodytą atstumą, nuo nurodytos kraštinės, nuo pradinio viewport(ekrano vaizdo) ARBA nuo artimiausio protėvinio elemento, kuris turi relatyviąją poziciją.
+  </p>
+  <div class="relative">
+    <div class="kvadratas linijinisBlokinis static">static 1</div>
+    <div class="kvadratas linijinisBlokinis static">static 2</div>
+    <div class="kvadratas linijinisBlokinis absolute b50 r30">absolute</div>
+    <div class="kvadratas linijinisBlokinis static">static 3</div>
+  </div>
+  
+  <h2>Fixed</h2>
+  <p>
+    Elementas su fixed pozicija yra išėjęs iš puslapio tėkmės.  Suteikia galimybę naudotis top, left, right, bottom, z-index stiliais.<br> 
+    Fiksuoja elementą vienoje viewport vietoje ir jis juda kartu su ekranu kai vartotojas skroll'ina per puslapį. <br>
+    Top, left, right, bottom nustatymas nurodo nuo kurios viewport(ekrano vaizdo) vietos jis atsitraukia per nurodytą atstumą, nuo nurodytos kraštinės.
+  </p>
+  <div>
+    <div class="kvadratas linijinisBlokinis static">static 1</div>
+    <div class="kvadratas linijinisBlokinis static">static 2</div>
+    <div class="kvadratas linijinisBlokinis fixed r30 b50">fixed</div>
+    <div class="kvadratas linijinisBlokinis static">static 3</div>
+  </div>
+  <h2>Sticky</h2>
+  <p>
+    Sticky pozicija iš savęs nieko nedaro. Bet suteikia galimybę naudotis top, left, right, bottom, z-index stiliais.<br>
+    Top, left, right arba bottom nustatymas nusako, per kokį atstumą nuo viewport (ekrano vaizdo) kraštų jis prilips ir judės savo tėvinio elemento ribose.
+  </p>
+  <div class="h500 zalia2">
+    <div class="kvadratas linijinisBlokinis static">static 1</div>
+    <div class="kvadratas linijinisBlokinis static ">static 2</div>
+    <div class="kvadratas linijinisBlokinis sticky t10">sticky</div>
+    <div class="kvadratas linijinisBlokinis static">static 3</div>
+  </div>
+  <div>
+</div>
+    
+    <!--Menu-->
+    <!--Page su semantic tags-->
+</body>
+</html>
