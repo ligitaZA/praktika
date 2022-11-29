@@ -353,9 +353,13 @@ console.groupEnd();
 
 {
   console.groupCollapsed('TASK 7')
-  for(let i = 3; i <= 20; i+=3){
-  console.log(i);
+
+  let skaiciuMasyvas = [];
+for(let i = 0; i < 30; i+=3){
+  skaiciuMasyvas.push(i);
 }
+console.log(skaiciuMasyvas);
+
 console.groupEnd();
 }
 
@@ -363,10 +367,13 @@ console.groupEnd();
 
 {
   console.groupCollapsed('TASK 8')
-  let skaiciuMasyvas1 = [1,2,3,4,5,6,7,8,9,10];
-for(let i = skaiciuMasyvas1.length - 1; i >= 0; i-=2){
-  console.log(skaiciuMasyvas1[i]);
-} 
+
+  let skaiciuMasyvas = [];
+for(let i = 0; i < 20; i+=2){
+  skaiciuMasyvas.unshift(i);
+}
+console.log(skaiciuMasyvas);
+
 console.groupEnd();
 }
 
@@ -374,10 +381,13 @@ console.groupEnd();
 {
   console.groupCollapsed('TASK 9')
 
-  for(let i = 0; i <= 60; i++){
-    if(i>=54)
-  console.log(i);
-} 
+  let skaiciuMasyvas = [];
+  for(let i = 54; i <= 60; i++){
+    // if (i>=54)
+      skaiciuMasyvas.push(i); 
+    }
+   console.log(skaiciuMasyvas);
+
 console.groupEnd();
 }
 
@@ -385,11 +395,20 @@ console.groupEnd();
 {
   console.groupCollapsed('TASK 10')
 
+  let skaiciuMasyvas = [];
   for(let i = 2; i <= 20; i+=2){
-  console.log(i);
-} 
-for(let i = 1; i <= 20; i+=2){
-  console.log(i);
-}
+    skaiciuMasyvas.push(i);
+  }
+  console.log(skaiciuMasyvas);
+
+
+  let skaiciuMasyvas2 = [];
+  for(let i = 1; i <= 20; i+=2){
+    skaiciuMasyvas2.push(i);
+  }
+  console.log(skaiciuMasyvas2);
+
+
  console.groupEnd();
+
 }
