@@ -150,14 +150,13 @@ function number2(a,b,c){
 console.groupCollapsed('TASK 9')
 
 
-// let abecele = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
-//     function abecele(masyvas, masyvas1){
-//       for(let i = ab; i<masyvas1; i+=2){
-//         console.log(i)
-//       }
-//   }
-
-
+let abecele = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    function masyvas9(number){
+      for(const i=0; i < abecele.length; i+=2){
+       if(typeof(masyvas9[number]) === 'number');
+        return abecele[number];
+      }
+    }
   
 // 
 
@@ -165,25 +164,48 @@ console.groupEnd();
 
 //       TASK 10
 
-console.groupCollapsed('task10')
+console.groupCollapsed('TASK 10')
 
-// function sudetis(nr1, nr2, object){
-//   console.log('sudetis');
-//   if(typeof(nr1,nr2)=== 'number' && typeof(object)==='sum'){    //cia sako jei nr1 yra skaicius ir nr2 yra skaicius, tada darom kita veiksma, kur sudesim ir grazinam atsakyma. jei nr1 arba nr2 butu ne skaicius tada grazintu error zinute
-//     let atsakymas = nr1 / nr2;
-//     return atsakymas; 
-//   }else {
-//     return 'error';
-//   }
-// }
+function math(n1, n2, operator){
+  switch(n1, n2, operator){
+    case 'sum':
+    let sum = n1 + n2
+    console.log(sum + ' sum');
+    break;
+    case 'div':
+    let div = n1 / n2
+    console.log(div + ' divide');
+    break;
+    case 'min':
+    let min = n1 - n2
+    console.log(min + ' minus');
+    break;
+    case 'kart':
+    let kart = n1 * n2
+    console.log(kart + ' kart');
+    break;
+  }
+}
+console.groupEnd();
 
+//        TASK 11
+console.groupCollapsed('TASK 11')
+var skaicius = [];
+function randomNumber(skaicius){
+  for(let i = 0; i <= 10; i++){
+  return Math.floor(Math.random()*11);
+}console.log(skaicius);
+}
+  function pakelti(skaicius){
+  return skaicius * skaicius;
+}
 console.groupEnd();
 
 
-//        TASK 10
-
-// for (var i = 1; i <= 10; i++) {
-//   if (i % 2 != 0) {
-//     console.log(i);
-//   }
-// }
+ //    EXTRA 
+//  let firstArray=[1, 2, 3, 4, 5, 6, 7]
+// let scdArray=['a', 'b', 'c']
+// do{
+//   firstArray.splice(scdArray.length, 0, scdArray.pop())
+// console.log(firstArray);
+// } while (scdArray.length > 0);
