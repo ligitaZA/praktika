@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./main.js"></script>
+</head>
+
+<body>
+  <h1>Kartojimas</h1>
+  <ol>
+    <li>Kintamieji- kas jie,kodel, scope, tipai, priskyrimai(assign)</li>
+    <p>Kintamieji yra sukuriami prieš pavadinimą parašius let - veiks tik savo ribose(scope) / const - veikia už savo
+      ribų, tačiau kitaip nei let, negali būt keičiamas / var - veikia už savo ribų (scope), tačiau yra pasenęs ir
+      dažniausiai nebenaudojamas</p>
+    <ul>
+      <li>string-tai yra žodinis kintamasis</li>
+      <li>number - skaicius</li>
+      <li>boolean - true arba false</li>
+      <p>Tiek objektas, tiek masyvas yra konteineriniai kintamieji. Tai reiškia, kad jų viduje galima talpinti keletą
+        reikšmių (gali būti skirtingų kintamųjų tipų: string, number, bool, null...).
+      </p>
+      <li>array - masyvas [reiksme, reiksme, reiksme, .... ]</li>
+      <p>
+        // masyvas.push - prideda nauja reiksme prie masyvo GALO su array methods
+        // masyvas.unshift - prideda nauja reiksme i masyvo PRADZIA
+        // masyvas.pop() - isima paskutini masyvo elementa, jo neistrina. galima priskirti ji kitam
+        // masyvas.shift() - isima pirma masyvo elementa, kaip ir pop, duomeni talpina savyje. galima priskirti kazkam
+        // masyvas.length - paima reiksme jai nieko nepadarant, tiesiog parodo kad yra
+        reverse() - apsuka masyvą, jį modifikuoja
+        slice(nr1,nr2) - atkerpa masyvo, bet jo nemodifikuoja. paima nuo nr1 (imtinai) iki nr2 (neimtinai) masyvo
+        elementus
+        splice(nr1, nr2, nr3, n4, nr5...) - nuo nr1 trina nr2 kieki elementu ir nr1 vietoje iterpa nr3, nr4...
+        arr1.concat (arr2,arr3...) - prie arr1 prijungia arr2 arr3..... nemodifikuoja, grazina nauja
+        sort() - isrikiuoja masyva abeceles tvarka
+
+        sujungtas.sort(function(a,b){return a-b}); rikiuoja teisingai skaicius
+
+        zodziuMasyvas.sort(function(a,b){return a.localeCompare(b)}); rikiuoja teisingai zodzius
+
+      </p>
+
+      <li>object - objektas 
+        <p>{raktas: reikšmė, raktas1: reikšmė, .......};
+          pvz.:
+          let zmogus1 = {
+          vardas: "petras", // vardas yra raktas
+          pavarde: "petrauskas",
+          amzius: 30,
+          vedes: false
+          }
+          console.log(zmogus1.vedes);
+          console.log(zmogus1.pavarde);
+          zmogus1.vardas = "Jonas"; // pakeičiama reikšmė, nes naudojome let;
+          console.log(zmogus1.vardas); //dabar jau rasytu nebe petras, o jonas
+        </p>
+      </li>
+    </ul>
+    <li>Operatoriai</li>
+    <ul>
+      <li> + ; - ; * ; / </li>
+      <li>laipsnio kėlimas, šaknies traukimas, liekanos radimas</li>
+      <li>lygu, lyyygu, nelygu, nelyyygu</li>
+      <li>daugiau, mažiau, daugiau arba lygu, mažiau arba lygu</li>
+      <li>IR ARBA NE</li>
+      <li>typeof</li>
+    </ul>
+    <li>Sąlygos</li>
+    <ul>
+      <li>if else if else </li>
+      <li>switch case.... naudojamas rečiau negu if</li>
+      <p>let menuo = prompt('Koks dabar mėnuo?');
+
+        switch(menuo){
+          case 'gruodis':
+          case 'sausis':
+          case 'vasaris':
+            window.alert('Dabar yra žiema.')
+            break;
+          
+          case 'kovas':
+          case 'balandis':
+          case 'gegužė':
+            window.alert('Dabar yra pavasaris.')
+            break;
+          
+          case 'birželis':
+          case 'liepa':
+          case 'rugpjūtis':
+            window.alert('Dabar yra vasara.')
+            break;
+          
+          case 'rugsėjis':
+          case 'spalis':
+          case 'lapkritis':
+            window.alert('Dabar yra žiema.')
+            break;
+        }</p>
+      <li>truthy/falsy</li>
+      <li>ternary - Ternary (max trumpintas if else) -      sąlyga ? jeiguTiesa : jeiguMelas    -    if else</li>
+      <p>console.groupCollapsed('Sąlygos')
+        if (10 > 5) {
+          console.log("tiesa");
+        } else {
+          console.log("netiesa");
+        }
+      
+        10 < 5 ? console.log("tiesa") : console.log("melas")   //tas pats užrašymas kaip if else </p>
+      <li>AND && - Naudojant && and tikrinama ar abiejose pusėse yra tiesa. Jei bent vienoje yra melas, grąžina melą.
+        Jeigu kairėje pusėje yra melas - dešinės pusės net netikrina.
+        Naudojant || or tikrinama ar bent vienoje pusėje yra tiesa. Jei bent vienoje pusėje yra tiesa - gražina tiesą. 
+        Jei kairėje pusėje yra tiesa - dešinės pusės net netikrina/nevykdo.</li>
+    </ul>
+    <li>Ciklai</li>
+    <ul>
+      <li>for</li>
+      <li>while</li>
+      <li>do while</li>
+      <li>for in</li>
+      <li>for of</li>
+      <li>array itteration methods</li>
+    </ul>
+    <li>Funkcijos</li>
+    <ul>
+      <li>funkcijos deklaravimas (function)</li>
+      <li>paramentrai/argumentai(). Parametrai/argumentai - tai yra duomenys perduodami funkcijai jos iškvietimo metu, su kuriais funkcijos viduje bus atliekami kažkokie veiksmai.parametrai rasomi skliausteliuose po funkcijos pavadinimo. tai gali buti array, kaip pavyzdziuose, tada consoleje sita funkcija kviesim rasydami pvz pavadinimas([array reiksmes, gali but skaiciai, string, bool, nesvarbu])</li>
+      <li>funkcijos gražinimas (return)</li>
+      <p>pavyzdys
+        function number (masyvas1, masyvas2){
+          for(let i=masyvas1; i <= masyvas2; i++){
+            console.log(i)
+          }
+        }
+        1. Kviečiam funkciją pavadinimu number, kurioje yra 2 parametrai masyvas1 ir masyvas2
+        2. Funkcijoje yra ciklas, kuris sako kad pradesim nuo masyvas1, ir cikla baigsim ties masyvas 2. Jeigu masyvas1 butu skaicius 5 o masyvas 9, tada išrašys skaicius nuo 5 iki 9.
+
+        function petras(nr1, nr2){
+          let atsakymas = nr1.length + nr2.length; 
+          return atsakymas; 
+      }
+        1. Kviečiam funkciją petras, kurioje yra nr1 ir nr2 parametrai
+        2. Tada susikuriam variable let su pavadinimu atsakymas ir sakom kad jinai yra lygi nr1 ir nr2 ilgiui.
+        3. Grąžinamas atsakymas
+      </p>
+    </ul>
+  </ol>
+</body>
+
+</html>
