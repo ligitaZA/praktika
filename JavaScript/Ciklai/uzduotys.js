@@ -322,7 +322,8 @@ let medziai2 = ["Pušis", "Maumedis", "Beržas", "Alksnis",
 }
   //            TASK 5
 {
-{ console.groupCollapsed('TASK 5')
+  console.groupCollapsed('TASK 5')
+
     let zmogus2 = {
       vardas: 'Petras',
       pavarde: 'Petrauskas',
@@ -334,18 +335,20 @@ let medziai2 = ["Pušis", "Maumedis", "Beržas", "Alksnis",
     } else {
       console.log('Moteris');
     }
-  }
+  
   console.groupEnd();
 }
 
 //              TASK 6
 { 
   console.groupCollapsed('TASK 6')
-  let skaiciuMasyvas = [];
+
+
+  var masyvas = [];
 for(let i = 0; i < 50; i++){
-  skaiciuMasyvas.push(Math.floor(Math.random()*101));
+  masyvas.push(Math.floor(Math.random()*101));
 }
-console.log(skaiciuMasyvas);
+console.log(masyvas);
 console.groupEnd();
 }
 
@@ -354,12 +357,9 @@ console.groupEnd();
 {
   console.groupCollapsed('TASK 7')
 
-  let skaiciuMasyvas = [];
-for(let i = 0; i < 30; i+=3){
-  skaiciuMasyvas.push(i);
+for(let i = 0; i < masyvas.length; i+=3){
+  console.log(masyvas[i]);
 }
-console.log(skaiciuMasyvas);
-
 console.groupEnd();
 }
 
@@ -368,11 +368,9 @@ console.groupEnd();
 {
   console.groupCollapsed('TASK 8')
 
-  let skaiciuMasyvas = [];
-for(let i = 0; i < 20; i+=2){
-  skaiciuMasyvas.unshift(i);
+for(let i = masyvas.length - 1; i >= 0  ; i-=2){
+ console.log(masyvas[i]);
 }
-console.log(skaiciuMasyvas);
 
 console.groupEnd();
 }
@@ -381,12 +379,11 @@ console.groupEnd();
 {
   console.groupCollapsed('TASK 9')
 
-  let skaiciuMasyvas = [];
-  for(let i = 54; i <= 60; i++){
-    // if (i>=54)
-      skaiciuMasyvas.push(i); 
+  for(let i = 0; i <= masyvas.length - 1; i++){
+    if (masyvas[i] > 54){
+      console.log(masyvas[i]);
     }
-   console.log(skaiciuMasyvas);
+    }
 
 console.groupEnd();
 }
@@ -395,20 +392,23 @@ console.groupEnd();
 {
   console.groupCollapsed('TASK 10')
 
-  let skaiciuMasyvas = [];
-  for(let i = 2; i <= 20; i+=2){
-    skaiciuMasyvas.push(i);
+  for(let i = 0; i <= masyvas.length - 1; i++){
+    if(masyvas[i] % 2 == 0){
+      console.log(masyvas[i] + ' lyginis')
+    }else{
+      console.log(masyvas[i] + ' nelyginis')
+    }
   }
-  console.log(skaiciuMasyvas);
 
-
-  let skaiciuMasyvas2 = [];
-  for(let i = 1; i <= 20; i+=2){
-    skaiciuMasyvas2.push(i);
+for (var i = 0; i <= 100; i++) {
+  if (i % 3 == 0 && i % 5 == 0) {
+    console.log("FizzBuzz");
+  } else if (i % 3 == 0) {
+    console.log("Fizz");
+  } else if (i % 5 == 0) {
+    console.log("Buzz");
+  }else {
+    console.log('number')
   }
-  console.log(skaiciuMasyvas2);
-
-
- console.groupEnd();
-
+}
 }
