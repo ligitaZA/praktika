@@ -24,11 +24,13 @@
   }
   function saknis(nr1, nr2){
     console.log('saknies traukimas')
-    return nr1 ** nr2;
+    return nr1 ** (1/nr2); 
   }
+  // console.log ('is 25 traukiame 2 laipsnio sakni:', saknis(25,2))
   console.groupEnd();
 
-// same galima padaryti su situ
+// same galima padaryti su situ, taip yra tvarkingiau, nes patikrini su type of ar skaicius
+
   function sudetis(nr1, nr2){
     console.log('sudetis');
     if(typeof(nr1)=== 'number' && typeof(nr2)==='number'){    //cia sako jei nr1 yra skaicius ir nr2 yra skaicius, tada darom kita veiksma, kur sudesim ir grazinam atsakyma. jei nr1 arba nr2 butu ne skaicius tada grazintu error zinute
@@ -149,14 +151,20 @@ function number2(a,b,c){
 
 console.groupCollapsed('TASK 9')
 
-
+// neteisingai
 let abecele = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
     function masyvas9(number){
-      for(const i=0; i < abecele.length; i+=2){
-       if(typeof(masyvas9[number]) === 'number');
+      for(const i=0; i < abecele.length; i++){
+       if(typeof(number) === 'number');
         return abecele[number];
       }
     }
+  // teisingai
+
+  function abecelesRaide(kelinta){
+    let alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z'];
+    console.log(alphabet[kelinta])
+  }
   
 // 
 
@@ -191,14 +199,13 @@ console.groupEnd();
 //        TASK 11
 console.groupCollapsed('TASK 11')
 var skaicius = [];
-function randomNumber(skaicius){
-  for(let i = 0; i <= 10; i++){
-  return Math.floor(Math.random()*11);
-}console.log(skaicius);
+function randomNumber(){
+  return Math.ceil(Math.random()*11);
 }
-  function pakelti(skaicius){
-  return skaicius * skaicius;
+  function pakelti(){
+  return randomNumber()**2;
 }
+console.log(pakelti());
 console.groupEnd();
 
 
@@ -209,3 +216,14 @@ console.groupEnd();
 //   firstArray.splice(scdArray.length, 0, scdArray.pop())
 // console.log(firstArray);
 // } while (scdArray.length > 0);
+
+let firstArray= [1, 2, 3, 4, 5, 6, 7];
+let scdArray= ['a', 'b', 'c'];
+
+function masyvuJungimas(arr1, arr2){
+  while(arr2.length){
+    arr1.splice(arr2.length, 0, arr2.shift())
+  }
+  return arr1;
+}
+console.log(masyvuJungimas(firstArray, scdArray));

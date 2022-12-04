@@ -1,0 +1,70 @@
+.spalva {
+  background-color: rgb(21, 241, 168);
+  height: 20px;
+  width: 20px;
+}
+.spalva1 {
+  background-color: rgb(124, 133, 216);
+  height: 20px;
+  width: 20px;
+}
+
+.tekstas {
+  background-color: rgb(163, 221, 189);
+  text-decoration: underline;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 20px;
+}
+section:not(#calc){
+  display: none;
+}
+#output {
+  height: 30px;
+  width: 80px;
+  background-color: rgba(149, 173, 226, 0.521);
+  border: 1px solid rgb(231, 211, 211);
+  border-radius: 10px;
+  background-color: rgba(149, 173, 226, 0.521);
+  border: 1px solid rgb(231, 211, 211);
+  border-radius: 10px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px;
+  box-sizing: border-box;
+}
+#calc {
+  display: flex;
+  gap: 10px;
+  padding: 50px;
+}
+
+#skaicius1, #skaicius2{
+  padding: 5px;
+  width: 100px;
+  background-color: rgba(149, 173, 226, 0.521);
+  border: 1px solid rgb(231, 211, 211);
+  border-radius: 10px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+#veiksmas, #submit{
+  padding: 10px;
+  width: 80px;
+  border: none;
+  background-color: rgba(236, 225, 218, 0.863);
+  border-radius: 10px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#424297 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #1e29a8;
+}
+div{
+  text-align: center;
+  line-height: 30px;
+}
+
+#veiksmas:hover, #submit:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #D6D6E7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}

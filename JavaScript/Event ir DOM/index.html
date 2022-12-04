@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./main.css">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+  <main>
+    <section id="events">
+      <h1 class="pirmas">Events</h1>
+      <p class="apieEvents">
+        Events yra visi veiksmai kurie vyksta puslapyje.(pelės paspaudimas, scroll'inimas, klaviatūros paspaudimas, failo įkėlimas ....) <br>
+        Norėdami stebėti ar įvyksta event , turime pradžioje nurodyti(selectinti su querySelector), kurioje DOM dalyje tas įvykis gali nutikti <br>
+       </p> 
+       <p class="parametrai">
+        <div class="spalva"></div>
+        Selektinus , kurioje dalyje klausomės įvykio, reikia aprašyti įvykio klausymąsį. Tai padarome rašydami "addEventListener" metodą, kuris priima 2 parametrus : koksĮvykis(paspaudimas pelės, klaviatūros, užėjimas pelės, pažymėjimas), kąDarytiNutikusĮvykiui (vyksta funkcija). <br>
+        Galima suteiksti event listener tik konkreciam elementui pvz paragrafui, paveiksleliui ir t.t
+      </p>
+    </section>
+    <section id="DOM">
+      <h1 class="antras">DOM</h1>
+      <div class="spalva1"></div>
+      <p class="apieDOM">
+        Document object model. Document -  puslapis, kuriame yra visa vartotojui atvaizduojama informacija(tekstas, forma, paveiksliukas ...) <br>
+        object - puslapio elementas(html, span, icon, viskas) <br>
+        Modelis - objektų struktūra kažkuriame elemente (tekstas, peveiksliukas, forma, lentelė...)
+      </p>
+      <p class="parinktiDOM">
+        Norėdami per JS parinkti kažkurią Dom dalį, turime rašyti tokį kodą : "document.querySelector" arba "document.querySelectorAll". querySelector priima vieną parametra - selektorių " "(tokį, kokį rašėme CSS)
+      </p>
+    </section>
+    <section id="DOM_is_JS">
+
+    </section>
+    <section id="calc">
+      <form> 
+        <input type="number" name="skaicius1" id="skaicius1">
+        <select name="veiksmas" id="veiksmas">
+          <option value="+">Sudėti</option>
+          <option value="-">Atimti</option>
+          <option value="*">Dauginti</option>
+          <option value="/">Dalinti</option>
+          <option value="saknis">Traukti šaknį</option>
+          <option value="laipsnis">Kelti laipsniu</option>
+          <option value="liekana">Rasti liekaną</option>
+        </select>
+        <input type="number" name="skaicius2" id="skaicius2">
+        <input type="submit" value="Skaičiuoti" id="submit">
+      </form>
+      <div id="output" onclick="calc()"></div>
+    </section >
+  </main>
+
+</body>
+</html>
