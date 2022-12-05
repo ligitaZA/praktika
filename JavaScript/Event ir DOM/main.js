@@ -188,11 +188,12 @@ calculator.children[0].addEventListener('submit', function(e){
 //   let skaicius1 = e.target.skaicius1.valueAsNumber;
 //   let skaicius2 = e.target.skaicius2.valueAsNumber;
 //   let veiksmas = document.querySelector('#veiksmas').value;
-//   let sum, div, min, kart;
+//   let veiksmas;
 
-// switch(skaicius1, skaicius2, veiksmas){
+// switch(veiksmas){
 //     case '+':
-//     let sum = skaicius1 + skaicius2
+//     atsakymas = skaicius1 + skaicius2;
+// break;  // teisingai
 //     console.log(sum);
 //     break;
 //     case '/':
@@ -208,6 +209,8 @@ calculator.children[0].addEventListener('submit', function(e){
 //     console.log(kart);
 //     break;
 //   }
+  // document.querySelector('#output').innerHTML = atsakymas;
+
   
 //   document.querySelector('#output').innerHTML = sum, div, min, kart
 // });
