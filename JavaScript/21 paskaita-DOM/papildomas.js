@@ -63,7 +63,7 @@ task2.innerHTML += `
     <div class="task2_image_container">
       ${
         data[1].images.map(function(image){
-          return `<img src="${image}">`;
+          return `<img src="${image}" alt="paintings">`;
         })
       }
     </div>
@@ -99,9 +99,47 @@ for (let i = 0; i < data[2].imagesTitles.length; i++) {
   <div class="inner">
     <h1>${data[2].imagesTitles[i]}</h1>
   <div class="imagesAndPar">
-    <img src="${data[2].images[i]}">
+    <img src="${data[2].images[i]}" alt="painting">
     <p>${data[2].paragraphs[i]}</p>
   </div>
   </div>
   `;
 };
+
+//4 extra) Padaryti formą, kurioje įvedus duomenis (nuo, iki) ir paspaudus mygtuką "vykdyti", žemiau būtų sukurta grupė div'ų, kuriuose yra atliktas FizzBuzz metodas nuo duotojo parametro iki duotojo parametro. Viską gražiai stilizuoti.
+
+//5 extra) Padaryti formą, kurioje įvedus duomenis (iki) ir paspaudus mygtuką "vykdyti", žemiau būtų sukurta grupė div'ų, kuriuose yra rasti pirminiai skaičiai iki duotojo parametro. Viską gražiai stilizuoti.
+
+// Fizz buzz
+function fizzBuzz(nuo,iki){
+  for(let i = nuo; i<= iki; i++){
+    if (i%(5*3) === 0){
+      console.log('FizzBUzz')
+    } else if (i % 3 === 0){
+      console.log('Fizz');
+    }else if (i % 5 === 0){
+      console.log('Buzz');
+    }else{
+      console.log(i)
+    }
+  }
+}
+
+// prime numbers
+function primeNumbers(upTo){
+  let primeNumbers=[];
+  if(upTo > 10){
+      for(let i = 2; i < 10; i++){
+        let isPrime = true;
+        for(let j = 2; j < i-1 ;j++){
+          if(i % j ===0){
+            isPrime = false;
+          }
+          if(isPrime){
+            primeNumbers.push(i);
+          }
+        }
+      }
+    }
+    console.log(primeNumbers);
+  }
