@@ -56,17 +56,14 @@ document.querySelector('#task2').addEventListener (('submit'), (e) => {
       console.log('Number is not an integer'); 
     }
   })
-  
-  // String:
-  // 1) Sukurk du input'us - vieną, kur vartotojas įves savo vardą; kitą - skaičių. Pirma, patikrink ar skaičius sveikas (jei ne - console). Jei sveikas, po apačia sukurk h1 elementą, kur vardas bus atkartotas tiek kartų, kiek skaičius nurodo. 
-  
+
   // 2) Sukurk input, kur vartotojas įves savo vardą. Įvedus - console'ink kokio ilgio yra vardas. Tačiau užtikrink, kad priekyje ir gale nebūtų įskaičiuoti tarpeliai.
   
   {
       document.getElementById('vardas').addEventListener(('keyup'), (e) => {
    e.preventDefault ();
     const vardas = document.getElementById('vardas').value.trim();
-    console.log('Length: ' + vardas.length);
+    console.log('Vardo raidžių yra: ' + vardas.length);
   })
   }
 
@@ -87,15 +84,17 @@ document.querySelector('#task2').addEventListener (('submit'), (e) => {
   
 //  4) Pakoreguok trečią pratimą, kad įskaičiuotų, jei pavardė ilgesnė nei vienas žodis. Jeigu žodžių daugiau negu du, tuomet antrąjį, trečiąjį ir visus likusius išvesti į antrąjį h1 laukelį.
   
-// document.querySelector('#task3').addEventListener(('submit'), (e) => {
-//     let pilnasvardas = document.getElementById('pilnasvardas').value;
-//     let vardas = document.createElement('h1');
-//     vardas.textContent = pilnasvardas.split(' ')[0];
-//     let surname = document.createElement('h1');
-//     surname.textContent = pilnasvardas.length;
-  
-//     document.body.append(vardas, surname);
-//   });
+document.querySelector('#task3').addEventListener(('submit'), (e) => {
+  e.preventDefault();
+  let pilnasvardas = document.getElementById('pilnasvardas').value.trim().split(' ');
+  let vardas = document.createElement('h1');
+  vardas.textContent = pilnasvardas[0];
+
+  let pavarde = document.createElement('h1');
+  pavarde.textContent = pilnasvardas[1].concat(' ', pilnasvardas[2]);
+
+  document.body.append(vardas, pavarde);
+});
 
 // Konspektai:
 //   1) Pasikonspektuoti VISUS Number metodus ir savybes.
