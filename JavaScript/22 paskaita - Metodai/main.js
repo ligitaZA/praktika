@@ -19,7 +19,7 @@ console.log(Math.random( ) * number);
 console.log(number.toString);
 console.log(Number.MAX_SAFE_INTEGER);
 console.log(Number.POSITIVE_INFINITY);
-console.log(Math.pow(5,2));
+console.log(Math.pow(5,2)); // kelimas kvadratu
 console.log(Math.sqrt(25));
 console.log((Math.random() * number).toFixed(2));
 console.log(number.toFixed(4)*1);

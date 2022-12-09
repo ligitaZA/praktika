@@ -14,10 +14,272 @@
   <input type="=tel" pattern="^\(\+[0-9]{3})\s[0-9]{3}\s[0-9]{5}$" name="" id="" placeholder="(+xxx) xxx xxxx">
   <input type="button" value="Patvirtinti">
   </form> -->
+ 
 
-<main>
+   
+  <section id="Konspektas">
+    <h1>Konspektas</h1>
+    <h3>Number metodai is savybes</h3>
+    <p>Static properties:</p>
+    <ul>
+        <li>
+         Number.EPSILON -
+        The smallest interval between two representable numbers.
+        </li>
+        <li>
+          Number.MAX_SAFE_INTEGER - 
+             The maximum safe integer in JavaScript (253 - 1).
+        </li>
+        <li>
+            Number.MAX_VALUE - 
+            The largest positive representable number.
+        </li>
+        <li>
+            Number.MIN_SAFE_INTEGER -
+            The minimum safe integer in JavaScript (-(253 - 1)).
+        </li>
+        <li>
+            Number.MIN_VALUE - 
+            The smallest positive representable number—that is, the positive number closest to zero (without actually being zero).
+        </li>
+        <li>
+            Number.NaN - 
+            Special "Not a Number" value.
+        </li>
+        <li>
+            Number.NEGATIVE_INFINITY - 
+            Special value representing negative infinity. Returned on overflow.
+        </li>
+        <li>
+            Number.POSITIVE_INFINITY - 
+            Special value representing infinity. Returned on overflow.
+        </li>
+        <li>
+            Number.prototype - 
+            Allows the addition of properties to the Number object.
+        </li>
+    </ul>
+    <h3>Static methods:</h3>
+    <ul>
+        <li>Number.isNaN() -
+            Determine whether the passed value is NaN.</li>
+        <li>Number.isFinite() -
+            Determine whether the passed value is a finite number.</li>
+        <li>Number.isInteger() -
+            Determine whether the passed value is an integer.</li>
+        <li>Number.isSafeInteger() -
+            Determine whether the passed value is a safe integer (number between -(253 - 1) and 253 - 1).</li>
+        <li>Number.parseFloat() -
+            This is the same as the global parseFloat() function.</li>
+        <li>Number.parseInt() -
+            This is the same as the global parseInt() function.
+            </li>
+    </ul>
+    <h1>Math metodai ir savybes</h1>
+    <h3>Static properties:</h3>
+    <ul>
+        <li>Math.E -
+            Euler's number and the base of natural logarithms; approximately 2.718.</li>
+        <li>Math.LN2 -
+            Natural logarithm of 2; approximately 0.693.</li>
+        <li>Math.LN10 -
+            Natural logarithm of 10; approximately 2.303.</li>
+        <li>Math.LOG2E -
+            Base-2 logarithm of E; approximately 1.443.</li>
+        <li>Math.LOG10E -
+            Base-10 logarithm of E; approximately 0.434.</li>
+        <li>Math.PI -
+            Ratio of a circle's circumference to its diameter; approximately 3.14159.
+            </li>
+        <li>Math.SQRT1_2 -
+            Square root of ½; approximately 0.707.</li>
+        <li>Math.SQRT2 -
+            Square root of 2; approximately 1.414.</li>
+    </ul>
+    <h3>Static methods:</h3>
+    <ul>
+        <li>Math.abs() -
+            Returns the absolute value of x.
+            
+            </li> 
+        <li>Math.acos() -
+            Returns the arccosine of x.
+            
+            </li>
+        <li>Math.acosh() -
+            Returns the hyperbolic arccosine of x.</li>
+        <li>Math.asin() -
+            Returns the arcsine of x.</li>
+        <li>Math.asinh() -
+            Returns the hyperbolic arcsine of a number.</li>
+        <li>Math.atan() -
+            Returns the arctangent of x.</li>
+        <li>Math.atanh() -
+            Returns the hyperbolic arctangent of x.</li>
+        <li>Math.atan2() -
+            Returns the arctangent of the quotient of its arguments.</li>
+        <li>Math.cbrt() -
+            Returns the cube root of x.</li>
+        <li>Math.ceil() -
+            Returns the smallest integer greater than or equal to x.</li>
+        <li>Math.clz32() -
+            Returns the number of leading zero bits of the 32-bit integer x.</li>
+        <li>Math.cos() -
+            Returns the cosine of x.</li>
+        <li>Math.cosh() -
+            Returns the hyperbolic cosine of x.
+            </li>
+        <li>Math.exp() -
+            Returns ex, where x is the argument, and e is Euler's number (2.718…, the base of the natural logarithm).</li>
+        <li>Math.expm1() -
+            Returns subtracting 1 from exp(x).</li>
+        <li>Math.floor() -
+            Returns the largest integer less than or equal to x.
+            </li>
+        <li>Math.fround() -
+            Returns the nearest single precision float representation of x.
+            </li>
+        <li>Math.hypot() -
+            Returns the square root of the sum of squares of its arguments.</li>
+        <li>Math.imul() -
+            Returns the result of the 32-bit integer multiplication of x and y.</li>
+        <li>Math.log() -
+            Returns the natural logarithm (㏒e; also, ㏑) of x.</li>
+        <li>Math.log1p() -
+            Returns the natural logarithm (㏒e; also ㏑) of 1 + x for the number x.</li>
+        <li>Math.log10() -
+            Returns the base-10 logarithm of x.</li>
+        <li>Math.log2() -
+            Returns the base-2 logarithm of x.</li>
+        <li>Math.max() -
+            Returns the largest of zero or more numbers.
+            </li>
+        <li>Math.min() -
+            Returns the smallest of zero or more numbers.</li>
+        <li>Math.pow() -
+            Returns base x to the exponent power y (that is, xy).</li>
+        <li>Math.random() -
+            Returns a pseudo-random number between 0 and 1. 
+            </li>
+        <li>Math.round() -
+            Returns the value of the number x rounded to the nearest integer.</li>
+        <li>Math.sign() -
+            Returns the sign of the x, indicating whether x is positive, negative, or zero.
+            </li>
+        <li>Math.sin() -
+            Returns the sine of x.</li>
+        <li>Math.sinh() -
+            Returns the hyperbolic sine of x.</li>
+        <li>Math.sqrt() -
+            Returns the positive square root of x.</li>
+        <li>Math.tan() -
+            Returns the tangent of x.</li>
+        <li>Math.tanh() -
+            Returns the hyperbolic tangent of x.</li>
+        <li>Math.trunc() -
+            Returns the integer portion of x, removing any fractional digits.
+            
+            </li>
+    </ul>
+    <h1>String metodai ir savybes</h1>
+    <h3>Static methods:</h3>
+    <ul>
+        <li>String.fromCharCode() -
+            Returns a string created by using the specified sequence of Unicode values.</li>
+        <li>String.fromCodePoint() -
+            Returns a string created by using the specified sequence of code points.</li>
+        <li>String.raw() -
+            Returns a string created from a raw template string.</li>
+    </ul>
+    <h3>Instance properties</h3>
+    <ul>
+        <li>String.prototype.length -
+            Reflects the length of the string. Read-only.</li>
+    </ul>
+    <h3>Instance methods</h3>
+    <ul>
+        <li>String.prototype.at() -
+            Returns the character (exactly one UTF-16 code unit) at the specified index. Accepts negative integers, which count back from the last string character.</li>
+        <li>String.prototype.charAt() -
+            Returns the character (exactly one UTF-16 code unit) at the specified index.</li>
+        <li>String.prototype.charCodeAt() -
+            Returns a number that is the UTF-16 code unit value at the given index.</li>
+        <li>String.prototype.codePointAt() -
+            Returns a nonnegative integer Number that is the code point value of the UTF-16 encoded code point starting at the specified pos.</li>
+        <li>String.prototype.concat() -
+            Combines the text of two (or more) strings and returns a new string.
+            </li>
+        <li>String.prototype.includes() -
+            Determines whether the calling string contains searchString.</li>
+        <li>String.prototype.endsWith() -
+            Determines whether a string ends with the characters of the string searchString.</li>
+        <li>String.prototype.indexOf() -
+            Returns the index within the calling String object of the first occurrence of searchValue, or -1 if not found.</li>
+        <li>String.prototype.lastIndexOf() -
+            Returns the index within the calling String object of the last occurrence of searchValue, or -1 if not found.</li>
+        <li>String.prototype.localeCompare() -
+            Returns a number indicating whether the reference string compareString comes before, after, or is equivalent to the given string in sort order.</li>
+        <li>String.prototype.match() -
+            Used to match regular expression regexp against a string.
+            
+            </li>
+        <li>String.prototype.matchAll() -
+            Returns an iterator of all regexp's matches.
+            
+            </li>
+        <li>String.prototype.normalize() -
+            Returns the Unicode Normalization Form of the calling string value.</li>
+        <li>String.prototype.padEnd() -
+            Pads the current string from the end with a given string and returns a new string of the length targetLength.</li>
+        <li>String.prototype.padStart() -
+            Pads the current string from the start with a given string and returns a new string of the length targetLength.</li>
+        <li>String.prototype.repeat() -
+            Returns a string consisting of the elements of the object repeated count times.</li>
+        <li>String.prototype.replace() -
+            Used to replace occurrences of searchFor using replaceWith. searchFor may be a string or Regular Expression, and replaceWith may be a string or function.</li>
+        <li>String.prototype.replaceAll() -
+            Used to replace all occurrences of searchFor using replaceWith. searchFor may be a string or Regular Expression, and replaceWith may be a string or function.
+            
+            </li>
+        <li>String.prototype.slice() -
+            Extracts a section of a string and returns a new string.</li>
+        <li>String.prototype.split() -
+            Returns an array of strings populated by splitting the calling string at occurrences of the substring sep.</li>
+        <li>String.prototype.startsWith() -
+            Determines whether the calling string begins with the characters of string searchString.</li>
+        <li>String.prototype.substring() -
+            Returns a new string containing characters of the calling string from (or between) the specified index (or indices).</li>
+        <li>String.prototype.toLocaleLowerCase() -
+            The characters within a string are converted to lowercase while respecting the current locale.
+            <br>
+            For most languages, this will return the same as toLowerCase().</li>
+        <li>String.prototype.toLocaleUpperCase( [locale, ...locales]) -
+            The characters within a string are converted to uppercase while respecting the current locale.
+            <br>
+            For most languages, this will return the same as toUpperCase().</li>
+        <li>String.prototype.toLowerCase() -
+            Returns the calling string value converted to lowercase.</li>
+        <li>String.prototype.toString() -
+            Returns a string representing the specified object. Overrides the Object.prototype.toString() method.</li>
+        <li>String.prototype.toUpperCase() -
+            Returns the calling string value converted to uppercase.
+            
+            </li>
+        <li>String.prototype.trim() -
+            Trims whitespace from the beginning and end of the string.</li>
+        <li>String.prototype.trimStart() -
+            Trims whitespace from the beginning of the string.</li>
+        <li>String.prototype.trimEnd() -
+            Trims whitespace from the end of the string.</li>
+        <li>String.prototype.valueOf() -
+            Returns the primitive value of the specified object. Overrides the Object.prototype.valueOf() method.</li>
+        <li>String.prototype[@@iterator]() -
+            Returns a new iterator object that iterates over the code points of a String value, returning each code point as a String value.</li>
+    </ul>
+</section>
+<section> 
   <!-- task1 -->
-    <form>
+   <form>
     <input type="number" id="kaina" step="0.001" placeholder="Kaina"/>
 	<input type="number" id="kiekis" step="0.1" placeholder="Kiekis" />
 	<button type="submit">Skaičiuojam</button>
@@ -32,14 +294,13 @@
   </form>
 </section>
   <br>
+  <!-- task3/4 -->
   <section id="task3">
     <form>
       <input type="text" name="text" id="pilnasvardas"></input>
       <button type="submit">Submit</button>
     </form>
   </section>
-
-</main>
-
+</section>
 </body>
 </html>

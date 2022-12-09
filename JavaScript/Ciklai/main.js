@@ -206,6 +206,8 @@ Ternary (max trumpintas if else)
   // console.log(10);
 {
   console.groupCollapsed('Ciklai - for')
+
+  
 for(let i = 0; i < 9; i++){
   console.log(i+1)
 }

@@ -389,6 +389,7 @@ console.groupEnd();
 }
 
 //             TASK 10
+//10) Parašyti ciklą, kuris iš masyvo išspausdintų tik lyginius/nelyginius skaičius. (2ciklai)
 {
   console.groupCollapsed('TASK 10')
 

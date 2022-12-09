@@ -5,7 +5,7 @@ console.groupCollapsed('TASKS')
 //   1) Sukurk variable 'milkPrice'. Su JS patikrink ir informuok vartotoją console() ar jam reikės centų, ar nereikės (t.y. ar skaičius sveikas).
 
 
-const milkPrice = 2;
+let milkPrice = 1;
 
 if(Number.isInteger(milkPrice)){
   console.log('Centų nereikia')
@@ -13,9 +13,8 @@ if(Number.isInteger(milkPrice)){
   console.log('Centų reikės')
 }
 
-// task 2 
+// task 1.2
 // 2) Pakoreguok pirmą pratimą, kad console taip pat ir išmestų kainą - su dviem skaičias po kablelio (t.y. 3.00 Eur).
-
 
 if (Number.isInteger(milkPrice)) {
   console.log('Centų nereikia')
@@ -24,19 +23,19 @@ if (Number.isInteger(milkPrice)) {
 }
 console.log(milkPrice.toFixed(2))
 
-// task 3 
+// task 1.3 
 // 3) Sukurk programą degalinei - bus du input laukeliai (kuriame su HTML): viename įvedame kainą su trimis skaičias po kablelio, antrame - degalų kiekį, su vienu skaičiu po kablelio (HTML naudojame step="0.1" atributą pasakyti kiek skaičių po kablelio vartotojas gali paduoti). Pavyzdžiui: 1.399Eur x 5.1L. Pateikus duomenis - vartotojui apačioje turi išmesti kainą h1 laukelyje (sukuriame su JS), su dviem skaičiais po kablelio (pvz. 7.13 Eur).
 
 document.querySelector('form').addEventListener('submit', (e) => {
     e.preventDefault();
     let kaina = Number(document.getElementById('kaina').value);
     let kiekis = Number(document.getElementById('kiekis').value);
-  
+
     let total = kaina * kiekis;
   
     const isviso = document.createElement('h1');
     isviso.textContent = total.toFixed(2);
-    document.body.append(isviso);
+    document.querySelector('form').append(isviso);
   });
 
 //   String:
@@ -46,14 +45,14 @@ document.querySelector('form').addEventListener('submit', (e) => {
 
 document.querySelector('#task2').addEventListener (('submit'), (e) => {
     e.preventDefault();
-    const vardas = document.getElementById('vardas').value;
-    const skaicius = Number(document.getElementById('skaicius').value);
+    let vardas = document.getElementById('vardas').value;
+    let skaicius = Number(document.getElementById('skaicius').value);
     if (Number.isInteger(skaicius)) {
-      const h1 = document.createElement('h1');
+      let h1 = document.createElement('h1');
       h1.textContent = vardas.repeat(skaicius);
-      document.body.append(h1);
+      document.querySelector('#task2').append(h1);
     } else {
-      console.log('Number is not an integer'); 
+      console.log('įvedei nelyginį skaičių.'); 
     }
   })
 
@@ -62,9 +61,9 @@ document.querySelector('#task2').addEventListener (('submit'), (e) => {
   {
       document.getElementById('vardas').addEventListener(('keyup'), (e) => {
    e.preventDefault ();
-    const vardas = document.getElementById('vardas').value.trim();
+    let vardas = document.getElementById('vardas').value.trim();
     console.log('Vardo raidžių yra: ' + vardas.length);
-  })
+  });
   }
 
 
@@ -79,7 +78,7 @@ document.querySelector('#task2').addEventListener (('submit'), (e) => {
     let pavarde = document.createElement('h1');
     pavarde.textContent = pilnasvardas[1];
   
-    document.body.append(vardas, pavarde);
+    document.querySelector('#task3').append(vardas, pavarde);
   });
   
 //  4) Pakoreguok trečią pratimą, kad įskaičiuotų, jei pavardė ilgesnė nei vienas žodis. Jeigu žodžių daugiau negu du, tuomet antrąjį, trečiąjį ir visus likusius išvesti į antrąjį h1 laukelį.
@@ -93,15 +92,6 @@ document.querySelector('#task3').addEventListener(('submit'), (e) => {
   let pavarde = document.createElement('h1');
   pavarde.textContent = pilnasvardas[1].concat(' ', pilnasvardas[2]);
 
-  document.body.append(vardas, pavarde);
+  document.querySelector('#task3').append(vardas, pavarde);
 });
-
-// Konspektai:
-//   1) Pasikonspektuoti VISUS Number metodus ir savybes.
-//   2) Pasikonspektuoti VISUS Math metodus ir savybes.
-//   3) Pasikonspektuoti VISUS String metodus ir savybes.
-
-
-
-//     Sting metodai
 
