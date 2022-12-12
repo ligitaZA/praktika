@@ -1,7 +1,7 @@
 document.querySelector('#card>form').addEventListener('submit', e => {
   e.preventDefault();
   console.dir(e);
-  const[photo, title,description, date,location] = [
+  const[photo, title, description, date, location] = [
     e.target.elements.photo.value,
      e.target.elements.title.value,
     e.target.elements.description.value,

@@ -113,43 +113,67 @@ td {
 
 /* cards task */
 
+.button{
+  width: 200px;
+  margin: 20px auto;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 0 solid #767a7e;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  box-sizing: border-box;
+  color: #1A202C;
+  font-size: 20px;
+  font-weight: bold;
+}
+.button:hover{
+  background-color: #1a202c48;
+}
 #createCards {
   margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  font-family: 'Lexend Deca'
+  font-family: 'Lexend Deca';
 }
-.card {
-  width: 500px;
-  height: 600px;
+
+.borderCard{
   display: flex;
-  justify-content: center;
-  flex-direction: column;
   position: relative;
-  justify-content: flex-end;
+  gap: 20px;
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
 }
 .card img{
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  position: absolute; 
   border-radius: 5px;
+  height: 550px;
+  width: 400px;
+  object-fit: cover; 
 }
-#createCards .content {
+.content {
   display: flex;
-  flex-direction: column;
-  background-color: rgba(223, 212, 212, 0.377);
+  flex-direction: column; 
+  position: absolute;
+  background-color: rgba(43, 38, 38, 0.397);
+  color: rgb(255, 255, 255);
   z-index: 5;
   padding: 10px;
+  bottom: 0;
+  height: 50%;
+  overflow: hidden;
 }
 #createCards .content:hover{
-  background-color: rgba(31, 28, 28, 0.788);
-  color: white;
-  
+  background-color: rgba(240, 230, 230, 0.767);
+  color: rgb(0, 0, 0);
+  height: 96.5%;
+  border-radius: 5px;
+  justify-content: center;
 }
+
 #createCards h1 {
   margin: 10px;
   font-size: 40px;
@@ -175,7 +199,7 @@ td {
 #createCards .firstRow *{
   margin: 0;
 }
-#createCards .description {
+#createCards .aprasymas {
   font-size: 19px;
   font-weight: bolder;
   margin: 0;
@@ -184,4 +208,11 @@ td {
 #createCards .aktoriai {
   margin: 0;
   padding: 10px 0 10px;;
+}
+
+.searching{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  gap: 10px;
 }
