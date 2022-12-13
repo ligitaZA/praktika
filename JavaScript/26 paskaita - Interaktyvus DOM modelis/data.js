@@ -6,12 +6,12 @@ const meniu = [
     kaina: 5.5
   },{
     id: '1',
-    pavadinimas: "Didelis kebabas lavašė",
+    pavadinimas: "Didelis kebabas lavaše",
     sudetis: ['lavašas', 'vištiena', 'šviežios daržovės', 'padažas'],
     kaina: 4.6
   },{
     id: '2',
-    pavadinimas: "Mažas kebabas lavašė",
+    pavadinimas: "Mažas kebabas lavaše",
     sudetis: ['lavašas', 'vištiena', 'šviežios daržovės', 'padažas'],
     kaina: 4.1
   },{

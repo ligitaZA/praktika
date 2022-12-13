@@ -1,4 +1,3 @@
-
 const formSec = document.querySelector('#form'); // sukuriamas formSec kintamasis, kuris priskiriamas HTML'e esančiam elementui, kuris turi ID 'form'
 const form = document.createElement('form'); // sukuriamas form elementas
 const saskaita = document.querySelector('#saskaita'); // sukuriamas saskaita kintamasis, kuris priskiriamas HTML'e esančiam elementui, kuris turi ID 'saskaita'
@@ -63,7 +62,7 @@ let saskaitosSukurimas = (prekes) => { // saskaitosSukurimas funkcijos prilygini
   p1.append(text); // paragrafui priskiriamas tekstas
 
   let h4 = document.createElement('h4'); // sukuriamas h4 elementas
-  text = document.createTextNode("Įmonės pav"); // sukuriamas tekstinis elementas su tekstu "Įmonės pav"
+  text = document.createTextNode("KEbaberija"); // sukuriamas tekstinis elementas su tekstu "Įmonės pav"
   h4.append(text); // h4 priskiriamas tekstas
 
   let h1 = document.createElement('h1'); // sukuriamas h1 elementas
@@ -111,7 +110,7 @@ let saskaitosSukurimas = (prekes) => { // saskaitosSukurimas funkcijos prilygini
   const hr2 = document.createElement('hr'); // sukuriamas dar vienas hr elementas (reikia keletos hr elementų norint juo kelis atvaizduoti)
 
   let h2 = document.createElement('h2'); // sukuriamas h2 elementas
-  text = document.createTextNode('Padėkojimas'); // sukuriamas tekstinis elementas su tekstu 'Padėkojimas'
+  text = document.createTextNode('Skanaus!'); // sukuriamas tekstinis elementas su tekstu 'Padėkojimas'
   h2.append(text); // h2 suteikiamas tekstas
 
   mainDiv.append(p1, h4, h1, hr, ul, hr1, p2, hr2, h2); // į mainDiv'ą sukeliame p1, h4, h1, hr, ul, hr1, p2, hr2, h2 elementus tokia tvarka kaip išvadrinta

@@ -1,5 +1,105 @@
 #saskaita > div {
-  width: 500px;
-  margin: 0 auto;
-  border: 1px solid black;
+  width: 400px;
+  border: 1px solid rgb(151, 150, 150);
+  margin: 20px;
+}
+
+form {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.patiekaloSelektas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+}
+select {
+  height: 40px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: bolder;
+}
+
+.patiekaloSelektas > input{
+  height: 39px;
+  width: 44px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  text-align: right;
+}
+
+.addMoreSelect > button {
+  width: 400px;
+  height: 30px;
+  margin: 10px 0;
+  font-size: 23px;
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.336);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  
+}
+.addMoreSelect > button:hover {
+  color: green;
+  border-color: green;
+}
+.submitDiv > input {
+  height: 40px;
+  width: 400px;
+  align-items: center;
+  border: 1px solid rgba(0, 233, 97, 0.336);
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.85);
+  font-weight: bolder;
+  font-size: medium;
+  background-color: rgba(6, 148, 6, 0.603);
+}
+
+.submitDiv > input:hover {
+   border-color: rgba(0, 0, 0, 0.15);
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  transform: translateY(-1px);
+  
+}
+
+#saskaita .date, h4, h1, h2{
+  display: flex;
+  justify-content: center;
+}
+ul{
+  padding: 20px;
+  margin: 0;
+
+}
+span {
+  font-size: larger;
+}
+li {
+list-style: none;
+}
+li  div {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+#saskaita .bendraKaina {
+  padding: 20px;
+  margin: 0;
+  font-weight: bolder;
+  font-size: 18px;
 }
