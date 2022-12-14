@@ -136,6 +136,8 @@ fullNameEntryForm.addEventListener("submit", (event) => { //dedu event listeneri
   // console.log({ user }); //consolinam
 });
 
+
+
 // 2) Sukurkite HTML formą, kurioje vartotojas galės įrašyti (į input laukelius): car brand, model, mileage, price ir image (url laukelis).
 //   2.1) Per Klasę, sukuriamas objektas ir jis atvaizduojamas po forma (CSS'ą rašykite CSS'e) kaip atvaizduota nuotraukoje (./images/cars.PNG).
 //   3.1) Paspaudus ant automobilio bloko - turi alert išmesti kainą ir mileage. (gal su CSS'u gražiai padaryti, kad užėjus ant elemento su pele, atsiranda laukelis nuotraukoje...)
@@ -148,16 +150,16 @@ class Car {
     this.image = image;
   }
   post() {
-    const container = document.querySelector('.container');
+    const container = document.querySelector('.container'); //kuriu konteineri paemus is html .container 
     const createDiv = document.createElement('div');
     createDiv.className = '.card';
     const createImage = document.createElement('img');
-    createImage.src = this.image;
+    createImage.src = this.image; //sukuriu elmenta kuris bus this image, kad irasius i forma isikeltu nurodytas
     const createText = document.createElement('h2');
-    createText.innerText = `${this.brand} ${this.model}`;
+    createText.innerText = `${this.brand} ${this.model}`;// kadangi noriu jog man ismestu brand ir model, tai idedu tus parametrus i inner text if h2
     createDiv.append(createImage, createText);
     container.append(createDiv);
-    createDiv.addEventListener('click', () => {
+    createDiv.addEventListener('click', () => { //pridedu event listeneri kad paspaudus ant paveikslelio ismetu kaina
       const createP = document.createElement('p');
       createP.innerText = `${this.price}`;
       createDiv.append(createP);
@@ -166,15 +168,15 @@ class Car {
   }
 }
 
-document.querySelector('#carForm').addEventListener('submit', (event) => {
+document.querySelector('#carForm').addEventListener('submit', (event) => { //event listeneris formai
   event.preventDefault();
   const brand = document.querySelector('#brand').value;
   const model = document.querySelector('#model').value;
   const mileage = document.querySelector('#mileage').value;
   const price = document.querySelector('#price').value;
-  const image = document.querySelector('#image').value;
+  const image = document.querySelector('#image').value; //paimu visas value
   const car = new Car(brand, model, mileage, price, image);
-  car.post();
+  car.post(); //car ikeliamas
 })
 
 
