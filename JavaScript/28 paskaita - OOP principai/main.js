@@ -109,14 +109,17 @@ class Person {
     const usersListElement = document.querySelector("tbody#users-list"); //obvious
     const nameRow = document.createElement("tr");//kuriu table row
     const firstNameElement = document.createElement("td"); // kuriu table data kuriame bus mano name
+
+    const lastNameRow = document.createElement('tr');
     const lastNameElement = document.createElement("td");// kuriu table data kuriame bus mano last name
 
     firstNameElement.textContent = this.firstName; //i susikurta firstnameelement dedu savo firstname
     lastNameElement.textContent = this.lastName;// same tik kad dedu savo lastname
 
-    nameRow.append(firstNameElement, lastNameElement); //appendinu abu
+    nameRow.append(firstNameElement); 
+    lastNameRow.append(lastNameElement); //appendinu abu
 
-    usersListElement.append(nameRow); // appendinu visa table row
+    usersListElement.append(nameRow, lastNameRow); // appendinu visa table row
   }
 }
 const fullNameEntryForm = document.querySelector("form#fullNameEntry");//pasirenku forma, kur vartotojas ves savo duomenis
@@ -188,10 +191,10 @@ document.querySelector('#carForm').addEventListener('submit', (event) => { //eve
 class Heading{
   constructor(props){
     this.props = props;
-    return this.render();
+    return this.metodas();
   }
 
-  render = () =>{
+  metodas = () =>{
     this.htmlElement = document.createElement(`h${this.props.dydis}`);// i html pridedu h, kurio dydis bus nustatomas per objekta zemiau
     this.textElement = document.createTextNode(this.props.tekstas); //pridedu teksta kuris bus parasytas zemiau  
     this.htmlElement.append(this.textElement); //appendinu vis elementa
@@ -207,14 +210,13 @@ class Heading{
       //   this.htmlElement.setAttribute(atributas[0], atributas[1]);
       // });
     }
-
     return this.htmlElement;
   }
 }
 
 let antraste1 = new Heading({ //susikeliam visus nekuriant papildomu eiluciu, tik su auksciau parasytomis
   dydis: '1',
-  tekstas: 'Kaimietiškai',
+  tekstas: 'Inkapsiuliacija       - objekto vidiniai duomenys slepiami ir jais galima manipuliuoti tik naudojant objekto viešus metodus.',
   atributai: {
     class: 'klasesVardas darVienaKlase',
     id: 'kazkoksId',
@@ -230,7 +232,7 @@ document.querySelector("body").append(antraste1);
 
 document.querySelector("body").append(new Heading({  //pridedam dar viena h
   dydis:'5',
-  tekstas:'Labas rytas',
+  tekstas:'Abstrakcija           - objekto nepriklausomumas nuo išorinių sudedamųjų dalių.',
   // atributai: [
   //   ['style', 'font-size: 50px']
   // ]
@@ -240,9 +242,9 @@ document.querySelector("body").append(new Heading({  //pridedam dar viena h
 }));
 document.querySelector("body").append(new Heading({
   dydis:'6',
-  tekstas:'Labai mažas header',
+  tekstas:'Paveldėjimas          - viena klasė gali būti kitos klasės konkretizacija.',
   atributai: {
-    style: 'color:aquamarine',
+    style: 'color:#12592e',
   }
 }));
 

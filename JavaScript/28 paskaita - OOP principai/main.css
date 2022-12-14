@@ -1,28 +1,78 @@
-form {
-  padding-top: 2rem;
+form:nth-of-type(1) {
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  background-color: #0F8A5F;
+  width: 500px;
 }
-
+input:nth-child(1){
+  height: 25px;
+  border: 1px solid #CC231E;
+  border-radius: 5px;
+}
+form:first-of-type > button {
+  border-radius: 5px;
+  border-color: #CC231E;
+  background-color: #CC231E;
+  margin-left: 10px;
+}
 table {
   border-collapse: collapse;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: #0F8A5F;
+  color: azure;
+  letter-spacing: 1px;
+  width: 500px;
 }
-
-td {
+th,td {
   display: block;
-  border: 1px solid #000;
+  border: 1px solid #CC231E;
   padding: 1rem;
   margin-bottom: 1rem;
+  border-radius: 5px;
 }
 
+/*cars*/
+
+#carForm {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background-color:#235E6F;
+  margin-top: 20px;
+  padding: 5px;
+  width: 500px;
+}
+label {
+  color: white;
+  font-size: 20px;
+}
 input {
   display: block;
+  height: 25px;
+  border: 1px solid #CC231E;
+  border-radius: 5px;
 }
-
+#carForm button {
+  border-radius: 5px;
+  color: white;
+  background-color: #CC231E;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bolder;
+  margin: 10px 0;
+}
 img {
   width: 300px;
 }
-
 .container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  justify-content: center;
+  background-color: #235E6F;
+  width: 500px;
+  padding: 0 5px;
+  text-align: center;
+  color: white;
 }
