@@ -184,7 +184,7 @@ document.querySelector('#carForm').addEventListener('submit', (event) => { //eve
 // 4+) (Shiritori) https://edabit.com/challenge/6o5tYwwbY2ys7XTm4
 
 
-// Susikurti (h1-h6) Antraštės Klasę su tekstu, atributais
+// Susikurti (h1-h6) antraštės Klasę su tekstu, atributais
 class Heading{
   constructor(props){
     this.props = props;
@@ -192,13 +192,13 @@ class Heading{
   }
 
   render = () =>{
-    this.htmlElement = document.createElement(`h${this.props.dydis}`);
-    this.textElement = document.createTextNode(this.props.tekstas);   
-    this.htmlElement.append(this.textElement);
+    this.htmlElement = document.createElement(`h${this.props.dydis}`);// i html pridedu h, kurio dydis bus nustatomas per objekta zemiau
+    this.textElement = document.createTextNode(this.props.tekstas); //pridedu teksta kuris bus parasytas zemiau  
+    this.htmlElement.append(this.textElement); //appendinu vis elementa
 
     if(this.props.atributai){
       // jeigu atributai yra objektas
-      Object.keys(this.props.atributai).forEach(raktas => {
+      Object.keys(this.props.atributai).forEach(raktas => {//paima ju keys ir nustato atributus kurie gali but duodami
         this.htmlElement.setAttribute(raktas, this.props.atributai[raktas]);
       });
 
@@ -212,7 +212,7 @@ class Heading{
   }
 }
 
-let antraste1 = new Heading({
+let antraste1 = new Heading({ //susikeliam visus nekuriant papildomu eiluciu, tik su auksciau parasytomis
   dydis: '1',
   tekstas: 'Kaimietiškai',
   atributai: {
@@ -227,19 +227,23 @@ let antraste1 = new Heading({
   // ]
 });
 document.querySelector("body").append(antraste1);
-document.querySelector("body").append(new Heading({
+
+document.querySelector("body").append(new Heading({  //pridedam dar viena h
   dydis:'5',
   tekstas:'Labas rytas',
   // atributai: [
   //   ['style', 'font-size: 50px']
   // ]
   atributai: {
-    style: 'font-size:50px'
+    style: 'font-size:40px'
   }
 }));
 document.querySelector("body").append(new Heading({
   dydis:'6',
-  tekstas:'mažiukas'
+  tekstas:'Labai mažas header',
+  atributai: {
+    style: 'color:aquamarine',
+  }
 }));
 
 //5) Sukurti Klasę, kuri kurs paragrafus.
@@ -263,24 +267,27 @@ class Paragraph {
 }
 let paragrafas1 = new Paragraph({
   tekstas:
-    "Lorem ipsum dolor sit ame  consectetur adipisicing elit. Quisquam, quod.",
+    "Inkapsuliacija - tai objekto (arba klasės) savybių (arba metodų) prieinamumo valdymas,public - savybės ar metodai yra pasiekiami, ir gali būti keičiami bei naudojami iš bet kur private - savybės ar metodai yra pasiekiami ir gali būti keičiami bei naudojami tik klasės metoduose, bei geteriuose ir seteriuose.",
   atributai: {
-    class: "klasesVardas darVienaKlase",
-    id: "kazkoksId",
-    style: "color:green"
+    class: "klase klase2",
+    id: "paragrafoId",
+    style: "color:blue"
   }
 });
 document.querySelector("body").append(paragrafas1);
 document.querySelector("body").append(
   new Paragraph({
-    tekstas: "Laba diena",
+    tekstas: "Get'eteris (getter) - tai metodas kuris iškviečiamas tarsi savybė ir yra naudojamas reikšmei gauti. Get'eriai naudojami tuomet, kuomet norime pritaikyti inkapsuliacijos principus.",
     atributai: {
-      style: "font-size:20px"
+      style: "font-size:30px"
     }
   })
 );
 document.querySelector("body").append(
   new Paragraph({
-    tekstas: "Paragrafas"
+    tekstas: " Set'eteris (setter) - tai metodas kuris iškviečiamas tarsi savybė ir yra naudojamas reikšmei nustatyti. Set'eriai naudojami tuomet, kuomet norime pritaikyti inkapsuliacijos principus.",
+    atributai: {
+      style: 'color:green'
+    }
   })
 );
