@@ -170,7 +170,7 @@ class Car {
     })
   }
 }
-
+// eventTarget elements pakeisti is value
 document.querySelector('#carForm').addEventListener('submit', (event) => { //event listeneris formai
   event.preventDefault();
   const brand = document.querySelector('#brand').value;
@@ -189,7 +189,7 @@ document.querySelector('#carForm').addEventListener('submit', (event) => { //eve
 
 // Susikurti (h1-h6) antraštės Klasę su tekstu, atributais
 class Heading{
-  constructor(props){
+  constructor(props){  // props tiesiog iprastas uzvadinimas, galima vadinti kaip nori
     this.props = props;
     return this.metodas();
   }

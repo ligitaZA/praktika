@@ -1,0 +1,23 @@
+
+[  {  
+    "name": "Harry Potter and the Philosopher's Stone",   
+    "poster": "https://www.kickassfacts.com/wp-content/uploads/2016/06/Harry-Potter-and-the-Philosophers-Stone.jpg",    
+    "lenght": 152,    
+    "actor": ["Daniel Radcliffe",
+    "Rupert Grint", "Emma Watson"]
+  },
+  {
+    "name": "Harry Potter and the Chamber of Secrets",
+    "poster": "https://cdn.jwplayer.com/v2/media/7xR5v3Fn/poster.jpg?width=1920",
+    "lenght": 161,
+    "actor": ["Daniel Radcliffe",
+    "Rupert Grint", "Emma Watson"]
+  },
+  {
+    "name": "Harry Potter and the Prisoner of Azkaban",
+    "poster": "https://musicboxtheatre.com/sites/default/files/styles/page_images/public/harrypotterazkaban.jpg?itok=hc6vNakk",
+    "lenght": 142,
+    "actor": ["Daniel Radcliffe",
+    "Rupert Grint", "Emma Watson"]
+  }
+]

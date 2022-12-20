@@ -52,13 +52,13 @@ label {
 input {
   display: block;
   height: 25px;
-  border: 1px solid #CC231E;
+  border: 1px solid #1ecc35;
   border-radius: 5px;
 }
 #carForm button {
   border-radius: 5px;
   color: white;
-  background-color: #CC231E;
+  background-color: #166d41;
   height: 35px;
   font-size: 20px;
   font-weight: bolder;

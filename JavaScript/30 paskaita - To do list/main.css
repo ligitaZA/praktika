@@ -1,0 +1,159 @@
+/* * {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  background: #eee;
+  font-size: 18px;
+  transition: 0.2s;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ffc93c;
+}
+
+ul li.checked {
+  background: #ff9a3c;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #ff6f3c;
+  color: white;
+}
+
+.header {
+  background-color: #155263;
+  padding: 30px 40px;
+  color: #ffc93c;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.addBtn:hover {
+  background-color: #ffc93c;
+} */
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+html{
+  height: 100vh;
+  background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gettyimages-618978970-1602068114.jpg');
+  background-repeat: left;
+}
+
+.container .title{
+  text-align: center;
+  font-family: 'Gaegu';
+}
+.container .form{
+  background-color: #fff;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+ 
+}
+.container{
+  padding: 30px;
+  margin-top: 190px;
+}
+.form input{
+  flex: 1;
+  padding: 0.7rem;
+  border: none;
+  height: 40px;
+  background-color: #0f8a5f77;
+}
+
+.form .btn{
+  padding: 0.7rem;
+  background-color: rgba(6, 148, 82, 0.521);
+  color: white;
+  cursor: pointer;
+  border: none;
+  font-family: 'Gaegu';
+  font-size: 20px;
+}
+
+.lists .todo{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  margin-top: 0.5rem;
+  border: 1px solid #0F8A5F;
+  font-family: 'Gaegu';
+  font-size: 30px;
+  padding: 5px;
+}
+.lists .todo p {
+  margin: 0;
+}
+.todo span{
+  cursor: pointer;
+}

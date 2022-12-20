@@ -1,0 +1,29 @@
+
+select{
+  width: 300px;
+  text-align: center;
+  padding: 5px;
+  background-color: #F5624D;
+  border: transparent;
+}
+.darkThemedSelect{
+  color: white;
+  font-size: 20px;
+}
+.optionSelection {
+  color: #235E6F;
+  font-size: 20px;
+}
+div.select {
+  background-color: #CC231E;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+table * {
+  border: 1px solid black;
+  width: 150px;
+  height: 40px;
+  text-align: center;
+  font-size: large;
+}
