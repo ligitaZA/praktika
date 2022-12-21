@@ -8,23 +8,13 @@
 
 const searching = document.getElementById('button');
 const maistas = document.getElementById('meal');
-// const receptas = document.querySelector('.receptas');
-// const uzdaryti = document.getElementById('uzdaryti');
-
-// event listeners
-searching.addEventListener('click', maistoSarasas);
-// maistas.addEventListener('click', maistoReceptas);
-// uzdaryti.addEventListener('click', () => {
-//     receptas.parentElement.classList.remove('showRecipe');
-// });
+const modalas = document.querySelector('.modalas');
+const uzdaryti = document.getElementById('uzdaryti');
 
 
-// paimu maisto sarasa, veliau jam pridesiu eventa
 function maistoSarasas(){
-
   //paimu search-input is html failo kaip nauja kintamaji
     let tekstas = document.getElementById('search-input').value.trim(); 
-
     //fetchinu itraukiant inputo reiksme
     fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${tekstas}`)
     .then(response => response.json())
@@ -39,7 +29,7 @@ function maistoSarasas(){
                         </div>
                         <div class = "meal-name">
                             <h3>${element.strMeal}</h3>
-                            <a href = "#" class = "recipe-btn">Get Recipe</a>
+                            <input type='button' class = "recipe-btn" value='Get Recipe' ></input>
                         </div>
                     </div>
                 `;
@@ -52,35 +42,41 @@ function maistoSarasas(){
     });
 }
 
+function maistoReceptas(e){
+  e.preventDefault();
+  if(e.target.classList.contains('recipe-btn')){
+    const foodId = e.target.parentElement.parentElement;
+      fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${foodId.dataset.id}`)
+      .then(response => response.json())
+      .then(data => mealModal(data.meals));
+  }
+} 
 
-// // //get recipe of the meal
-// function maistoReceptas(e){
-//   e.preventDefault();
-//   if(e.target.classList.contains('recipe-btn')){
-//       let mealItem = e.target.parentElement;
-//       fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
-//       .then(response => response.json())
-//       .then(data => mealRecipeModal(data.meals));
-//   }
-// }
+// modalas
+function mealModal(maistas){
+  console.log(maistas);
+  maistas = meal[0];
+  const html = `
+      <h2 class="recipe-title">${meal.strMeal}</h2>
+      <p class="recipe-category">${meal.strCategory}</p>
+      <div class="recipe-instruct">
+          <h3>Instructions:</h3>
+          <p>${meal.strInstructions}</p>
+      </div>
+      <div class="recipe-meal-img">
+          <img src="${meal.strMealThumb}" alt = "img">
+      </div>
+      <div class = "recipe-link">
+          <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
+      </div>
+  `;
+  modalas.innerHTML = html;
+  modalas.parentElement.classList.add('showRecipe');
+}
 
-// // create a modal
-// function mealRecipeModal(maistas){
-//   maistas = maistas[0];
-//   let html = `
-//       <h2 class = "recipe-title">${meal.strMeal}</h2>
-//       <p class = "recipe-category">${meal.strCategory}</p>
-//       <div class = "recipe-instruct">
-//           <h3>Instructions:</h3>
-//           <p>${meal.strInstructions}</p>
-//       </div>
-//       <div class = "recipe-meal-img">
-//           <img src = "${meal.strMealThumb}" alt = "">
-//       </div>
-//       <div class = "recipe-link">
-//           <a href = "${meal.strYoutube}" target = "_blank">Watch Video</a>
-//       </div>
-//   `;
-//   mealDetailsContent.innerHTML = html;
-//   mealDetailsContent.parentElement.classList.add('showRecipe');
-// }
+//eventai mygtukams
+searching.addEventListener('click', maistoSarasas);
+maistas.addEventListener('click', maistoReceptas);
+uzdaryti.addEventListener('click', () => {
+    modalas.parentElement.classList.remove('showRecipe');
+});

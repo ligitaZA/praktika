@@ -141,7 +141,7 @@ h2 {
 .recipe-btn:hover{
     background-color: #d82a2a9f;
 }
-/* 
+
 .meal-details{
     position: fixed;
     top: 50%;
@@ -263,7 +263,7 @@ h2 {
 }
 .recipe-link a:hover{
     opacity: 0.8;
-} */
+}
 
 
 .notFound{
