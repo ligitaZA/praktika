@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "city": "Vilnius",
+      "price": "primokesiu as",
+      "description": "gyg",
+      "image": "https://www.meme-arsenal.com/memes/23be2b94727f00f76a3e3682d46846ad.jpg",
+      "id": 1
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
