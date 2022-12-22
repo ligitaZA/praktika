@@ -113,9 +113,10 @@ function getApartments() {
           <div class="apartment">
             <img src="${apartment.image}" alt="${apartment.description}">
             <div class="info">
-              <p>${apartment.city}</p>
-              <p>€ ${apartment.price}</p>
-              <p>${apartment.description}</p>
+              <p class="city">${apartment.city}</p>
+              <p class="price">€ ${apartment.price}</p>
+              <p class="description">${apartment.description}</p>
+              <button class="edit-button" data-apartment-id="${apartment.id}">Edit</button>
               <button class="delete-button" data-apartment-id="${apartment.id}">Delete</button>
             </div>
           </div>
@@ -161,7 +162,56 @@ apartments.addEventListener('click', function (e) {
       }
     });
   }
-});
+
+  // editinimas
+  if (e.target.classList.contains('edit-button')) {
+    const apartmentId = e.target.dataset.apartmentId;
+    const apartmentElement = e.target.parentElement;
+    const cityElement = apartmentElement.querySelector('.city');
+    const priceElement = apartmentElement.querySelector('.price');
+    const descriptionElement = apartmentElement.querySelector('.description');
+    apartmentElement.innerHTML = `
+      <form class="edit-apartment-form">
+        <input type="text" value="${cityElement.textContent}">
+        <input type="number" value="${priceElement.textContent.slice(2)}">
+        <input type="text" value="${descriptionElement.textContent}">
+        <button type="submit" id="save-button">Save</button>
+      </form>
+    `;
+    const form = apartmentElement.querySelector('.edit-apartment-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const city = form.querySelector('input:nth-child(1)').value;
+      const price = form.querySelector('input:nth-child(2)').value;
+      const description = form.querySelector('input:nth-child(3)').value;
+      fetch(`http://localhost:3000/posts/${apartmentId}`, {
+        method: "PUT",
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ city, price, description })
+      }).then(response => {
+        if (response.ok) {
+          getApartments();
+        }
+      });    
+
+      
+      // taisyti
+      document.querySelector('#save-button').addEventListener('submit',
+    function (e) {
+      e.preventDefault();
+      const city = form.querySelector('input:nth-child(1)').value;
+      const price = form.querySelector('input:nth-child(2)').value;
+      const description = form.querySelector('input:nth-child(3)').value;
+      const newApartment1 = {
+        city,
+        price,
+        description,
+        image
+      };
+    })
+  })}})
 
 
-
+  

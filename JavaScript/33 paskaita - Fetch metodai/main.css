@@ -68,7 +68,7 @@ label {
   flex-direction: column;
   justify-content: space-between;
   width: 350px;
-  height: 400px;
+  height: 500px;
   padding: 10px;
 }
 button {
@@ -102,5 +102,8 @@ button {
   font-style: italic;
   padding: 5px;
 }
-
+.edit-apartment-form {
+  height: 100px;
+  gap: 0;
+}
 
