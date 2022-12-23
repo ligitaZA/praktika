@@ -87,13 +87,13 @@ button {
 .buttons {
   display: flex;
   padding-top: 10px;
+
 }
-.edit-button{
+.edit-button, .delete-button{
   width: 100px;
+  background-color:rgba(35, 94, 111, 0.603)
 } 
-.delete-button {
-  width: 100px;
-}
+
 .movie img {
   width: 100%;
   height: 300px;
@@ -108,8 +108,6 @@ button {
   overflow: hidden;
   width: 350px;
 }
-
-
 .movie .info p:first-child {
   font-weight: bold;
 }
@@ -117,8 +115,19 @@ button {
   font-style: italic;
   padding: 5px;
 }
-.edit-movie-form {
-  height: 100px;
-  gap: 0;
-}
 
+.edit-movie-form{
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: rgba(35, 94, 111, 0.603);
+}
+.edit-movie-form select{
+    height: 25px;
+    border: none;
+    background-color: #e4d7d793;
+    color: #fff;
+  }
+  .edit-movie-form p{
+    margin: 0;
+  }
