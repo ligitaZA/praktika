@@ -1,11 +1,12 @@
 {
   "posts": [
     {
-      "city": "Vilnius",
-      "price": "500",
-      "description": "Apartamentai Palangoje.",
-      "image": "https://media.makeameme.org/created/you-get-some-cbfaaaada4.jpg",
-      "id": 1
+      "name": "Iron Man",
+      "category": "Action",
+      "length": "6",
+      "description": "Anthony Edward ",
+      "actors": "Robert Downey Jr.,Terrence Howard,Jeff Bridges,Gwynth Paltrow,Leslie Bibb",
+      "id": 2
     }
   ]
 }

@@ -100,41 +100,50 @@ Sukurti CRUD aplikaciją laisva tema naudojant JSON-server.
   ++) Galima tobulinti, kad JSON faile būtų keletas susietų laukų. (pvz.: Knygos ir Autoriai)
 */
 
-const apartments = document.querySelector('#apartments');
-const addApartmentForm = document.querySelector('#addApartmentForm');
+const filmai = document.querySelector('#filmai');
+const addMovieForm = document.querySelector('#addMovieForm');
 
-function getApartments() {
+function getFilm() {
   fetch(`http://localhost:3000/posts`)
     .then(response => response.json())
     .then(data => {
-      apartments.innerHTML = '';
-      data.forEach(apartment => {
-        apartments.innerHTML += `
-          <div class="apartment">
-            <img src="${apartment.image}" alt="${apartment.description}">
+      filmai.innerHTML = '';
+      data.forEach(movie => {
+        filmai.innerHTML += `
+          <div class="movie">
+
+            <img src="${movie.image}" alt="movie img" class="image">
             <div class="info">
-              <p class="city">${apartment.city}</p>
-              <p class="price">€ ${apartment.price}</p>
-              <p class="description">${apartment.description}</p>
-              <button class="edit-button" data-apartment-id="${apartment.id}">Edit</button>
-              <button class="delete-button" data-apartment-id="${apartment.id}">Delete</button>
+              <p class="name">${movie.name}</p>
+              <p class="category">${movie.category}</p>
+              <p class="length">${movie.length}</p>
+              <p class="description">${movie.description}</p>
+              <p class="actors">${movie.actors}</p>
+              <div class='buttons'>
+              <button class="edit-button" data-movie-id="${movie.id}">Edit</button>
+              <button class="delete-button" data-movie-id="${movie.id}">Delete</button>
+            </div>
             </div>
           </div>
         `;
       });
     });
 }
-getApartments();
-addApartmentForm.addEventListener('submit', function (e) {
+getFilm();
+addMovieForm.addEventListener('submit', function (e) {
   e.preventDefault();
-  const city = document.querySelector('#city').value;
-  const price = document.querySelector('#price').value;
+  const name = document.querySelector('#name').value;
+  const category = document.querySelector('#category').value;
+  const length = document.querySelector('#length').value;
   const description = document.querySelector('#description').value;
+  const actors = document.querySelector('#actors').value;
   const image = document.querySelector('#image').value;
-  const newApartment = {
-    city,
-    price,
+  const newFilm = {
+    name,
+    category,
+    length,
     description,
+    actors,
     image
   };
   fetch(`http://localhost:3000/posts`, {
@@ -142,76 +151,66 @@ addApartmentForm.addEventListener('submit', function (e) {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify(newApartment)    
+      body: JSON.stringify(newFilm)    
     })    
     .then(response => response.json())   
     .then(data => {
       console.log(data);
-      getApartments();
+      getFilm();
     });
 });
-apartments.addEventListener('click', function (e) {
+filmai.addEventListener('click', function (e) {
   e.preventDefault();
   if (e.target.classList.contains('delete-button')) {
-    const apartmentId = e.target.dataset.apartmentId;
-    fetch(`http://localhost:3000/posts/${apartmentId}`, {
+    const movieId = e.target.dataset.movieId;
+    fetch(`http://localhost:3000/posts/${movieId}`, {
       method: "DELETE"
     }).then(response => {
       if (response.ok) {
-        getApartments();
+        getFilm();
       }
     });
   }
 
   // editinimas
   if (e.target.classList.contains('edit-button')) {
-    const apartmentId = e.target.dataset.apartmentId;
-    const apartmentElement = e.target.parentElement;
-    const cityElement = apartmentElement.querySelector('.city');
-    const priceElement = apartmentElement.querySelector('.price');
-    const descriptionElement = apartmentElement.querySelector('.description');
-    apartmentElement.innerHTML = `
-      <form class="edit-apartment-form">
-        <input type="text" value="${cityElement.textContent}">
-        <input type="number" value="${priceElement.textContent.slice(2)}">
+    const movieId = e.target.dataset.movieId;
+    const movieElement = e.target.closest('.info');
+    const nameElement = movieElement.querySelector('.name');
+    const categoryElement = movieElement.querySelector('.category');
+    const lengthElement = movieElement.querySelector('.length');
+    const descriptionElement = movieElement.querySelector('.description');
+    const actorsElement = movieElement.querySelector('.actors');
+    movieElement.innerHTML = `
+      <form class="edit-movie-form">
+      <input type="text" value="${nameElement.textContent}">
+        <input type="text" value="${categoryElement.textContent}">
+        <input type="number" value="${lengthElement.textContent.slice(2)}">
         <input type="text" value="${descriptionElement.textContent}">
+        <input type="text" value="${actorsElement.textContent}">
         <button type="submit" id="save-button">Save</button>
       </form>
     `;
-    const form = apartmentElement.querySelector('.edit-apartment-form');
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const city = form.querySelector('input:nth-child(1)').value;
-      const price = form.querySelector('input:nth-child(2)').value;
-      const description = form.querySelector('input:nth-child(3)').value;
-      fetch(`http://localhost:3000/posts/${apartmentId}`, {
-        method: "PUT",
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({ city, price, description })
-      }).then(response => {
-        if (response.ok) {
-          getApartments();
-        }
-      });    
+    const form = movieElement.querySelector('.edit-movie-form');
 
-      
-      // taisyti
-      document.querySelector('#save-button').addEventListener('submit',
-    function (e) {
-      e.preventDefault();
-      const city = form.querySelector('input:nth-child(1)').value;
-      const price = form.querySelector('input:nth-child(2)').value;
-      const description = form.querySelector('input:nth-child(3)').value;
-      const newApartment1 = {
-        city,
-        price,
-        description,
-        image
-      };
-    })
-  })}})
+    const saveButton = movieElement.querySelector('#save-button');
 
-
-  
+saveButton.addEventListener('click', (e) => {
+  e.preventDefault();
+  const name = form.querySelector('input:nth-child(1)').value;
+  const category = form.querySelector('input:nth-child(2)').value;
+  const length = form.querySelector('input:nth-child(3)').value;
+  const description = form.querySelector('input:nth-child(4)').value;
+  const actors = form.querySelector('input:nth-child(5)').value;
+  fetch(`http://localhost:3000/posts/${movieId}`, {
+    method: "PUT",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ name, category, length, description, actors })
+  }).then(response => {
+    if (response.ok) {
+      getFilm();
+    }
+  });
+})}})
