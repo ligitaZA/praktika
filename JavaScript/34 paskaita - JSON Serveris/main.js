@@ -179,6 +179,7 @@ filmai.addEventListener('click', function (e) {
     const imageElement = movieElement.querySelector('.image');
     const nameElement = movieElement.querySelector('.name');
     const categoryElement = movieElement.querySelector('.category');
+    console.log(categoryElement)
     const lengthElement = movieElement.querySelector('.length');
     const descriptionElement = movieElement.querySelector('.description');
     const actorsElement = movieElement.querySelector('.actors');
@@ -188,8 +189,8 @@ filmai.addEventListener('click', function (e) {
     <label>Name</label>
     <input type="text" class="nameElement" value="${nameElement.textContent}"> 
 
-        <label for="category" class='categoryElement'>Category</label>
-        <select name="category" id="category" value="${categoryElement.textContent}">
+        <label for="category" >Category</label>
+        <select name="category" id="category" class='categoryElement' value="${categoryElement.textContent}">
             <option value="Action" ${categoryElement.textContent === 'Action' ? 'selected' : ''}>Action</option>
             <option value="Adventure" ${categoryElement.textContent === 'Adventure' ? 'selected' : ''}>Adventure</option>
             <option value="Comedy" ${categoryElement.textContent === 'Comedy' ? 'selected' : ''}>Comedy</option>
