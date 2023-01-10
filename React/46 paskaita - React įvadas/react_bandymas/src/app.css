@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap');
+
+body {
+  margin:  0 100px;
+  background-color: rgb(207, 207, 207);
+  font-family: "Open Sans";
+}
+header .imageBackground img {
+  height: 80px;
+  width: 300px;
+  background-color: rgb(255, 255, 255);
+}
+header .imageBackground {
+  background-color: rgb(255, 255, 255);
+}
+header .header-part ul {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 10px;
+  list-style: none;
+  height: 50px;
+  background-color: rgb(24, 27, 41);
+}
+header .header-part ul li {
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+}
+header .header-part ul li:hover {
+  background-color: rgba(44, 48, 49, 0.726);
+  transition: 0.2s ease;
+}
+
+
+header img {
+  max-height: 500px;
+  width: 100%;
+}
+
+#middlePart {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+
+}
+#middlePart div {
+  background-color: white;
+  padding: 15px;
+}
+#middlePart h2 {
+  margin-bottom: 5px;
+}
+#middlePart p {
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+#lowerPart {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 20px;
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+#lowerPart .firstDiv {
+  width: 70%;
+  margin: 0;
+}
+
+#lowerPart .firstDiv h1 {
+  font-size: 40px;
+  margin: 0;
+}
+
+#lowerPart .firstDiv h2 {
+  margin: 0;
+}
+
+#lowerPart .firstDiv p {
+  font-size: 18px;
+}
+
+#lowerPart .secondDiv {
+  width: 30%;
+}
+
+#lowerPart .secondDiv ul {
+  background-color: rgb(207, 207, 207);
+  height: 100%;
+  margin: 0;
+  padding: 0
+}
+
+#lowerPart .secondDiv ul li {
+  list-style: none;
+  padding: 32px;
+  cursor: pointer;
+}
+#lowerPart .secondDiv ul li:hover {
+  background-color: rgba(218, 218, 216, 0.829);
+  font-weight: bolder;
+  transition: 0.2s ease;
+}
+

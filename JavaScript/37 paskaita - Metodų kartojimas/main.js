@@ -459,3 +459,6 @@ const rastiReiksme = (masyvas, reiksme, indeksas) => {
   return masyvas.slice(indeksas).find(el => el === reiksme) !== undefined;
 }
 console.log(rastiReiksme([1, 2, 3, 4, 5], 4, 2))
+
+
+

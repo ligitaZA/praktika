@@ -242,3 +242,39 @@ filmai.addEventListener('click', function (e) {
     })
   }
 })
+
+// async function surastiButus() {
+//   try {
+//     // Nuskaitykite duomenys iš failo 'duomenys.json'
+//     const response = await fetch('./data/duomenys.json');
+//     const duomenys = await response.json();
+
+//     // Nustatykite kriterijus
+//     const kambariuSkaicius = 2;
+//     const aukstoNumerisNuo = 5;
+//     const aukstoNumerisIki = 7;
+//     const kainaIki = 99999;
+
+//     // Sukurkite tuščią sąrašą, kuriame bus saugomi atitinkantys kriterijus butai
+//     const atsakymai = [];
+
+//     // Eikite per kiekvieną butą sąraše ir patikrinkite, ar jis atitinka nurodytus kriterijus
+//     duomenys.forEach(butai => {
+      
+//       const butoNumeris = butai.butoNumeris;
+//       const aukstoNumeris = Math.floor(butoNumeris / 27) + 1;
+//       const kambariuSkaiciusBute = butai.kambariuSkaicius;
+//       const pardavimoKaina = butai.pardavimoKaina;
+
+//       if (aukstoNumeris >= aukstoNumerisNuo && aukstoNumeris <= aukstoNumerisIki && kambariuSkaiciusBute === kambariuSkaicius && pardavimoKaina <= kainaIki) {
+//         atsakymai.push(butai);
+//       }
+//     });
+
+//     // Išveskite atsakymų sąrašą į konsolę
+//     console.log(atsakymai);
+//   } catch (error) {
+//     console.error(error);
+//   }}
+//   surastiButus();
+
