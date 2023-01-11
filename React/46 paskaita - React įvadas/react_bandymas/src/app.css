@@ -21,6 +21,7 @@ header .header-part ul {
   list-style: none;
   height: 50px;
   background-color: rgb(24, 27, 41);
+  margin-top: 0;
 }
 header .header-part ul li {
   padding: 10px;

@@ -8,8 +8,8 @@ const List = (props) => {
           props.data.map((item, index) => {
             return (
             <ListItem 
-            data={item}
             key={index.toString()}
+            data={item}
             />
           )})
         }

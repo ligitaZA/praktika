@@ -1,0 +1,40 @@
+header .header {
+  background-image: url('https://images.unsplash.com/10/fields.jpg?ixid=MnwxMjA3fDB8MXxzZWFyY2h8Mnx8bGF0ZSUyMHN1bW1lcnxlbnwwfHx8fDE2NzI4NzA0NTI&ixlib=rb-4.0.3');
+  background-position: center;
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+}
+header .headerText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: white;
+  font-family: 'Open Sans';
+
+}
+
+header .headerText h1{
+  margin: 0;
+  font-weight: lighter;
+  font-size: 30px;
+}
+
+header .headerText p {
+  width: 120px;
+  text-align: center;
+  padding: 10px;
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 25px;
+}
+
+header .headerText button {
+  padding: 13px 25px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(102, 157, 179);
+  color: white;
+}
