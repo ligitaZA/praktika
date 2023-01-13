@@ -1,0 +1,81 @@
+.articles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.articles .article .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.articles .article .check i {
+  font-size: 20px;
+}
+
+.articles .article {
+  width: 400px;
+  height: 500px; 
+  padding: 10px;
+  border: 1px solid #d5d9d9; 
+  box-sizing: border-box;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  overflow-y: scroll;
+}
+.articles .article .content p {
+  visibility: hidden;
+}
+.articles .article:hover p {
+  visibility: visible;
+}
+
+.articles .article::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F5F5F5;
+}
+
+.articles .article::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+.articles .article::-webkit-scrollbar-thumb {
+  background: transparent; 
+  border-radius: 30px;
+  margin: 5px;
+}
+
+.articles .article:hover::-webkit-scrollbar-thumb {
+  background: #4A4A4A; 
+}
+
+.articles .article img {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+.articles .article .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-direction: column;
+
+}
+.articles .article h2 {
+  font-size: 50px;
+  margin: auto;
+  text-align: center;
+}
+button {
+  background-color: transparent;
+  border: 1px solid;
+  
+}
+.selected {
+  color: white;
+  border-color: rgba(0, 128, 0, 0.74);
+  background-color: #546b54b6;
+}
