@@ -12,3 +12,46 @@ header nav div {
   gap: 10px;
   align-items: center;
 }
+header form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  gap: 10px;
+  padding: 20px;
+}
+header form input{
+border: 1px solid #bec4c4;
+  box-sizing: border-box;
+  width: 200px;
+  height: 25px;
+}
+
+  header form .login {
+  background-color: rgba(187, 177, 177, 0.315);
+  border: transparent;
+  box-shadow: rgba(153, 160, 160, 0.671) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px 10px;
+  }
+
+  header label{
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  } 
+  header .logout {
+  background-color: rgba(187, 177, 177, 0.315);
+  border: transparent;
+  box-shadow: rgba(153, 160, 160, 0.671) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  width: 100px;
+  padding: 5px 10px;
+  margin: 20px auto;
+  display: block;
+  }

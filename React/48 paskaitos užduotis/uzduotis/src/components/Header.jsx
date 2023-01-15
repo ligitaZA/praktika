@@ -1,15 +1,5 @@
-import { useState, useEffect } from "react";
 
-const Header = () => {
-
-  const [markedCount, setClickCount] = useState(0);
-
-  useEffect(() => {
-    console.log('1');
-    return () => {
-      console.log('2');
-    }
-  }, [setClickCount]);
+const Header = ({ markedCount}) => {
 
   return (
     <>

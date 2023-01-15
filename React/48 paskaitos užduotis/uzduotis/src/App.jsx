@@ -1,11 +1,38 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import './App.css';
 import Articles from './components/Articles';
 import Header from "./components/Header";
+import SignIn from './components/SignIn';
 
 
 function App() {
 
+  const [markedCount, setClickCount] = useState(0);
+  const [arPrisijunges, setArPrisijunges] = useState(false);
+
+  const [newArticle, setNewArticle] = useState({
+    src: '',
+    name: '',
+    paragraph1: '',
+    paragraph2: '',
+    paragraph3: ''
+  });
+
+  const handleChange = (property) => (event) => {
+    setNewArticle({ ...newArticle, [property]: event.target.value });
+  }
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setData([...data, newArticle]);
+    setNewArticle({
+      src: '',
+      name: '',
+      paragraph1: '',
+      paragraph2: '',
+      paragraph3: ''
+    });
+  }
   const [data, setData] = useState(
 
     [
@@ -61,16 +88,38 @@ function App() {
     ]
 
   )
-    useEffect(() => {
-      console.log('pazymeta');
-    }, [setData])
+
+  const handleLogOut = () => {
+    setArPrisijunges(false);
+}
   return (
     <>
       <header>
-        <Header />
+        <Header markedCount={markedCount} setClickCount={setClickCount} />
+        {
+          arPrisijunges ? 
+          <>
+            <label>Sekmingai prisijungei!</label>
+            
+            <button onClick={handleLogOut} className='logout' >Atsijungti</button>
+            <hr />
+          </>
+          : 
+          <SignIn
+            prijungti={setArPrisijunges}
+            />
+        }
       </header>
       <main>
-        <Articles data={data} />
+        <form onSubmit={handleSubmit}>
+          <input type="text" placeholder="Image URL" value={newArticle.src} onChange={handleChange('src')} />
+          <input type="text" placeholder="Article name" value={newArticle.name} onChange={handleChange('name')} />
+          <input type="text" placeholder="Paragraph 1" value={newArticle.paragraph1} onChange={handleChange('paragraph1')} />
+          <input type="text" placeholder="Paragraph 2" value={newArticle.paragraph2} onChange={handleChange('paragraph2')} />
+          <input type="text" placeholder="Paragraph 3" value={newArticle.paragraph3} onChange={handleChange('paragraph3')} />
+          <button type="submit">Add New Article</button>
+        </form>
+        <Articles data={data} setClickCount={setClickCount} />
       </main>
     </>
   );

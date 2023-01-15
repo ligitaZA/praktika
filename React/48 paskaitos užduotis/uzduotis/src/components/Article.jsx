@@ -6,9 +6,12 @@ const Article = ({ data, setClickCount }) => {
 
   const handlePazymetasStraipsnis = () => {
     setPazymetasStraipsnis(!pazymetasStraipsnis);
-    setClickCount(prevCount => prevCount + 1);
+    if(pazymetasStraipsnis){
+      setClickCount(prevCount => prevCount - 1);
+    }else{
+      setClickCount(prevCount => prevCount + 1);
+    }
   }
-
   useEffect(() => {
     console.log('pazymetas straipsnis');
   }, [pazymetasStraipsnis]);

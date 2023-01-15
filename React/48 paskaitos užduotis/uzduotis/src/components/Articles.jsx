@@ -1,6 +1,6 @@
 import Article from "./Article"
 
-const Articles = ({ data }) => {
+const Articles = ({ data, setClickCount }) => {
 
   return (
     <>
@@ -11,7 +11,7 @@ const Articles = ({ data }) => {
               <Article
                 data={item}
                 key={index}
-                
+                setClickCount={setClickCount}
               />
             )
           })
