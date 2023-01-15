@@ -80,7 +80,7 @@ button {
   background-color: #546b54b6;
 }
 main form {
-  margin: 20px 200px;
+  margin: 20px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -92,6 +92,7 @@ main form {
   height: auto;
   gap: 10px;
   padding: 20px;
+  width: 400px;
   }
   main form input {
   border: 1px solid #bec4c4;

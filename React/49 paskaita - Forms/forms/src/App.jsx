@@ -3,6 +3,8 @@ import './App.css';
 import Form from './components/Form';
 import SignIn from './components/SignIn';
 import { useState } from 'react';
+import NDForm from './components/NDForm';
+
 
 function App() {
   const [arPrisijunges, setArPrisijunges] = useState(false);
@@ -16,6 +18,9 @@ function App() {
     />
   }
   <Form />
+  <div className='formHomework'>
+  <NDForm/>
+  </div>
   </>
   );
 }
