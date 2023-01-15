@@ -20,7 +20,7 @@ function TodoApp() {
     setTodos(newTodos);// atnaujinamas setTodos su naujomis reiksmemis
   }
 
-  const unifinisheTasks = todos.filter(todo => !todo.isCompleted).length; // naujas kintamasis, naudojant filter ir length suiskaiciuoja nebaigtu uzduociu kieki
+  const unifinisheTasks = todos.filter(todo => !todo.isCompleted).length; // naujas kintamasis, naudojant filter ir length suiskaiciuoja nebaigtu užduociu kieki
   return (
     <div className='app'>
       <label>You have <span>{unifinisheTasks}</span> Todos</label>
