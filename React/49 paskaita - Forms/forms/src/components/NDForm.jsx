@@ -11,7 +11,7 @@ const NDForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [data, setData] = useState({});
 
-  const handleChanges = (e) => {
+  const handleChanges = (e) => { //funkcija formos lauku reiksmiu pakitimui
     setForma({
       ...forma,
       [e.target.name]: e.target.value
@@ -63,10 +63,10 @@ const NDForm = () => {
         <br />
         <button type="submit">Submit</button>
       </form>
-      {submitted && <div>
-          <p>Name: {data.name}</p>
+      {submitted && <div className="card">
+          <h3>{data.name}</h3>
           <img src={data.src} alt={data.name} />
-          <p>About: {data.about}</p>
+          <p>{data.about}</p>
         </div>}
     </div>
     </>

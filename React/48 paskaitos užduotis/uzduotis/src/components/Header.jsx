@@ -1,5 +1,5 @@
 
-const Header = ({ markedCount}) => {
+const Header = ({ markedCount }) => {
 
   return (
     <>

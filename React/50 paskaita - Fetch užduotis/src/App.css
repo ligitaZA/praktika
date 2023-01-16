@@ -1,0 +1,71 @@
+.forma form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #737979;
+  border-radius: 8px;
+  box-shadow: rgba(114, 114, 233, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  height: auto;
+  gap: 5px;
+  padding: 20px;
+  margin: 20px 200px;
+  padding: 10px;
+}
+.forma form label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+.forma form label input {
+  border: none;
+  border-radius: 5px;
+  margin: 0 auto;
+  width: 200px;
+  height: 25px;
+  border: #12121259 1px solid;
+}
+.filmas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.filmas div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  background-color: rgb(197, 193, 193);
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+}
+.filmas div img {
+  height: 50%;
+  width: 100%;
+  border-radius: 12px 12px 0 0 ;
+  object-fit: cover;
+  position: relative;
+}
+.filmas * {
+  margin: 0;
+  text-align: center;
+}
+.filmas button {
+  margin: 5px 10px;
+  background-color: transparent;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+}
+.filmas button i {
+  font-size: large;
+  color: #fff;
+}

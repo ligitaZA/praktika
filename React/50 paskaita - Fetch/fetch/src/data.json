@@ -1,0 +1,33 @@
+
+  {
+    "kalnai":[
+      {
+        "pavadinimas": "kalno name",
+        "lokacija": "kur yra",
+        "aukstisMetrais": 5003,
+        "arEsuIveikes": false,
+        "id": "65dfs1g"
+      },
+      {
+        "pavadinimas": "kalno name2",
+        "lokacija": "kur yra2",
+        "aukstisMetrais": 3744,
+        "arEsuIveikes": false,
+        "id": "65dfg1g"
+      },
+      {
+        "pavadinimas": "kalno name3",
+        "lokacija": "kur yra3",
+        "aukstisMetrais": 5003,
+        "arEsuIveikes": true,
+        "id": "65dfs1r"
+      },
+      {
+        "pavadinimas": "kalno name4",
+        "lokacija": "kur yra4",
+        "aukstisMetrais": 4667,
+        "arEsuIveikes": false,
+        "id": "65dss1g"
+      }
+    ]
+  }

@@ -1,0 +1,28 @@
+{
+  "filmai": [
+    {
+      "name": "Haris Poteris ir Azkabano kalinys",
+      "metai": "2004",
+      "zanras": "Nuotykių",
+      "arMatytas": true,
+      "image": "https://cdn.mos.cms.futurecdn.net/LhrXmhosUpsnVFZBjSJ6cL-1200-80.jpg",
+      "id": 1
+    },
+    {
+      "name": "Haris Poteris ir Paslapčių kambarys",
+      "metai": "2002",
+      "zanras": "Nuotykių",
+      "arMatytas": true,
+      "image": "https://www.peacocktv.com/dam/growth/assets/seo/HarryPotter/CoS/hp-cos-og.png",
+      "id": 2
+    },
+    {
+      "name": "Haris Poteris ir Ugnies taurė",
+      "metai": "2005",
+      "zanras": "Nuotykių",
+      "arMatytas": true,
+      "image": "https://a.ltrbxd.com/resized/sm/upload/tq/zt/18/vz/harry-potter-goblet-fire-50-1200-1200-675-675-crop-000000.jpg?v=4e416202ca",
+      "id": 3
+    }
+  ]
+}
