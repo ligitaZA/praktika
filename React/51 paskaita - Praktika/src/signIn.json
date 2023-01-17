@@ -1,0 +1,12 @@
+{
+  "prisijungimas":[
+    {
+      "name": "ligita",
+      "password": "12345"
+    },
+    {
+      "name": "ledlauzis",
+      "password": "spuogas"
+    }
+  ]
+}
