@@ -1,5 +1,385 @@
-header {
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
+body {
+  background-image: url('https://wallpaperaccess.com/full/1552448.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+  font-family: 'Ubuntu';
+  color: #fff;
+}
+
+main {
+  background-color: #1d1d2c65;
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: end;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto;
+  padding: 100px;
+  height: 100px;
+}
+
+.form-header div {
+  background-color: #4d39399f;
+  margin-top: 20px;
+  padding: 5px;
+  font-size: 25px;
+  color: #fdfdfd;
+}
+
+.form-header form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 50px 50px 50px;
+  background-color: #1b1b1dbb;
+}
+
+.form-header h1 {
+  font-size: 32px;
+}
+
+.form-header form input {
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 40px;
+  width: 300px;
+  background-color: rgb(56, 55, 55);
+}
+
+.form-header form button {
+  border-radius: 4px;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  padding: 10px 30px;
+  width: 100%;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: auto 50px;
+  background-color:#2e2f30f8;;
+}
+
+.nav h1 {
+  font-size: 25px;
+}
+
+.nav img {
+  padding: 10px 30px;
+  height: 50px;
+}
+
+.logout {
+  margin-right: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 30px;
+  line-height: 1em;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #ee1414, #ff605ac2);
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: transparent;
+  transition: .2s ease-in-out;
+}
+
+.logout:hover {
+  background-color: #e50914;
+}
+
+main form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  margin: 20px 50px;
+}
+
+main .input-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+main .input-form h1 {
+  font-size: 60px;
+  text-align: right;
+  line-height: 80px;
+}
+
+main .input-form span {
+  display: block;
+}
+
+main form label {
+  display: flex;
+  flex-direction: column;
+  line-height: 30px;
+}
+
+main form label input:not(.checkbox) {
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 40px;
+  width: 400px;
+  background-color: rgba(68, 67, 67, 0.644);
+}
+
+main form .align-self {
+  align-self: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 10px;
+}
+
+main form .add-film {
+  margin-top: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 30px;
+  line-height: 1em;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #ee1414, #ff605ac2);
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: transparent;
+  transition: box-shadow .2s ease-in-out;
+}
+
+main form .add-film:hover {
+  background-color: #e50914;
+}
+
+.filmas {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 50px;
+}
+
+.filmas * {
+  margin: 0;
+  text-align: center;
+}
+
+.filmas .delete {
+  margin: 5px 10px;
+  background-color: transparent;
+  border: none;
+  align-self: flex-end;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+}
+
+.filmas button i {
+  font-size: large;
+  color: #fff;
+}
+
+.filmas .delete i:hover {
+  color: #e50914;
+  transform: rotate(90deg);
+  transition: ease 0.5s;
+}
+
+.filmas .edit {
+  margin: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 5px 20px;
+  line-height: 1em;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.253);
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: transparent;
+  transition: box-shadow .2s ease-in-out;
+}
+
+.filmas .edit:hover {
+  background-color: #e50914;
+}
+
+main div img {
+  height: 50%;
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+  object-fit: cover;
+  position: relative;
+}
+
+.filmas div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 350px;
+  background-color: rgba(241, 227, 227, 0.774);
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, .1) 0 6px 20px;
+  box-sizing: border-box;
+  color: #121212;
+}
+
+main .save {
+  margin-bottom: 10px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 8px 30px;
+  line-height: 1em;
+  box-sizing: border-box;
+  background: linear-gradient(to bottom right, #ee1414, #ff605ac2);
+  border: 0;
+  color: #FFFFFF;
+  cursor: pointer;
+  outline: transparent;
+  transition: box-shadow .2s ease-in-out;
+}
+
+main .save:hover {
+  background-color: #e50914;
+}
+
+main .film-item {
+  padding: 20px 10px 0;
+  height: 330.8px;
+}
+
+main .film-item input:not(.checkbox) {
+  border: 0;
+  border-radius: 4px;
+  color: #fff;
+  height: 25px;
+  width: 200px;
+  background-color: rgba(68, 67, 67, 0.644);
+}
+
+main .film-item p {
+  display: flex;
+  flex-direction: column;
+}
+
+
+footer {
+  background-color: #2e2f30f8;
+  box-shadow: rgba(0, 0, 0, 0.37) 0 3px 5px -1px, rgba(0, 0, 0, 0.14) 0 6px 10px 0,
+    rgba(0, 0, 0, 0.342) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #f3f3f3;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: center;
+}
+
+footer section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+footer #left {
+  padding: 5px;
+  line-height: 30px;
+}
+
+footer #left>p {
+  font-family: "Ubuntu";
+  font-size: large;
+  margin: 10px auto;
+  letter-spacing: 2px;
+}
+
+footer i {
+  padding-right: 10px;
+}
+
+footer img {
+  height: 120px;
+  margin: 0 auto;
+}
+
+footer .address {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  padding-left: 10px;
+}
+
+footer .address div {
+  display: flex;
+  align-items: center;
+}
+
+footer .address div p,
+footer .address div a {
+  font-family: "Ubuntu";
+  margin: 0;
+}
+
+footer section#right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 10px;
+  font-family: "Ubuntu";
+  font-size: large;
+}
+
+footer .soc-networks {
+  text-align: center;
+}
+
+footer a {
+  color: inherit;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.copyrights p {
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 12px;
+}
+
+footer img {
+  height: 80px;
 }

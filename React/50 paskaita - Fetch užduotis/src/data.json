@@ -1,12 +1,44 @@
 {
   "filmai": [
     {
-      "name": "",
-      "metai": "",
-      "zanras": "",
+      "name": "harry potter and the goblet of fire",
+      "metai": "2005",
+      "zanras": "Nuotykių",
       "arMatytas": true,
-      "image": "",
-      "id": 1
+      "image": "https://the-club.com/wp-content/uploads/6ucv0l46-1920.jpg",
+      "id": 3
+    },
+    {
+      "name": "harry potter and the goblet of fire",
+      "metai": "2005",
+      "zanras": "Nuotykių",
+      "arMatytas": true,
+      "image": "https://the-club.com/wp-content/uploads/6ucv0l46-1920.jpg",
+      "id": 4
+    },
+    {
+      "name": "harry potter and the goblet of fire",
+      "metai": "2005",
+      "zanras": "Nuotykių",
+      "arMatytas": true,
+      "image": "https://the-club.com/wp-content/uploads/6ucv0l46-1920.jpg",
+      "id": 5
+    },
+    {
+      "name": "harry potter and the goblet of fire",
+      "metai": "2005",
+      "zanras": "Nuotykių",
+      "arMatytas": true,
+      "image": "https://the-club.com/wp-content/uploads/6ucv0l46-1920.jpg",
+      "id": 6
+    },
+    {
+      "name": "harry potter and the goblet of fire",
+      "metai": "2005",
+      "zanras": "Nuotykių",
+      "arMatytas": true,
+      "image": "https://the-club.com/wp-content/uploads/6ucv0l46-1920.jpg",
+      "id": 7
     }
   ]
 }

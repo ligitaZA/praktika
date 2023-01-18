@@ -1,5 +1,8 @@
 const Form = ({ name, setName, metai, setMetai, zanras, setZanras, arMatytas, setArMatytas, image, setImage, addFilm}) => {
+  
   return (
+    <> 
+    <h1>Add your <span>favorite movie</span> </h1>
     <form onSubmit={addFilm}>
         <label>
           Pavadinimas:
@@ -22,10 +25,11 @@ const Form = ({ name, setName, metai, setMetai, zanras, setZanras, arMatytas, se
           value={zanras} 
           onChange={(e) => setZanras(e.target.value)} />
         </label>
-        <label>
+        <label className="align-self">
           Matytas:
           <input 
           type="checkbox" 
+          className="checkbox"
           checked={arMatytas} onChange={(e) => setArMatytas(e.target.checked)} />
         </label>
         <label>
@@ -36,8 +40,10 @@ const Form = ({ name, setName, metai, setMetai, zanras, setZanras, arMatytas, se
           value={image} 
           onChange={(e) => setImage(e.target.value)}/>
         </label>
-        <button type="submit">Pridėti filmą</button>
+        <button className="add-film" type="submit">Pridėti filmą</button>
     </form>
+    </>
+   
   )
 }
  

@@ -31,7 +31,6 @@ const Header = (props) => {
     }
   }
 
-
   //fetchinu per signIn.sjon server, prilyginu reiksmes userLogin.name ir userLogin.password
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,24 +48,28 @@ const Header = (props) => {
   }
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          placeholder="Username"
-          name="name"
-          value={userLogin.name}
-          onChange={handleUserInput}
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          name="password"
-          value={userLogin.password}
-          onChange={handleUserInput}
-        />
-        <button className="login" type="submit">Log In</button>
-      </form>
-      { status && <div>{status}</div> }
+      <div className="form-header">
+        <form onSubmit={handleSubmit}>
+          <h1>Sign In</h1>
+          <input
+            type="text"
+            placeholder="Username"
+            name="name"
+            value={userLogin.name}
+            onChange={handleUserInput}
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            name="password"
+            value={userLogin.password}
+            onChange={handleUserInput}
+          />
+          <button className="login" type="submit">Sign In</button>
+        </form>
+        {status && <div>{status}</div>}
+      </div>
+
     </>
   );
 }
