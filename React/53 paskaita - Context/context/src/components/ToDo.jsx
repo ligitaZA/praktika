@@ -1,4 +1,9 @@
-const ToDo = ({ data, index, changeTaskState, deleteTask }) => {
+import { useContext } from "react";
+import ToDosContext from "../toDosContext";
+
+const ToDo = ({ data, index }) => {
+  
+const {changeTaskState, deleteTask} = useContext(ToDosContext);
   return (
     <>
       <div>

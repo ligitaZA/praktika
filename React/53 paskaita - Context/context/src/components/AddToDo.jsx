@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import ToDosContext from "../toDosContext";
 
-const AddToDo = ({addNewTask}) => {
-
+const AddToDo = () => {
+  const {addNewTask} = useContext(ToDosContext)
   const [newTaskName, setNewTaskName] = useState('');
 
   const submitHandler = (e) => {

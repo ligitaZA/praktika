@@ -1,15 +1,16 @@
+import { useContext } from "react";
 import ToDo from "./ToDo";
+import ToDosContext from "../toDosContext";
 
-const ToDos = ({ data, changeTaskState, deleteTask }) => {
+const ToDos = () => {
+  const { toDos } = useContext(ToDosContext)
   return (
     <>
-      {data.map((todo, index) =>
+      {toDos.map((todo, index) =>
         <ToDo
           key={todo.id}
           data={todo}
           index={index}
-          deleteTask={deleteTask}
-          changeTaskState={changeTaskState}
         />
       )}</>
   )
