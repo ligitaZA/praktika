@@ -4,7 +4,7 @@ const Footer = () => {
       <footer>
         <div className="footer">
           <section id="left">
-            <p>Susisiekite</p>
+            <p>Contact Us</p>
             <div className="address">
               <div>
                 <i className="fa fa-mail-forward"></i><a
@@ -27,7 +27,7 @@ const Footer = () => {
 
           <section id="right">
             <div className="soc-networks">
-              <h3>Sekite mus</h3>
+              <h3>Follow Us</h3>
               <a href="#">
                 <i className="fa fa-facebook-square"></i></a>
               <a href="#">

@@ -21,7 +21,7 @@ function Content({ item, deleteFilm, editFilm }) {
   const [originalItem, setOriginalItem] = useState(item);
 
 
-  // Kai komponentas yra redagavimo būsenoje, yra rodoma forma, kuri, paspaudus "submit", iškviečia "handleSubmit" funkciją, kuri naudojama atnaujinti filmą naudojant "editFilm" funkciją ir perduoda atnaujintus duomenis kaip argumentą.
+  // Kai komponentas yra redagavimo būsenoje, yra rodoma forma, kuri paspaudus "submit", iškviečia "handleSubmit" funkciją, kuri naudojama atnaujinti filmą naudojant "editFilm" funkciją ir perduoda atnaujintus duomenis kaip argumentą.
 
   const handleSubmit = async (e) => {
     e.preventDefault();

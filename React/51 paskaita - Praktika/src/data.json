@@ -57,10 +57,10 @@
       "id": "Wz1N2Jz"
     },
     {
-      "name": "Filmas",
-      "metai": "1987",
-      "zanras": "Komedija",
-      "arMatytas": false,
+      "name": "Labas",
+      "metai": "1234",
+      "zanras": "drama",
+      "arMatytas": true,
       "image": "http://media.forumcinemas.lt/1012/Event_11507/gallery/avatar-5.jpg",
       "id": "omQOS5m"
     }
