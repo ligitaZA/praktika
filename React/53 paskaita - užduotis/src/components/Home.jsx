@@ -1,11 +1,12 @@
 import React, { useContext } from 'react';
-import { OrdersContext } from '../App';
+import OrdersContext from '../context';
 
 const Home = () => {
-  const { orders } = useContext(OrdersContext);
+  const { orders, deleteOrder } = useContext(OrdersContext);
 
   return (
-    <div>
+    <>
+     <div>
       <h1>Orders</h1>
       {orders.length > 0 ? (
         <table>
@@ -22,6 +23,7 @@ const Home = () => {
                 <td>{order.id}</td>
                 <td>{order.people}</td>
                 <td>{order.price}</td>
+                <td><button onClick={() => deleteOrder(order.id)}>Delete</button></td>
               </tr>
             ))}
           </tbody>
@@ -30,6 +32,7 @@ const Home = () => {
         <p>Loading...</p>
       )}
     </div>
+    </>
   );
 };
 

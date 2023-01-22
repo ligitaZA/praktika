@@ -1,18 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
+import OrdersContext from '../context';
 
-
-const Add = ({addOrder}) => {
-  const [numberOfPeople, setNumberOfPeople] = useState('');
+const Add = () => {
+  const [people, setPeople] = useState('');
   const [price, setPrice] = useState('');
 
+  // import the addOrder function from the context
+  const { addOrder } = useContext(OrdersContext);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addOrder(people, price);
+    setPeople('');
+    setPrice('');
+  }
+
   return (
-    <form onSubmit={addOrder}>
+    <form onSubmit={handleSubmit}>
       <label>
         Number of People:
         <input
           type="number"
-          value={numberOfPeople}
-          onChange={e => setNumberOfPeople(e.target.value)}
+          value={people}
+          onChange={e => setPeople(e.target.value)}
         />
       </label>
       <br />
