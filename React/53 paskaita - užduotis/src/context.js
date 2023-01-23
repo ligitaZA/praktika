@@ -6,7 +6,6 @@ const OrderProvider = ({children}) => {
   //kuriu useState, nustatant orders kintamaji ir setOrders funkcija
   const [orders, setOrders] = useState([]);
 
-
   //kuriu addOrder funkcija, jai naudojamas useCallback, kuriam padudoamas people ir price parametrai, kuriamas naujas uzsakkymas naudojant fetch ir siunciant data i back-end'a, tap pat jam priskiriamas id pagal dabartine data.
 
   //pradzioj sukuriamas naujas objektas newOrder su id pagal data, people ir price. 

@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { useNavigate } from 'react-router-dom';
 import OrdersContext from '../context';
 
 const Add = () => {
@@ -9,7 +10,8 @@ const Add = () => {
 
   // importuota addOrder funkcija
   const { addOrder } = useContext(OrdersContext);
-
+  
+  const navigate = useNavigate();
  // submitinant forma, naudojama addOrder funkcija ir priskiriamos reiksmes people, price bei nustatomos naujos reiksmes per setPeople ir setPrice su naujomis reikšmėmis, kad po pateikimo forma būtų išvalyti laukai,
  //pirma su addOrder(people, price) yra pridedamos naujos reiksmes i forma, o su set... formos laukai isvalomi
   const handleSubmit = (event) => {
@@ -17,9 +19,11 @@ const Add = () => {
     addOrder(people, price);
     setPeople('');
     setPrice('');
-  }
+    navigate(-1);
+    }
 
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <label>
         Number of People:
@@ -41,6 +45,8 @@ const Add = () => {
       <br />
       <button type="submit">Add Order</button>
     </form>
+    </>
+    
   );
 }
 // komponentas eksportuojamas, su submito info keliauja i Home komponenta

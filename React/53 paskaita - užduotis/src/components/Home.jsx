@@ -4,7 +4,7 @@ import OrdersContext from '../context';
 const Home = () => {
   //importuota orders ir deleteOrder. orders importuota, kad butu galima mapint ir trinti sukurta table row. kol duomenys uzsikrauna, rodo loading...
   const { orders, deleteOrder } = useContext(OrdersContext);
-
+  
   return (
     <>
      <div>
