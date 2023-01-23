@@ -6,6 +6,7 @@ import Home from './components/Home';
 import Add from './components/Add';
 import './App.css'
 
+//apgaubiama OrderProvider, kuriame yra kontekstas, taip pat naudojamas router, kad butu uzkraunama ne viskas is karto, o po viena komponenta, ta kurio nori vartotojas
 function App() {
   return (
     <OrderProvider>

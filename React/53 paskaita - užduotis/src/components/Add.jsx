@@ -2,12 +2,16 @@ import React, { useState, useContext } from 'react';
 import OrdersContext from '../context';
 
 const Add = () => {
+
+  //naujos funkcijos nustatyti zmoniu kieki ir kaina. people kintamasis ir price kintamasis atitinka people ir price kintamuju pavadinimus back-end'e
   const [people, setPeople] = useState('');
   const [price, setPrice] = useState('');
 
-  // import the addOrder function from the context
+  // importuota addOrder funkcija
   const { addOrder } = useContext(OrdersContext);
 
+ // submitinant forma, naudojama addOrder funkcija ir priskiriamos reiksmes people, price bei nustatomos naujos reiksmes per setPeople ir setPrice su naujomis reikšmėmis, kad po pateikimo forma būtų išvalyti laukai,
+ //pirma su addOrder(people, price) yra pridedamos naujos reiksmes i forma, o su set... formos laukai isvalomi
   const handleSubmit = (event) => {
     event.preventDefault();
     addOrder(people, price);
@@ -39,5 +43,5 @@ const Add = () => {
     </form>
   );
 }
-
+// komponentas eksportuojamas, su submito info keliauja i Home komponenta
 export default Add;
