@@ -25,6 +25,7 @@ const Add = () => {
   return (
     <>
     <form onSubmit={handleSubmit}>
+      <h3>Add Order</h3>
       <label>
         Number of People:
         <input

@@ -11,4 +11,15 @@ div {
 table *{
   border: 1px solid grey;
   padding: 5px;
+  background-color: aliceblue;
+}
+div:nth-child(2) {
+  background-color: rgb(145, 180, 171);
+  margin: 10px;
+  border-radius: 5px;
+  padding: 0 20px 20px;
+}
+button {
+  background-color: transparent;
+  cursor: pointer;
 }
