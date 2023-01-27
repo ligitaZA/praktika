@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "level": "admin",
+      "isBanned": false,
+      "userName": "PetrasDidysis",
+      "password": "123",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/3305/3305427.png"
+    },
+    {
+      "id": 1,
+      "level": "user",
+      "isBanned": true,
+      "userName": "Petriukas",
+      "password": "456",
+      "avatar": "https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png"
+    },
+    {
+      "id": 2,
+      "level": "user",
+      "isBanned": false,
+      "userName": "Jonukas",
+      "password": "789",
+      "avatar": "https://cdn.icon-icons.com/icons2/2643/PNG/512/male_boy_person_people_avatar_icon_159358.png"
+    },
+    {
+      "userName": "labas",
+      "password": "234",
+      "passwordRepeat": "234",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/5087/5087579.png",
+      "id": 1674807785813,
+      "level": "user",
+      "isBanned": false
+    },
+    {
+      "userName": "",
+      "password": "",
+      "passwordRepeat": "",
+      "avatar": "",
+      "id": 1674812884714,
+      "level": "user",
+      "isBanned": false
+    },
+    {
+      "userName": "labas2",
+      "password": "1234567",
+      "passwordRepeat": "1234567",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/5087/5087579.png",
+      "id": 1674818548269,
+      "level": "user",
+      "isBanned": false
+    },
+    {
+      "userName": "Jonukas1",
+      "password": "123456789",
+      "passwordRepeat": "123456789",
+      "avatar": "https://cdn-icons-png.flaticon.com/512/5087/5087579.png",
+      "id": 1674819100635,
+      "level": "user",
+      "isBanned": false
+    }
+  ],
+  "posts": [
+    {
+      "id": 0,
+      "userId": 1,
+      "heading" : "Pavadinimas0",
+      "content" : "daug teksto... daug teksto... daug teksto... daug teksto...daug teksto... daug teksto..."
+    },{
+      "id": 1,
+      "userId": 2,
+      "heading" : "Pavadinimas1",
+      "content" : "daug teksto... daug teksto... daug teksto... daug teksto...daug teksto... daug teksto..."
+    },{
+      "id": 2,
+      "userId": 2,
+      "heading" : "Pavadinimas2",
+     "content" : "daug teksto... daug teksto... daug teksto... daug teksto...daug teksto... daug teksto..."
+    },{
+      "id": 3,
+      "userId": 1,
+      "heading" : "Pavadinimas3",
+      "content" : "daug teksto... daug teksto... daug teksto... daug teksto...daug teksto... daug teksto..."
+    }
+  ]
+}
