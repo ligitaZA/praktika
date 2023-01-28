@@ -14,12 +14,12 @@ const LogIn = () => {
   const handleSubmit = async (values,  setSubmitting ) => {
     const loggedInUser = users.find(user => user.userName === values.userName && user.password === values.password);
     if (loggedInUser) {
-      if (loggedInUser.isBanned === false) {
+      if(!loggedInUser.isBanned){
         setLoggedInUser(loggedInUser);
         navigation('/');
         setFailedLogIn(false);
         setUserIsBanned(false);
-      } else {
+      } else if(loggedInUser.isBanned){
         setUserIsBanned(true);
       }
     } else {

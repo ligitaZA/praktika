@@ -27,23 +27,44 @@ const PostProvider = ({ children }) => {
     //   content : 'daug teksto... daug teksto... daug teksto... daug teksto...daug teksto... daug teksto...'
     // }
   
-  useEffect(() => {
-    fetch('http://localhost:5000/posts')
-    .then(res => res.json())
-    .then(data => setPosts(data.posts))
-}, [])
-
-  const addNewPost = (newPost) => {
-    setPosts([newPost, ...posts]);
-  }
-
-  const deletePost = (id) => {
-    setPosts(posts.filter(post => post.id !== id));
-  }
-
-  const updatePost = (id, updatedPost) => {
-    setPosts(posts.map(post => post.id.toString() === id ? {...post, ...updatedPost} : post));
-  }
+    useEffect(() => {
+      fetch('http://localhost:5000/posts')
+      .then(res => res.json())
+      .then(data => setPosts(data.posts))
+    }, [])
+  
+    const addNewPost = (newPost) => {
+      fetch('http://localhost:5000/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(newPost)
+      })
+      .then(res => res.json())
+      .then(data => {
+        setPosts([...(posts || []), data]);
+      });
+    }
+  
+    const deletePost = (id) => {
+      fetch(`http://localhost:5000/posts/${id}`, {
+        method: 'DELETE',
+      })
+      .then(() => {
+        setPosts(posts.filter(post => post.id !== id));
+      });
+    }
+  
+    const updatePost = (id, updatedPost) => {
+      fetch(`http://localhost:5000/posts/${id}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updatedPost)
+      })
+      .then(res => res.json())
+      .then(data => {
+        setPosts(posts.map(post => post.id.toString() === id ? {...post, ...data} : post));
+      });
+    }
 
   return (
     <PostContext.Provider

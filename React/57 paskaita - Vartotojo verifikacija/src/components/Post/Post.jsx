@@ -12,11 +12,13 @@ const Post = ({data}) => {
 
   return (
     <div style={{border:'3px solid black'}}>
-      <img
-        src={postOwner.avatar}
-        alt="user avatar"
-        style={{width:'30px', height:'auto'}}
-      />
+      {postOwner && (
+        <img
+          src={postOwner.avatar}
+          alt="user avatar"
+          style={{width:'30px', height:'auto'}}
+        />
+      )}
       <span>{postOwner.userName}</span>
       {
         loggedInUser && loggedInUser.id === postOwner.id &&
