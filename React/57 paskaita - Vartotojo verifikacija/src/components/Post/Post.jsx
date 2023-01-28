@@ -8,7 +8,7 @@ const Post = ({data}) => {
   const { users, loggedInUser } = useContext(UserContext);
   const { deletePost } = useContext(PostContext);
 
-  const postOwner = users.find(user => user.id === data.userId);
+  const postOwner = users.find(user => user.id === data.userId) || {}
 
   return (
     <div style={{border:'3px solid black'}}>
@@ -19,7 +19,7 @@ const Post = ({data}) => {
           style={{width:'30px', height:'auto'}}
         />
       )}
-      <span>{postOwner.userName}</span>
+      {postOwner && <span>{postOwner.userName}</span>}
       {
         loggedInUser && loggedInUser.id === postOwner.id &&
         <>
@@ -33,5 +33,4 @@ const Post = ({data}) => {
     </div>
   );
 }
- 
 export default Post;

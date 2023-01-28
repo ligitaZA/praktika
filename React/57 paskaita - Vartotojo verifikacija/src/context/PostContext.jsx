@@ -29,9 +29,16 @@ const PostProvider = ({ children }) => {
   
     useEffect(() => {
       fetch('http://localhost:5000/posts')
-      .then(res => res.json())
-      .then(data => setPosts(data.posts))
-    }, [])
+.then(res => {
+  if(res.status !== 200) throw new Error('Error fetching data')
+  return res.json()
+}).then(data => {
+  console.log(data);
+  setPosts(data);
+}).catch(error => {
+  console.error('Error:', error);
+});
+    }, []);
   
     const addNewPost = (newPost) => {
       fetch('http://localhost:5000/posts', {
