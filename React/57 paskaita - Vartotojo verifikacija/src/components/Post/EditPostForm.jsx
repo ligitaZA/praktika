@@ -14,38 +14,52 @@ const EditPostForm = () => {
 
   const [formInputs, setFormInputs] = useState({
     heading: currentPost.heading,
-    content: currentPost.content
+    content: currentPost.content,
+    image: currentPost.image
   });
 
   const handleSubmit = e => {
     e.preventDefault();
-    
+
     updatePost(id, formInputs);
-    
+
     navigation('/');
   }
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Heading:
-          <input type="text" name="heading"
-            value={formInputs.heading}
-            onChange={(e) => setFormInputs({...formInputs, heading:e.target.value})}
-          />
-        </label>
-        <label>
-          Content:
-          <input type="text" name="content"
-            value={formInputs.content}
-            onChange={(e) => setFormInputs({...formInputs, content:e.target.value})}
-          />
-        </label>
-        <input type="submit" value="Edit Post" />
-      </form>
+      <div className="editForm">
+        <form onSubmit={handleSubmit}>
+          <label>
+            Heading:
+            <input type="text" name="heading"
+              value={formInputs.heading}
+              onChange={(e) => setFormInputs({ ...formInputs, heading: e.target.value })}
+            />
+          </label>
+          <label>
+            Content:
+            <textarea
+              className="textarea"
+              type="text"
+              name="content"
+              value={formInputs.content}
+              onChange={(e) => setFormInputs({ ...formInputs, content: e.target.value })}
+            />
+          </label>
+          <label>
+            Image(URL):
+            <input type="text" name="image"
+              value={formInputs.image}
+              onChange={(e) => setFormInputs({ ...formInputs, image: e.target.value })}
+            />
+          </label>
+          <input className="edit" type="submit" value="Edit Post" />
+        </form>
+      </div>
+
     </>
   );
 }
- 
+
 export default EditPostForm;

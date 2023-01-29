@@ -16,7 +16,8 @@ const Posts = () => {
 
   return (
     <>
-      {
+    <div className="posts">
+{
         availablePosts.map(post => 
           <Post 
             key={post.id}
@@ -24,6 +25,8 @@ const Posts = () => {
           />  
         )
       }
+    </div>
+      
     </>
   );
 }

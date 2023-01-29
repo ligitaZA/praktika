@@ -1,38 +1,497 @@
-.App {
-  text-align: center;
+body {
+  margin: 0 auto;
+  background-image: url('https://wallpaperaccess.com/full/1552448.jpg');
+  background-size: cover;
+  background-attachment: fixed;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logIn {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  margin: 30px auto;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: rgb(41, 39, 39);
+  border-radius: 5px 5px 0 0;
+  border-style: none;
+  box-shadow: rgba(226, 224, 224, 0.2) 0 3px 5px -1px, rgba(226, 221, 221, 0.14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #dee7ee;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.logIn form {
+  font-size: 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 10px;
+  background-color: #1b1b1dbb;
+}
+
+.logIn form input {
+  border: 0;
+  font-size: 15px;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  width: 300px;
+  background-color: rgb(56, 55, 55);
+}
+
+.logIn form button {
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  padding: 10px 30px;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.logIn form label {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  margin: 30px auto;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: rgb(41, 39, 39);
+  border-radius: 5px 5px 0 0;
+  border-style: none;
+  box-shadow: rgba(226, 224, 224, 0.2) 0 3px 5px -1px, rgba(226, 221, 221, 0.14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #dee7ee;
+}
+
+.register form {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #1b1b1dbb;
+}
+
+.register form input {
+  border: 0;
+  font-size: 15px;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  width: 300px;
+  background-color: rgb(56, 55, 55);
+}
+
+.register form button {
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  padding: 10px 30px;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.register form label {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  margin: 30px auto;
+  padding: 20px;
+  justify-content: space-between;
+  background-color: rgb(41, 39, 39);
+  border-radius: 5px 5px 0 0;
+  border-style: none;
+  box-shadow: rgba(226, 224, 224, 0.2) 0 3px 5px -1px, rgba(226, 221, 221, 0.14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #dee7ee;
+}
+
+.editForm form {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: #1b1b1dbb;
+}
+
+.editForm form input {
+  border: 0;
+  font-size: 15px;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  width: 300px;
+  background-color: rgb(56, 55, 55);
+}
+
+.editForm form .edit {
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  padding: 10px 30px;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.editForm form label {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.textarea {
+  width: 100%;
+  border: 0;
+  font-size: 15px;
+  border-radius: 4px;
+  color: #fff;
+  height: 200px;
+  width: 300px;
+  background-color: rgb(56, 55, 55);
+}
+.loginRegister {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 30px;
+  margin: 30px;
+}
+
+.loginRegister a {
+  text-decoration: none;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 20px;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.headerUser {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerUser .managingUsers .userAvatar {
+  height: 40px;
+}
+
+.headerUser .homePart {
+  font-size: 20px;
+  padding: 30px;
+}
+
+.headerUser .homePart a {
+  text-decoration: none;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  width: 100%;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.headerUser .homePart a:hover {
+  background-color: #fffdfdb2;
+  color: #e50914;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.945);
+  transition: ease 0.3s;
+}
+
+.headerUser .managingUsers {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+}
+
+.headerUser .managingUsers .editPost {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  gap: 30px;
+}
+
+.headerUser .managingUsers .editPost a {
+  text-decoration: none;
+  margin: 0;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 500;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.headerUser .managingUsers .editPost a:hover {
+  background-color: #fffdfdb2;
+  color: #e50914;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.945);
+  transition: ease 0.3s;
+}
+
+.headerUser .managingUsers .userPart {
+  display: flex;
+  gap: 15px;
+}
+
+.headerUser .managingUsers .userPart a {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.headerUser .managingUsers .logOut {
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 4px;
+  font-weight: 500;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.headerUser .managingUsers .logOut:hover {
+  background-color: #fffdfdb2;
+  color: #e50914;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.945);
+  transition: ease 0.3s;
+}
+
+.posts {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 50px;
+}
+
+.posts .post {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: auto;
+  justify-content: space-between;
+  background-color: rgb(41, 39, 39);
+  border-radius: 5px 5px 0 0;
+  border-style: none;
+  box-shadow: rgba(226, 224, 224, 0.2) 0 3px 5px -1px, rgba(226, 221, 221, 0.14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #dee7ee;
+}
+
+.posts .post .postImg {
+  width: 100%;
+  height: auto;
+}
+
+.posts .newPost h1,
+p {
+  padding: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+.posts .post .userPart {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(61, 56, 56);
+}
+
+.posts .post .avatar {
+  height: 40px;
+  width: auto;
+}
+
+.posts .userPart .user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px;
+}
+
+.posts .userPart .buttons {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+}
+
+.posts .userPart .buttons .delete,
+.edit {
+  text-decoration: none;
+  margin: 0;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 500;
+  width: 100%;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.posts .userPart .buttons .delete:hover,
+.edit:hover {
+  background-color: #fffdfdb2;
+  color: #e50914;
+  border: none;
+  box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.945);
+  transition: ease 0.3s;
+}
+
+a {
+  text-decoration: none;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.banUser {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border: #dee7ee49 1px solid;
+  width: 500px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.banUser .user {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.banUser .user img {
+  height: 30px;
+}
+
+.banUser button {
+  text-decoration: none;
+  margin: 0;
+  padding: 5px;
+  border-radius: 4px;
+  font-weight: 500;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.banned {
+  background-color: rgb(41, 39, 39);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: rgba(226, 224, 224, 0.2) 0 3px 5px -1px, rgba(226, 221, 221, 0.14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #dee7ee;
+  margin: 30px auto;
+  width: 500px;
+}
+
+.newForm {
+  background-color: rgb(41, 39, 39);
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: rgba(226, 224, 224, 0.2) 0 3px 5px -1px, rgba(226, 221, 221, 0.14) 0 6px 10px 0, rgba(0, 0, 0, .12) 0 1px 18px 0;
+  box-sizing: border-box;
+  color: #dee7ee;
+  margin: 30px auto;
+  width: 500px;
+}
+
+.newForm form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 50px 50px 50px;
+  background-color: #1b1b1dbb;
+}
+
+.newForm form input {
+  border: 0;
+  font-size: 15px;
+  border-radius: 4px;
+  color: #fff;
+  height: 30px;
+  width: 300px;
+  background-color: rgb(56, 55, 55);
+}
+
+.newForm form .button {
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  margin: 24px 0 12px;
+  padding: 10px 30px;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
+
+.newForm form label {
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

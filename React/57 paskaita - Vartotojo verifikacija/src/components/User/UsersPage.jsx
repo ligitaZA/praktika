@@ -10,6 +10,7 @@ const UsersPage = () => {
 
   return (
     <>
+    <div className="banned">
       {
         nonAdminUsers.map(user => 
           <UserCard
@@ -19,6 +20,8 @@ const UsersPage = () => {
           />
         )
       }
+    </div>
+      
     </>
   );
 }

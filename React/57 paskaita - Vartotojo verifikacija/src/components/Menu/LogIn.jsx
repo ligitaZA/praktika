@@ -36,7 +36,7 @@ const LogIn = () => {
  
   return (
     <>
-      <div>
+      <div className="logIn">
         <Formik
           initialValues={{
             userName: '',

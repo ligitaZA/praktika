@@ -59,53 +59,59 @@ const Register = () => {
   })
   return (
     <>
-      <Formik
-        validationSchema={validationSchema}
-        onSubmit={(values, { setSubmitting, resetForm }) => handleSubmit(values, { setSubmitting, resetForm })}
-        initialValues={formInputs}
-      >
-        {({ errors, touched }) => (
-          <Form>
-            <label>
-              User name:
-              <Field 
-              name="userName" 
-              type="text" />
-              {errors.userName && touched.userName ? (
-                <div>{errors.userName}</div>
-              ) : null}
-            </label>
-            <label>
-              Password:
-              <Field 
-              name="password" 
-              type="password" />
-              {errors.password && touched.password ? (
-                <div>{errors.password}</div>
-              ) : null}
-            </label>
-            <label>
-              Repeat Password:
-              <Field 
-              name="passwordRepeat" 
-              type="password" />
-              {errors.passwordRepeat && touched.passwordRepeat ? (
-                <div>{errors.passwordRepeat}</div>
-              ) : null}
-            </label>
-            <label>
-              User picture:
-              <Field 
-              name="avatar" 
-              type="url" />
-              {errors.avatar && touched.avatar ? (
-                <div>{errors.avatar}</div>
-              ) : null}
-            </label>
-            <button type="submit">Register</button>
-          </Form>
-        )}
-      </Formik>
+      <div className="register">
+
+        {invalidUsername && <div className="error-message">This username is already taken, please choose a different one</div>}
+        <Formik
+          validationSchema={validationSchema}
+          onSubmit={(values, { setSubmitting, resetForm }) => handleSubmit(values, { setSubmitting, resetForm })}
+          initialValues={formInputs}
+        >
+          {({ errors, touched }) => (
+            <Form>
+              <label>
+                User name:
+                <Field
+                  name="userName"
+                  type="text" />
+                {errors.userName && touched.userName ? (
+                  <div>{errors.userName}</div>
+                ) : null}
+
+              </label>
+              <label>
+                Password:
+                <Field
+                  name="password"
+                  type="password" />
+                {errors.password && touched.password ? (
+                  <div>{errors.password}</div>
+                ) : null}
+              </label>
+              <label>
+                Repeat Password:
+                <Field
+                  name="passwordRepeat"
+                  type="password" />
+                {errors.passwordRepeat && touched.passwordRepeat ? (
+                  <div>{errors.passwordRepeat}</div>
+                ) : null}
+              </label>
+              <label>
+                User picture:
+                <Field
+                  name="avatar"
+                  type="url" />
+                {errors.avatar && touched.avatar ? (
+                  <div>{errors.avatar}</div>
+                ) : null}
+              </label>
+              <button type="submit">Register</button>
+            </Form>
+          )}
+        </Formik>
+      </div>
+
     </>
   );
 }

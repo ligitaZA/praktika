@@ -7,7 +7,8 @@ const NewPostForm = () => {
 
   const [formInputs, setFormInputs] = useState({
     heading: '',
-    content: ''
+    content: '',
+    image:''
   });
 
   const { addNewPost } = useContext(PostContext);
@@ -20,6 +21,7 @@ const NewPostForm = () => {
     const newPost = {
       heading: formInputs.heading,
       content: formInputs.content,
+      image: formInputs.image,
       id: Date.now(),
       userId: loggedInUser ? loggedInUser.id : null
     };
@@ -30,6 +32,7 @@ const NewPostForm = () => {
 
   return (
     <>
+    <div className="newForm">
       <form onSubmit={handleSubmit}>
         <label>
           Heading:
@@ -40,13 +43,25 @@ const NewPostForm = () => {
         </label>
         <label>
           Content:
-          <input type="text" name="content"
+          <textarea className="textarea" type="text" name="content"
             value={formInputs.content}
             onChange={(e) => setFormInputs({...formInputs, content:e.target.value})}
           />
         </label>
-        <input type="submit" value="Create new Post" />
+        <label>
+          Image(URL):
+          <input 
+          type="text" 
+          name="image" 
+          
+          value={formInputs.image} 
+          onChange={(e) => setFormInputs({...formInputs, image:e.target.value})}
+          />
+        </label>
+        <input type="submit" className="button" value="Create new Post" />
       </form>
+    </div>
+      
     </>
   );
 }
