@@ -25,7 +25,6 @@ const NewPostForm = () => {
       id: Date.now(),
       userId: loggedInUser ? loggedInUser.id : null
     };
-
     addNewPost(newPost);
     navigation('/');
   }

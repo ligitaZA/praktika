@@ -7,6 +7,7 @@ import UserPage from './components/User/UserPage';
 import UsersPage from './components/User/UsersPage';
 import NewPostForm from './components/Post/NewPostForm';
 import EditPostForm from './components/Post/EditPostForm';
+import MarkedPostsPage from './components/Post/MarkedPostsPage';
 import { Routes, Route } from 'react-router-dom';
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
           <Route path="/users" element={<UsersPage />}/>
           <Route path="/newPost" element={<NewPostForm />}/>
           <Route path="/editPost/:id" element={<EditPostForm />}/>
+          <Route exact path="/marked-posts" element={<MarkedPostsPage />} />
         </Route> 
 
          <Route path="/register" element={<Register />}/>

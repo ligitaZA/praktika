@@ -5,6 +5,7 @@ const PostContext = createContext();
 const PostProvider = ({ children }) => {
 
   const [posts, setPosts] = useState([]);
+  const [markedPosts, setMarkedPosts] = useState([]);
   // {
   //   id: 0,
   //   userId: 1,
@@ -39,6 +40,14 @@ const PostProvider = ({ children }) => {
         console.error('Error:', error);
       });
   }, []);
+
+  const toggleMark = (post) => {
+    if (markedPosts.includes(post)) {
+      setMarkedPosts(markedPosts.filter(p => p !== post));
+    } else {
+      setMarkedPosts([...markedPosts, post]);
+    }
+  }
 
   const addNewPost = (newPost) => {
     fetch('http://localhost:5000/posts', {
@@ -80,7 +89,10 @@ const PostProvider = ({ children }) => {
         posts,
         addNewPost,
         deletePost,
-        updatePost
+        updatePost,
+        markedPosts,
+        toggleMark,
+        setMarkedPosts
       }}
     >
       {children}
