@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import ChatContext from "../../context/ChatContext";
 import UserContext from "../../context/UserContext";
-import Message from "../Chat/Message";
+import Chat from "./NewChatForm";
 
 
 const Messages = () => {
@@ -16,8 +16,7 @@ const Messages = () => {
       <div>
         {
           messages.map(message =>
-            <Message
-            
+            <Chat
               key={ message.id}
               data={message} />
           )

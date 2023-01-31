@@ -547,3 +547,48 @@ a {
   flex-direction: column;
   align-items: center;
 }
+.chatUsers {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 500px;
+  background-color: #dee7ee;
+  padding: 5px;
+}
+.chatUsers .user {
+  padding: 5px;
+  border: #a1a1a3bb 1px solid;
+}
+.chatUsers .user img {
+  height: 30px;
+}
+.chatUsers form{
+  display: flex;
+  justify-content: space-between;
+
+}
+.chatUsers form label {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.chatUsers form label .input {
+  height: 25px;
+  width: 100%;
+  border: 0;
+  font-size: 15px;
+  border-radius: 4px;
+  color: #fff;
+  background-color: rgb(177, 174, 174);
+}
+.chatUsers form .btn {
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 500;
+  background: #e50914;
+  line-height: 1em;
+  box-sizing: border-box;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.26);
+  color: #fff;
+  cursor: pointer;
+}
