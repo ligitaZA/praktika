@@ -52,7 +52,6 @@ const NewPostForm = () => {
           <input 
           type="text" 
           name="image" 
-          
           value={formInputs.image} 
           onChange={(e) => setFormInputs({...formInputs, image:e.target.value})}
           />

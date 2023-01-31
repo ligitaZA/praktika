@@ -1,3 +1,4 @@
+
 import Posts from './Post/Posts'
 const Main = () => {
   return (

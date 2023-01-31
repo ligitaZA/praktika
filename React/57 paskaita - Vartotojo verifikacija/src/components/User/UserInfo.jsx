@@ -5,7 +5,8 @@ import PostContext from "../../context/PostContext";
 
 const UserInfo = () => {
   const { loggedInUser, setLoggedInUser } = useContext(UserContext);
-  const { markedPosts, setMarkedPosts } = useContext(PostContext)
+  const { markedPosts, setMarkedPosts } = useContext(PostContext);
+
   const markedPostsCount = markedPosts.length;
   const navigation = useNavigate();
 
@@ -26,7 +27,8 @@ const UserInfo = () => {
           (loggedInUser.level === 'admin') && <Link to="/users">Manage Users</Link>
         }
         <Link to="/newPost">Add New Post</Link>
-         <Link to="/marked-posts">Marked Posts: {markedPostsCount}</Link>
+        <Link to="/marked-posts">Marked Posts: {markedPostsCount}</Link>
+        <Link to="/messages">Chat</Link>
         </div>
         <div className="userPart">
           <Link to="/user">
