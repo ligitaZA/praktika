@@ -10,6 +10,7 @@ const Chat = () => {
   });
   const { messages, addMessage } = useContext(ChatContext);
   const { loggedInUser, users } = useContext(UserContext);
+  const { deleteMessage } = useContext(ChatContext);
   const chatNavigation = useNavigate();
 
   const handleSubmit = e => {
@@ -25,7 +26,9 @@ const Chat = () => {
   }
   const renderMessages = () => {
     return messages.map(message => {
+
       const messageOwner = users.find(user => user.id === message.userId) || {}
+
       return (
         <div className="user" key={message.id}>
           {messageOwner && (
@@ -36,6 +39,14 @@ const Chat = () => {
           )}
           {messageOwner && <span>{messageOwner.userName}</span>}
           <div className="message-text">{message.message}</div>
+
+         
+          <button
+            onClick={() => deleteMessage(message.id)}
+            className="delete-button">
+            Delete
+          </button>
+        
         </div>
       );
     });

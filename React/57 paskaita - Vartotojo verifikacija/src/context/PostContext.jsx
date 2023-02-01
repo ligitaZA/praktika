@@ -29,58 +29,66 @@ const PostProvider = ({ children }) => {
   // }
 
   useEffect(() => {
-    fetch('http://localhost:5000/posts')
-      .then(res => {
-        if (res.status !== 200) throw new Error('Error fetching data')
-        return res.json()
-      }).then(data => {
-        console.log(data);
-        setPosts(data);
-      }).catch(error => {
-        console.error('Error:', error);
-      });
-  }, []);
-
-  const toggleMark = (post) => {
-    if (markedPosts.includes(post)) {
-      setMarkedPosts(markedPosts.filter(p => p !== post));
-    } else {
-      setMarkedPosts([...markedPosts, post]);
+    const fetchData = async () => {
+    try {
+    const res = await fetch('http://localhost:5000/posts');
+    if (res.status !== 200) throw new Error('Error fetching data');
+    const data = await res.json();
+    console.log(data);
+    setPosts(data);
+    } catch (error) {
+    console.error('Error:', error);
     }
-  }
-
-  const addNewPost = (newPost) => {
-    fetch('http://localhost:5000/posts', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(newPost)
-    })
-      .then(res => res.json())
-      .then(data => {
-        setPosts([...(posts || []), data]);
-      });
-  }
-
-  const deletePost = (id) => {
-    fetch(`http://localhost:5000/posts/${id}`, {
-      method: 'DELETE',
-    })
-      .then(() => {
-        setPosts(posts.filter(post => post.id !== id));
-      });
-  }
-
-  const updatePost = (id, updatedPost) => {
-    fetch(`http://localhost:5000/posts/${id}`, {
-      method: 'PUT',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(updatedPost)
-    })
-      .then(res => res.json())
-      .then(data => {
-        setPosts(posts.map(post => post.id.toString() === id ? { ...post, ...data } : post));
-      });
-  }
+    }
+    fetchData();
+    }, []);
+    
+    const toggleMark = async (post) => {
+    if (markedPosts.includes(post)) {
+    setMarkedPosts(markedPosts.filter(p => p !== post));
+    } else {
+    setMarkedPosts([...markedPosts, post]);
+    }
+    }
+    
+    const addNewPost = async (newPost) => {
+    try {
+    const res = await fetch('http://localhost:5000/posts', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(newPost)
+    });
+    const data = await res.json();
+    setPosts([...(posts || []), data]);
+    } catch (error) {
+    console.error('Error:', error);
+    }
+    }
+    
+    const deletePost = async (id) => {
+    try {
+    await fetch(`http://localhost:5000/posts/${id}`, {
+    method: 'DELETE',
+    });
+    setPosts(posts.filter(post => post.id !== id));
+    } catch (error) {
+    console.error('Error:', error);
+    }
+    }
+    
+    const updatePost = async (id, updatedPost) => {
+    try {
+    const res = await fetch(`http://localhost:5000/posts/${id}`, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(updatedPost)
+    });
+    const data = await res.json();
+    setPosts(posts.map(post => post.id.toString() === id ? { ...post, ...data } : post));
+    } catch (error) {
+    console.error('Error:', error);
+    }
+    }
 
 
   return (

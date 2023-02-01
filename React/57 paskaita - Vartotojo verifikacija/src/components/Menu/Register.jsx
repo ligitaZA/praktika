@@ -15,36 +15,36 @@ const Register = () => {
 
   const { users, addNewUser, setLoggedInUser } = useContext(UserContext);
   const navigate = useNavigate();
-
-  const handleSubmit = (values, { setSubmitting, resetForm }) => {
+  const handleSubmit = async (values, { setSubmitting, resetForm }) => {
+    try {
     if (users.find(user => user.userName === values.userName)) {
-      setInvalidUsername(true);
+    setInvalidUsername(true);
     } else {
-      let newUser = {
-        ...values,
-        id: Date.now(),
-        level: 'user',
-        isBanned: false
-      };
-      fetch('http://localhost:5000/users', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(newUser)
-      })
-        .then(res => res.json())
-        .then(data => {
-          console.log(data);
-          addNewUser(newUser);
-          setLoggedInUser(newUser);
-          navigate('/');
-        })
-        .catch(error => console.error('Error:', error));
-      setSubmitting(false);
-      resetForm();
+    let newUser = {
+    ...values,
+    id: Date.now(),
+    level: 'user',
+    isBanned: false
+    };
+    const response = await fetch('http://localhost:5000/users', {
+    method: 'POST',
+    headers: {
+    'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newUser)
+    });
+    const data = await response.json();
+    console.log(data);
+    addNewUser(newUser);
+    setLoggedInUser(newUser);
+    navigate('/');
+    setSubmitting(false);
+    resetForm();
     }
-  }
+    } catch (error) {
+    console.error('Error:', error);
+    }
+    };
   const validationSchema = Yup.object({
     userName: Yup.string()
       .required('User name is required'),

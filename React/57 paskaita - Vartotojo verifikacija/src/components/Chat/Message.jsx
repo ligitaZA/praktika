@@ -1,37 +1,37 @@
-import UserContext from "../../context/UserContext";
-import { useContext } from "react";
-import ChatContext from "../../context/ChatContext";
+// import UserContext from "../../context/UserContext";
+// import { useContext } from "react";
+// import ChatContext from "../../context/ChatContext";
 
-const Message = ({ data }) => {
-  console.log(data)
-  const { users, loggedInUser } = useContext(UserContext);
-  const { deleteMessage } = useContext(ChatContext);
+// const Message = ({ data }) => {
+//   console.log(data)
+//   const { users, loggedInUser } = useContext(UserContext);
+//   const { deleteMessage } = useContext(ChatContext);
   
-  const messageOwner = users.find(user => user.id === data.userId); 
+//   const messageOwner = users.find(user => user.id === data.userId); 
 
-  return (
-    <>
-    <div className="user">
-      {messageOwner && (
-        <img
-          className="avatar"
-          src={messageOwner.avatar}
-          alt="user avatar" />
-      )}
+//   return (
+//     <>
+//     <div className="user">
+//       {messageOwner && (
+//         <img
+//           className="avatar"
+//           src={messageOwner.avatar}
+//           alt="user avatar" />
+//       )}
 
-    {messageOwner && <span>{messageOwner.userName}</span>}</div>
-      <div className="message-text">{data.message}</div>
+//     {messageOwner && <span>{messageOwner.userName}</span>}</div>
+//       <div className="message-text">{data.message}</div>
       
-      {loggedInUser && loggedInUser.id === data.userId && (
-          <button
-            onClick={() => deleteMessage(data.id)}
-            className="delete-button">
-            Delete
-          </button>
-        )}
-    </>
-  ) 
-}
+//       {loggedInUser && loggedInUser.id === messageOwner.userId && 
+//           <button
+//             onClick={() => deleteMessage(data.id)}
+//             className="delete-button">
+//             Delete
+//           </button>
+//         }
+//     </>
+//   ) 
+// }
 
 
-export default Message;
+// export default Message;

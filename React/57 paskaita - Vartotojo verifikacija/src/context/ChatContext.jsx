@@ -8,36 +8,43 @@ const ChatProvider = ({children}) => {
   const [messages, setMessages] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/messages')
-    .then(res => res.json())
-    .then(data => {
-      console.log(data);
-      setMessages(data);
-    }).catch(error => {
-      console.error('Error:', error);
-    });
+    const fetchMessages = async () => {
+      try {
+        const res = await fetch('http://localhost:5000/messages');
+        const data = await res.json();
+        console.log(data);
+        setMessages(data);
+      } catch (error) {
+        console.error('Error:', error);
+      }
+    };
+    fetchMessages();
   }, []);
 
-  const addMessage = (message) => {
-    fetch('http://localhost:5000/messages', {
-      method: 'POST',
-      headers: {'Content-Type' : 'application/json' },
-      body: JSON.stringify(message)
-    })
-    .then(res => res.json())
-    .then(data => {
+  const addMessage = async (message) => {
+    try {
+      const res = await fetch('http://localhost:5000/messages', {
+        method: 'POST',
+        headers: {'Content-Type' : 'application/json' },
+        body: JSON.stringify(message)
+      });
+      const data = await res.json();
       setMessages([...messages, data]);
-    });
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
 
-  const deleteMessage = (id) => {
+  const deleteMessage = async (id) => {
     console.log("deleteMessage called with id: ", id);
-    fetch(`http://localhost:5000/messages/${id}`, {
-      method: 'DELETE', 
-    })
-    .then(() => {
+    try {
+      await fetch(`http://localhost:5000/messages/${id}`, {
+        method: 'DELETE', 
+      });
       setMessages(messages.filter(message => message.id !== id))
-    })
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
 
   return (
