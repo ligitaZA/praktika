@@ -25,7 +25,8 @@ const Provider = ({children}) => {
 return (
   <Context.Provider
     value={{
-      something
+      something,
+      addSomething
     }}
     >
       {children}

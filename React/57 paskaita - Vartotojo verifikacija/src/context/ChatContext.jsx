@@ -30,11 +30,22 @@ const ChatProvider = ({children}) => {
     });
   };
 
+  const deleteMessage = (id) => {
+    console.log("deleteMessage called with id: ", id);
+    fetch(`http://localhost:5000/messages/${id}`, {
+      method: 'DELETE', 
+    })
+    .then(() => {
+      setMessages(messages.filter(message => message.id !== id))
+    })
+  }
+
   return (
     <ChatContext.Provider
       value={{
         messages,
-        addMessage
+        addMessage,
+        deleteMessage
       }}
     >
       {children}

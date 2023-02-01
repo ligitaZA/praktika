@@ -33,7 +33,7 @@ const Chat = () => {
               className="avatar"
               src={messageOwner.avatar}
               alt="user avatar" />
-          )};
+          )}
           {messageOwner && <span>{messageOwner.userName}</span>}
           <div className="message-text">{message.message}</div>
         </div>

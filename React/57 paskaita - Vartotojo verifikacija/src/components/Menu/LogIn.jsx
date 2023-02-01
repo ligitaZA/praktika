@@ -14,6 +14,7 @@ const LogIn = () => {
   const handleSubmit = async (values,  setSubmitting ) => {
     const loggedInUser = users.find(user => user.userName === values.userName && user.password === values.password);
     if (loggedInUser) {
+      console.log(loggedInUser)
       if(!loggedInUser.isBanned){
         setLoggedInUser(loggedInUser);
         navigation('/');
